@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Roboto:400italic,700italic,700,400&subset=latin,cyrillic');
+@import url(http://fonts.googleapis.com/css?family=Roboto:400italic,700italic,700,400&subset=latin,cyrillic);
 
 html {
 	min-height: 100%;
@@ -212,6 +212,34 @@ body.appID570.ld-light.ld-background-image {
 	box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
+.ld-light .Consumer,
+.ld-light .Base,
+.ld-light .Industrial,
+.ld-light .Mil-Spec,
+.ld-light .Restricted,
+.ld-light .Classified,
+.ld-light .Covert,
+.ld-light .Extraordinary {
+	background: linear-gradient(to top, rgba(0,0,0,0.07), transparent) !important;
+}
+
+.ld-light .item.marketPriced div.rarity {
+	background: linear-gradient(to top, rgba(0,0,0,0.07), transparent) !important;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.9) !important;
+}
+
+.ld-light .item .rarity {
+	background: linear-gradient(to top, rgba(0,0,0,0.07), transparent) !important;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.9) !important;
+	color: #444 !important;
+	box-shadow: 0 2px 0 #999999;
+}
+
+.ld-light .oitm:hover .item .rarity {
+	text-shadow: 0 1px 0 rgba(0,0,0,0.3) !important;
+	color: white !important;
+}
+
 /*
 * -- End: Light recolorings
 */
@@ -384,8 +412,9 @@ header > a:first-child:active {
 * -- End: Header
 */
 
-.box-shiny a:not([class]), .box-shiny-alt a:not([class]) {
+a {
 	color: #e89300 !important;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.2) !important;
 }
 
 #submenu {
@@ -610,14 +639,13 @@ header > a:first-child:active {
 	100%	{background: #d12121;}
 }
 
+@-webkit-keyframes itemTooltip {
+	0%		{background: #d12121;}
+	100%	{background: #d12121;}
+}
+
 .Warning {
-	-webkit-animation-name: warningPulse;
-	-webkit-animation-duration: 2s;
-	-webkit-animation-timing-function: linear;
-	-webkit-animation-delay: 0.5s;
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-direction: alternate;
-	-webkit-animation-play-state: running;
+	-webkit-animation: warningPulse 2s infinite;
 }
 
 .oitm:hover .item {
@@ -626,6 +654,16 @@ header > a:first-child:active {
 
 	-webkit-box-shadow: inset 0 10px 50px rgba(0,0,0,0.9) !important;
 	box-shadow: inset 0 10px 50px rgba(0,0,0,0.9) !important;
+}
+
+.oitm:hover .rarity {
+	background: linear-gradient(to top, rgba(0,0,0,0.8), transparent) !important;
+	text-shadow: 0 1px 0 black !important;
+}
+
+.oitm:hover .name {
+	opacity: 1 !important;
+	visibility: visible;
 }
 
 .oitm:hover .value {
@@ -652,23 +690,24 @@ header > a:first-child:active {
 .Classified,
 .Covert,
 .Extraordinary {
-	background: white !important;
+	background: linear-gradient(to top, rgba(0,0,0,0.3), transparent) !important;
 }
 
 .item.marketPriced div.rarity {
-	background: white !important;
-	text-shadow: none !important;
+	background: linear-gradient(to top, rgba(0,0,0,0.3), transparent) !important;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5) !important;
 }
 
 .item .rarity {
-	background: white !important;
-	left: -1px;
-	right: -1px;
-	bottom: -1px !important;
+	background: linear-gradient(to top, rgba(0,0,0,0.3), transparent) !important;
+	left: 0px;
+	right: 0px;
+	bottom: 0px !important;
 	width: auto !important;
-	text-shadow: none !important;
-	color: #3a3a3a !important;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5) !important;
+	color: rgba(255,255,255,0.9) !important;
 	box-shadow: 0 2px #555555;
+	line-height: 1rem;
 
 	-webkit-border-radius: 0 0 3px 3px !important;
 	-moz-border-radius: 0 0 3px 3px !important;
@@ -695,7 +734,7 @@ header > a:first-child:active {
 	text-indent: -9999em;
 	width: 21px;
 	height: 21px;
-	bottom: 1.9em;
+	bottom: 1.6em;
 	left: 4px;
 
 	-webkit-border-radius: 0 !important;
@@ -740,6 +779,13 @@ header > a:first-child:active {
 	top: 100% !important;
 	left: 0 !important;
 	min-width: 190px !important;
+	opacity: 0 !important;
+	display: block !important;
+	visibility: hidden;
+
+	-webkit-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
 
 	-webkit-box-shadow: inset 0 10px 40px rgba(0,0,0,0.3);
 	box-shadow: inset 0 10px 40px rgba(0,0,0,0.3);
@@ -1099,7 +1145,7 @@ div.trade-description p,
 }
 
 .team[style*="TBD"] {
-	background: url('http://i.imgur.com/PYSE7cT.png') center center no-repeat !important;
+	background: url('http://i.imgur.com/lfF85da.png') center center no-repeat !important;
 }
 
 .match .matchleft a > div,
@@ -1109,6 +1155,11 @@ div.trade-description p,
 	margin: 0 !important;
 	vertical-align: middle;
 	height: 50px;
+}
+
+.match a {
+	color: #333333 !important;
+	text-shadow: none !important;
 }
 
 .ld-match .matchleft div[style*="margin-top: 0.6em"],
@@ -1195,15 +1246,21 @@ div.trade-description p,
 	background: rgba(255,255,255,0.03);
 }
 
-.box-shiny-alt > div[style*="display: flex"] + div[style*="border: 1px solid #333"] {
+.ld-match div[style*="line-height: 1.5rem"],
+.ld-trade div[style*="line-height: 1.5rem"] {
 	border: none !important;
 	background: #4C4C4C !important;
 	color: white !important;
 	margin: 0 0 20px 0 !important;
+	padding: 0.5em 1em !important;
 
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
+}
+
+.ld-trade div[style*="line-height: 1.5rem"] {
+	margin: 15px 0 20px 0 !important;
 }
 
 .ld-match .box-shiny-alt > a:not(.buttonright) {
@@ -1510,11 +1567,6 @@ a[class*="button"]:hover {
 .standard,
 .box-shiny + .full {
 	color: #939393;
-}
-
-.box-shiny a,
-.box-shiny-alt a {
-	text-shadow: 0 1px 0 rgba(0,0,0,0.2) !important;
 }
 
 .full {
@@ -2423,4 +2475,8 @@ section {
 
 .ld-404 {
 
+}
+
+.profilesmall img[alt="Avatar"] {
+	margin-left: 1rem;
 }
