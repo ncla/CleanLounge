@@ -14,7 +14,5 @@
 			"description": "If selected, your item price (the one, that CSGL provides) will be shown only on hover.",
 			"checked": true
 		}
-	},
-
-	"collapsibleColumns": true
+	}
 }
