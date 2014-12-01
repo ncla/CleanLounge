@@ -1,19 +1,22 @@
 {
-	"icon": "https://raw.githubusercontent.com/farblood/CleanLounge/master/icon.png",
-	"css": "https://raw.githubusercontent.com/farblood/CleanLounge/master/inject.css",
-	"bg": "https://raw.githubusercontent.com/farblood/CleanLounge/master/bg.png",
+	"collapsibleColumns": true,
 
-	"name": "cleanlounge",
-	"author": "farblood",
-	"version": "1.0",
-	"title": "CleanLounge",
-	"description": "Very nice looking dark/light theme for CSGOLounge and DOTA2Lounge.",
+	"icon"			: "https://raw.githubusercontent.com/farblood/CleanLounge/master/icon.png",
+	// "css"			: "https://raw.githubusercontent.com/farblood/CleanLounge/master/inject.css",
+	"bg"			: "https://raw.githubusercontent.com/farblood/CleanLounge/master/bg.png",
 
-	"options": {
+	"name"			: "cleanlounge",
+	"author"		: "farblood",
+	"version"		: "1.0",
+	"title"			: "CleanLounge",
+	"description"	: "Very nice looking dark/light theme for CSGOLounge and DOTA2Lounge.",
+
+	"options"		: {
 		"ld-background-image": {
 			"description": "If selected, CSGOLounge and DOTA2Lounge will have background images.",
 			"checked": true
 		},
+
 		"ld-item-price-show": {
 			"description": "If selected, your item price (the one, that CSGL provides) will be shown only on hover.",
 			"checked": true
