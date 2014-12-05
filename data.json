@@ -1,8 +1,5 @@
 {
-	"collapsibleColumns": true,
-
 	"icon"			: "https://raw.githubusercontent.com/farblood/CleanLounge/master/icon.png",
-	// "css"			: "https://raw.githubusercontent.com/farblood/CleanLounge/master/inject.css",
 	"bg"			: "https://raw.githubusercontent.com/farblood/CleanLounge/master/bg.png",
 
 	"name"			: "cleanlounge",

@@ -424,13 +424,21 @@ a {
 	bottom: 0;
 	left: -249px;
 	top: 0;
-	opacity: 0;
 	z-index: 50;
 
 	-webkit-transition: left 0.25s, opacity 0.25s;
 }
 
-#submenu:hover {
+#submenu .ld-collapse-toggle {
+	position: absolute;
+	right: -20px;
+	display: inline-block;
+	width: 20px;
+	height: 30px;
+	background: black;
+}
+
+#submenu.ld-collapsed {
 	left: 0;
 	opacity: 1;
 }
@@ -616,10 +624,20 @@ footer a:hover {
 	left: auto !important;
 }
 
+#betreturns .oitm,
 #itemlist .oitm,
 #backpack .oitm {
 	margin: 4px .77% !important;
 	width: 15.1% !important;
+}
+
+#freeze + .bpheader {
+	padding: 0 !important;
+}
+
+#freeze + .bpheader .button {
+	float: right;
+	margin-right: 3px !important;
 }
 
 .ld-match .winsorloses {
@@ -648,20 +666,20 @@ footer a:hover {
 	right: 0;
 }
 
-.ld-match .betpoll .left {
+#betpoll .left {
 	background: #4a4a4a !important;
 	width: 55.3% !important;
 	margin: 10px auto !important;
 	float: none !important;
 }
 
-.ld-match .betpoll .left:after {
+#betpoll .left:after {
 	content: '';
 	display: table;
 	clear: both;
 }
 
-.ld-match .betpoll .left .oitm {
+#betpoll .left .oitm {
 	width: 22.6% !important;
 }
 
@@ -911,7 +929,7 @@ footer a:hover {
 	right: 0 !important;
 	top: 0 !important;
 	opacity: 1;
-	z-index: 10;
+	z-index: 1;
 
 	-webkit-transition: opacity 0.1s;
 	-o-transition: opacity 0.1s;
@@ -1533,7 +1551,8 @@ div.trade-description p,
 	font-weight: bold;
 }
 
-#betpoll + .buttonright {
+#betpoll + .buttonright,
+.ld-predict .buttonright {
 	float: none !important;
 	display: inline-block !important;
 	position: relative;
@@ -1544,6 +1563,15 @@ div.trade-description p,
 	-ms-transform: translate(-50%, 0);
 	-o-transform: translate(-50%, 0);
 	transform: translate(-50%, 0);
+}
+
+.ld-predict .buttonright {
+	margin-top: 1em !important;
+	margin-bottom: 1em !important;
+}
+
+#betpoll + .buttonright + div img {
+	margin-top: 1em;
 }
 
 /*
@@ -1608,14 +1636,43 @@ a.tab {
 	background: #3a3a3a !important;
 }
 
+.ld-predict #betpoll .left {
+	width: 25% !important;
+}
+
+.ld-predict #betpoll .left .oitm {
+	width: 47.5% !important;
+}
+
+.box:first-child > div[style*="predict"] {
+	padding-top: 175px !important;
+}
+
+.box:nth-of-type(2) > div[style*="predict"] {
+	background-size: 100% auto;
+	padding: 170px 15px 15px 15px;
+	box-sizing: border-box;
+}
+
+.box:nth-of-type(2) > div[style*="predict"] + div[style*="predict"] {
+	min-height: 197px !important;
+	padding: 0 !important;
+}
+
+.box:nth-of-type(2) > div[style*="predict"] + div[style*="predict"] > a {
+	height: 197px !important;
+}
+
+.box:first-child div[style*="predict"] + div[style*="border-radius"],
 .ld-match .box-shiny-alt + div[style*="border-radius"],
-.ld-match #stream + div[style*="border-radius"] {
+#stream + div[style*="border-radius"] {
 	display: table;
 	width: 96% !important;
 }
 
+.box:first-child div[style*="predict"] + div[style*="border-radius"] > a,
 .ld-match .box-shiny-alt + div[style*="border-radius"] > a,
-.ld-match #stream + div[style*="border-radius"] > a {
+#stream + div[style*="border-radius"] > a {
 	width: 33.3333% !important;
 	display: table-cell;
 	vertical-align: middle;
@@ -2454,7 +2511,7 @@ hr {
 	color: #ED8D20 !important;
 }
 
-.ld-mybets .name i {
+.ld-mybets .box:first-child .name i {
 	margin-bottom: 7px !important;
 }
 
