@@ -1,6 +1,7 @@
 {
-	"icon"			: "https://raw.githubusercontent.com/farblood/CleanLounge/master/icon.png",
-	"bg"			: "https://raw.githubusercontent.com/farblood/CleanLounge/master/bg.png",
+	"icon"			: "http://api.ncla.me/themes/CleanLounge/icon.png",
+	"bg"			: "http://api.ncla.me/themes/CleanLounge/bg.png",
+	"css"			: "http://api.ncla.me/themes/CleanLounge/inject.css",
 
 	"name"			: "cleanlounge",
 	"author"		: "farblood",
@@ -16,7 +17,7 @@
 
 		"ld-item-price-show": {
 			"description": "If selected, your item price (the one, that CSGL provides) will be shown only on hover.",
-			"checked": true
+			"checked": false
 		}
 	}
 }
