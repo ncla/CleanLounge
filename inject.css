@@ -1334,6 +1334,10 @@ div.trade-description p,
 	box-sizing: border-box;
 }
 
+div.trade-description p:empty {
+	display: none;
+}
+
 .matchheader {
 	display: table;
 }
