@@ -21,29 +21,31 @@ body {
 	color: white;
 }
 
-body.ld-light {
+/*body.ld-light {
 	background: #f9f9f9;
 }
-
-body.appID730.ld-dark.ld-background-image {
+*/
+body.appID730.ld-dark.ld-background-image,
+body.appID730.ld-light.ld-background-image {
 	background: #1e1e1e url('http://i.imgur.com/CBURaP7.png') top center no-repeat;
 }
 
-body.appID730.ld-light.ld-background-image {
+/*body.appID730.ld-light.ld-background-image {
 	background: #f9f9f9 url('http://i.imgur.com/Ps9Jvd3.png') top center no-repeat;
-}
+}*/
 
 /*
 * -- Dota2Lounge stylings
 */
 
-body.appID570.ld-dark.ld-background-image {
+body.appID570.ld-dark.ld-background-image,
+body.appID570.ld-light.ld-background-image {
 	background: #1e1e1e url('http://i.imgur.com/i3m8HzC.png') top center no-repeat;
 }
 
-body.appID570.ld-light.ld-background-image {
+/*body.appID570.ld-light.ld-background-image {
 	background: #f9f9f9 url('http://i.imgur.com/ZHsP4k1.png') top center no-repeat;
-}
+}*/
 
 .appID570 header > a:first-child:before {
 	content: url('http://i.imgur.com/FBehcg8.png');	
@@ -95,7 +97,7 @@ body.appID570.ld-light.ld-background-image {
 * -- Light recolorings
 */
 
-.ld-light header {
+/*.ld-light header {
 	background: linear-gradient(to top, rgba(255,255,255,0.9), rgba(255,255,255,0));
 	border-bottom: 1px solid #f0f0f0;
 }
@@ -273,7 +275,7 @@ body.appID570.ld-light.ld-background-image {
 	color: #8d8d8d;
 	text-shadow: white 0 1px 0;
 }
-
+*/
 /*
 * -- End: Light recolorings
 */
