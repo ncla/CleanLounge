@@ -482,6 +482,7 @@ footer a:hover {
 
 #freeze + .bpheader {
 	padding: 0;
+	background: none;
 }
 
 #freeze + .bpheader .button {
@@ -506,7 +507,7 @@ footer a:hover {
 	width: 23.7%;
 }
 
-.ld-match .winsorloses:nth-of-type(even) {
+.ld-match .winsorloses:nth-child(odd) {
 	margin-right: 4%;
 }
 
@@ -617,7 +618,7 @@ footer a:hover {
 
 .oitm {
 	margin: 4px 1.165%;
-	min-width: 69px;
+	min-width: 0;
 	min-height: 54px;
 	padding-bottom: 1px;
 }
@@ -712,8 +713,9 @@ footer a:hover {
 	background: linear-gradient(to top, rgba(0,0,0,0.35), transparent);
 }
 
-.item.marketPriced div.rarity {
-	background: linear-gradient(to top, rgba(0,0,0,0.35), transparent);
+.appID730 .marketPriced .rarity,
+.appID570 .marketPriced .rarity {
+	background: linear-gradient(to top, rgba(0,0,0,0.35), transparent) !important;
 	text-shadow: 0 1px 0 black;
 }
 
@@ -949,7 +951,6 @@ footer a:hover {
 a[onclick*="setBackpackCurl"]:not(.tab) {
 	text-shadow: none;
 	color: #FF8A00;
-	line-height: 35px;
 }
 
 #bets {
@@ -972,9 +973,12 @@ a[onclick*="setBackpackCurl"]:not(.tab) {
 	background: radial-gradient(#3a3a3a 15%, #333333 85%);
 	display: inline-block;
 	width: 48.5%;
+	padding: 0.15em;
+
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 
 	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 }
 
@@ -989,8 +993,9 @@ a[onclick*="setBackpackCurl"]:not(.tab) {
 .betheader {
 	background: rgba(255,255,255,0.02);
 	margin: 0;
-	width: 97.67%;
-	padding: .5em 1.165%;
+	width: calc(100% - 1.2em);
+	padding: .5em 0.75em;
+	margin: -.15em -.15em 0 -.15em;
 	border-bottom: 1px solid rgba(255,255,255,0.03);
 }
 
@@ -1987,7 +1992,7 @@ br + .full {
 	padding: 4px;
 }
 
-#ajaxCont table tbody > tr > td span {
+#ajaxCont table tbody > tr > td > span {
 	text-shadow: none;
 	display: inline-block;
 	background: #555555;
@@ -2015,13 +2020,13 @@ br + .full {
 	user-select: none;
 }
 
-#ajaxCont table tbody > tr > td span.lost {
+#ajaxCont table tbody > tr > td > span.lost {
 	background: #962c2c;
 	color: white;
 	text-shadow: rgba(0,0,0,0.2);
 }
 
-#ajaxCont table tbody > tr > td span.won {
+#ajaxCont table tbody > tr > td > span.won {
 	background: #629e2d;
 	color: white;
 	text-shadow: rgba(0,0,0,0.2);
@@ -2035,17 +2040,12 @@ br + .full {
 	line-height: 24px;
 
 	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 
 	-webkit-transition: all 0.1s;
-	-o-transition: all 0.1s;
 	transition: all 0.1s;
 
 	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
 	user-select: none;
 }
 
