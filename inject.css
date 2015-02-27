@@ -697,6 +697,12 @@ footer a:hover {
 	-webkit-animation: fadein 0.6s;
 }
 
+.item .smallimg[src*="fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZYMUrsm1j-9xgEObwgfEh_nvjlWhNzZCveCDfIBj98xqodQ2CZknz52YOLkDzRyTQmWAPRhW-cz8g7lBxg_7cNqQdr49bpVfVjst4SSNLcvYtAaHsLQUv-Fblr4vhltiKZeKcSPo3651CrtM3BKBUSNo3T8XA"],
+.item .smallimg[src*="fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZYMUrsm1j-9xgEObwgfEh_nvjlWhNzZCveCDfIBj98xqodQ2CZknz52YOLkDzRyTQmWAPRhW-cz8g7lBxg67cZ1TZm0rr8ALAS-tNaTZbkuM4waScfSCfPXMgD7u0ox0acOeZSPqSrm3Cy7JC5UDOsCbsHU"],
+.item .smallimg[src*="fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZYMUrsm1j-9xgEObwgfEh_nvjlWhNzZCveCDfIBj98xqodQ2CZknz52YOLkDzRyTQmWAPRhW-cz8g7lBxg-4cBrQJm39rlRKgy7toKTZ-EsYolOS8bRU_aPYgupuUg9iaELep2Ppyi72y7vJC5UDFSUDyoF"] {
+	content: url("https://steamcommunity-a.akamaihd.net/economy/image/fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZYMUrsm1j-9xgEObwgfEh_nvjlWhNzZCveCDfIBj98xqodQ2CZknz52YOLkDzRyTQmWAPRhW-cz8g7lBxg-4cBrQOi69qkBLBLtsYeUZ7gvZoxPG8OFC_7Tbl317ho51KQOJpGApSO73X_rPD1bDUK-5CtazxgA6RbO/99fx66f");
+}
+
 .item .smallimg[onerror*="gift"] {
 	width: 100%;
 	margin: 0;
@@ -2415,7 +2421,7 @@ hr {
 	margin-bottom: -6px;
 }
 
-.ld-mybets .full span {
+.ld-mybets .box:first-child .full span {
 	line-height: 30px;
 	width: 135px;
 	display: inline-block;
