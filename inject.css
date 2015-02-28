@@ -484,13 +484,6 @@ footer a:hover {
 	left: auto;
 }
 
-#betreturns .oitm,
-#itemlist .oitm,
-#backpack .oitm {
-	margin: 4px .77%;
-	width: 15.12%;
-}
-
 #freeze + .bpheader {
 	padding: 0;
 	background: none;
@@ -2721,6 +2714,13 @@ section {
 	.box {
 		width: 48% !important;
 	}
+
+	#betreturns .oitm,
+	#itemlist .oitm,
+	#backpack .oitm {
+		margin: 4px .77% !important;
+		width: 15.12% !important;
+	}
 }
 
 @media screen and (min-width: 1550px) {
@@ -2731,5 +2731,12 @@ section {
 
 	.ld-match .oitm {
 		width: 11.5%;
+	}
+
+	#betreturns .oitm,
+	#itemlist .oitm,
+	#backpack .oitm {
+		margin: 4px .77% !important;
+		width: 10.96% !important;
 	}
 }
