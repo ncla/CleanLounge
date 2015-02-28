@@ -711,12 +711,6 @@ footer a:hover {
 	background: linear-gradient(to top, rgba(0,0,0,0.35), transparent);
 }
 
-.appID730 .marketPriced .rarity,
-.appID570 .marketPriced .rarity {
-	background: linear-gradient(to top, rgba(0,0,0,0.35), transparent) !important;
-	text-shadow: 0 1px 0 black;
-}
-
 .item .rarity {
 	background: linear-gradient(to top, rgba(0,0,0,0.35), transparent) !important;
 	left: -1px;
@@ -733,15 +727,15 @@ footer a:hover {
 	border-radius: 0 0 3px 3px;
 }
 
-.item .rarity[style]:not(.Consumer),
-.item .rarity[style]:not(.Base),
-.item .rarity[style]:not(.Industrial),
-.item .rarity[style]:not(.Mil-Spec),
-.item .rarity[style]:not(.Restricted),
-.item .rarity[style]:not(.Covert),
-.item .rarity[style]:not(.Extraordinary),
+.item .rarity[style],
 .item .rarity.Any {
 	background: none;
+}
+
+.appID730 .marketPriced .rarity,
+.appID570 .marketPriced .rarity {
+	background: linear-gradient(to top, rgba(0,0,0,0.35), transparent) !important;
+	text-shadow: 0 1px 0 black;
 }
 
 .item .rarity.Consumer, .item .rarity.Base { box-shadow: 0px 2px #b3cdea; }
@@ -2154,8 +2148,8 @@ br + .selectbox {
 	color: #d7d7d7;
 	text-shadow: 0px 1px 0px rgba(0,0,0,0.1);
 
-	-webkit-box-shadow: 0px 2px 3px rgba(0,0,0,0.05)
-	box-shadow: 0px 2px 3px rgba(0,0,0,0.05)
+	-webkit-box-shadow: 0px 2px 3px rgba(0,0,0,0.05) !important;
+	box-shadow: 0px 2px 3px rgba(0,0,0,0.05) !important;
 
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
