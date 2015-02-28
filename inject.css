@@ -1,5 +1,16 @@
 @import url('http://fonts.googleapis.com/css?family=Roboto:400italic,700italic,700,400&subset=latin,cyrillic');
 
+@-webkit-keyframes fadein {
+	from	{ opacity: 0; }
+	top		{ opacity: 1; }
+}
+
+@-webkit-keyframes warningPulse {
+	0%		{ background: #d12121; }
+	50%		{ background: #F75858; }
+	100%	{ background: #d12121; }
+}
+
 html {
 	min-height: 100%;
 	height: 100%;
@@ -155,12 +166,12 @@ header > a:first-child:active {
 
 #menu {
 	height: 100%;
+	float: left;
 }
 
 #menu a {
 	letter-spacing: 0.2px;
 	text-shadow: none;
-	padding: 7px 12px;
 	font-size: 12px;
 	height: 100%;
 	float: left;
@@ -180,11 +191,11 @@ header > a:first-child:active {
 }
 
 #menu a:hover {
-	background: rgba(0,0,0,0.25);
+	background: rgba(0,0,0,0.13);
 }
 
 #menu a:active {
-	background: rgba(0,0,0,0.4);
+	background: rgba(0,0,0,0.23);
 }
 
 #menu a img {
@@ -226,6 +237,13 @@ header > a:first-child:active {
 	background-repeat: no-repeat;
 	background-position: center center;
 	padding: 0 12px;
+
+	-webkit-transition: opacity .15s;
+	transition: opacity .15s;
+}
+
+#login:hover, #logout:hover {
+	opacity: 0.75;
 }
 
 /*#login + .ddbtn, #logout + .ddbtn {
@@ -266,6 +284,7 @@ a {
 	left: -249px;
 	top: 0;
 	z-index: 50;
+	display: none;
 
 	-webkit-transition: left 0.25s, opacity 0.25s;
 }
@@ -469,7 +488,7 @@ footer a:hover {
 #itemlist .oitm,
 #backpack .oitm {
 	margin: 4px .77%;
-	width: 15.1%;
+	width: 15.12%;
 }
 
 #freeze + .bpheader {
@@ -523,17 +542,6 @@ footer a:hover {
 
 #betpoll .left .oitm {
 	width: 22.6%;
-}
-
-@media screen and (min-width: 1550px) {
-	.ld-main .tradepoll .oitm {
-		width: 23% !important;
-		margin: 4px 1% !important;
-	}
-
-	.ld-match .oitm {
-		width: 11.5%;
-	}
 }
 
 .inventoryStatisticsBox {
@@ -603,9 +611,12 @@ footer a:hover {
 	padding: 15px 20px;
 }
 
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+.item.Warning,
+.oitm:hover .item.Warning {
+	border-color: #d12121 !important;
+
+	-webkit-animation: warningPulse 2s infinite;
+	animation: warningPulse 2s infinite;
 }
 
 .oitm {
@@ -613,6 +624,7 @@ footer a:hover {
 	min-width: 0;
 	min-height: 54px;
 	padding-bottom: 1px;
+	max-width: none;
 }
 
 .item {
@@ -624,39 +636,25 @@ footer a:hover {
 	box-shadow: inset 0 10px 50px rgba(0,0,0,0.7);
 
 	-webkit-transition: all 0.1s;
-	-o-transition: all 0.1s;
 	transition: all 0.1s;
 
 	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
 	user-select: none;
 }
 
-.Souvenir,
+.item.Souvenir,
 .oitm:hover .item.Souvenir {
 	border-color: #e7b848 !important;
 }
 
-.StatTrak,
+.item.StatTrak,
 .oitm:hover .item.StatTrak {
 	border-color: #d67e1f !important;
 }
 
-.Star,
+.item.Star,
 .oitm:hover .item.Star {
 	border-color: #b171df !important;
-}
-
-@-webkit-keyframes warningPulse {
-	0%		{background: #d12121;}
-	50%		{background: #F75858;}
-	100%	{background: #d12121;}
-}
-
-.Warning {
-	-webkit-animation: warningPulse 2s infinite;
 }
 
 .oitm:hover .item {
@@ -868,7 +866,6 @@ footer a:hover {
 .box {
 	background: none;
 	margin: 15px 1%;
-	width: 48%;
 	padding: 0;
 
 	-webkit-box-shadow: none;
@@ -2686,10 +2683,53 @@ section {
 * -- End: Donations (/donations)
 */
 
-/*
-* -- Rules (/rules)
-*/
+@media screen and (min-width: 100px) {
+	.box {
+		width: 98% !important;
+	}
 
-/*
-* -- End: Rules (/rules)
-*/
+	.left, .right {
+		max-width: none !important;
+	}
+
+	.tradecnt .left {
+		margin-bottom: 8px !important;
+	}
+
+	.left::before, .right::before {
+		content: none;
+	}
+
+	header > a:first-child {
+		padding: 11px 7px;
+	}
+
+	#menu a {
+		padding: 7px !important;
+	}
+}
+
+@media screen and (min-width: 931px) {
+	#menu a {
+		padding: 7px 12px !important;
+	}
+
+	header > a:first-child {
+		padding: 11px 12px;
+	}
+
+	.box {
+		width: 48% !important;
+	}
+}
+
+@media screen and (min-width: 1550px) {
+	.ld-main .tradepoll .oitm {
+		width: 23% !important;
+		margin: 4px 1% !important;
+	}
+
+	.ld-match .oitm {
+		width: 11.5%;
+	}
+}
