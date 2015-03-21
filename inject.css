@@ -201,7 +201,8 @@ header > a:first-child:active {
 	height: 40px;
 }
 
-#menu a img[alt="Profile"] {
+#menu a img[alt="Profile"],
+#menu a img[alt="Sign in as..."] {
 	content: url('http://i.imgur.com/4r3TLTO.png');
 }
 
@@ -1122,6 +1123,11 @@ div.trade-description a:hover {
 	text-decoration: underline;
 }
 
+.tradepoll.ld-market div.tradescription p {
+	background: radial-gradient(rgb(140, 48, 48) 15%, rgb(158, 46, 46) 85%);
+	color: rgb(255, 110, 110);
+}
+
 div.trade-description p,
 .tradepoll:hover div.trade-description p {
 	background: radial-gradient(#3a3a3a 15%, #333333 85%);
@@ -1130,7 +1136,7 @@ div.trade-description p,
 	line-height: 17px;
 	width: 100%;
 	color: rgb(153, 153, 153);
-	border: none;
+	border: none !important;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.2);
 	word-break: break-all;
 
@@ -2675,7 +2681,7 @@ section {
 * -- End: Donations (/donations)
 */
 
-@media screen and (min-width: 100px) {
+@media screen and (max-width: 930px) {
 	.box {
 		width: 98% !important;
 	}
@@ -2704,6 +2710,10 @@ section {
 @media screen and (min-width: 931px) {
 	#menu a {
 		padding: 7px 12px !important;
+	}
+
+	.tradecnt .left {
+		margin-bottom: 0 !important;
 	}
 
 	header > a:first-child {
