@@ -1123,9 +1123,11 @@ div.trade-description a:hover {
 	text-decoration: underline;
 }
 
-.tradepoll.ld-marked div.tradescription p {
+.tradepoll.ld-marked .trade-description p,
+.tradepoll.ld-marked:hover .trade-description p {
 	background: radial-gradient(rgb(140, 48, 48) 15%, rgb(158, 46, 46) 85%);
 	color: rgb(255, 110, 110);
+	border-left: none !important;
 }
 
 div.trade-description p,
