@@ -2,4 +2,4 @@ CleanLounge
 ===========
 
 To-Do:
-- Start the new version from scratch to completely rewrite CSGOLounge's and DOTA2Lounge's style.
+- Completely rewrite the theme, because LoungeDestroyer will disable Lounge's styling.
