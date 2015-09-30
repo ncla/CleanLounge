@@ -1,0 +1,540 @@
+// Match's header
+.box:first-child
+	> .box-shiny-alt
+		> div[style*="display: flex"]
+			display: table !important
+			width: 100%
+			height: 32px
+			margin: -10px 0 10px 0
+			position: relative
+			text-align: left
+
+			&:after
+				content: ""
+				background: rgba(255,255,255,0.06)
+				height: 1px
+				display: block
+				position: absolute
+				right: -10px
+				left: -10px
+				bottom: 0
+
+			> .half
+				display: table-cell
+				font-size: 1em !important
+				padding-bottom: 1px
+				float: none
+				vertical-align: middle
+				width: (100% / 3) !important
+
+				// Format
+				&:nth-child(2)
+
+					&:not(:empty)
+						border-left: 1px solid rgba(255,255,255,0.06)
+						border-right: 1px solid rgba(255,255,255,0.06)
+
+			// Note
+			+ div[style*="background: #444"]
+				background: transparent !important
+				+background-image(linear-gradient(to top, $color-red, lighten($color-red, 2%)) !important)
+				color: white
+				text-transform: uppercase
+				line-height: 1em !important
+				border: none !important
+				padding: 9px 10px !important
+				margin: -11px -10px 0 -10px !important
+				text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+				+box-shadow(inset 0 1px 0 saturate(lighten($color-red, 2%), 15%), 0 1px 3px rgba(0,0,0,0.08))
+
+				+ a,
+				+ a + span[style*="width: 10%"],
+				+ a + span + a
+					margin-top: 0 !important
+
+				+ a + span[style*="width: 10%"]
+					position: relative
+					top: 10px
+
+			// Teams to bet on
+			+ div[style*="background: #444"] + a,
+			+ div[style*="background: #444"] + a + span + a,
+			+ a,
+			+ a + span + a
+				background: rgba(0,0,0,0.08)
+				float: left
+				display: block
+				width: calc(100% / 2 - 10px)
+				cursor: pointer
+				margin: -10px 0 -10px -10px
+				padding: 15px 10px
+				z-index: 1
+				position: relative
+				text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+				+box-sizing(border-box)
+				+transition(color 0.2s)
+
+				> span
+					width: 100% !important
+					float: none !important
+					display: block
+					+pie-clearfix
+
+					> b, i
+						display: block
+						text-decoration: none
+
+					> b
+						font-size: 1.1em
+						font-weight: normal
+						display: inline-block
+						padding-top: 0.55em
+						+border-radius(2px)
+
+					> br
+						display: none
+
+				.team
+					background-color: #bbbbbb !important
+					display: inline-block
+					height: 50px
+					width: 60px
+					margin: 0 0 0 1.1em !important
+					line-height: 1em
+					border: 2px solid lighten(#bbbbbb, 8%)
+					position: relative
+					+border-radius(2px)
+					+transition(all 0.2s)
+					+box-shadow(0 1px 3px rgba(0,0,0,0.15))
+
+					&[style*="float: left"]
+						margin: 0 1.1em 0 0 !important
+
+					&:after
+						content: ""
+						display: block
+						position: absolute
+						left: 0
+						top: 0
+						width: 60px
+						height: 50px
+						background: rgba(255,255,255,0.15)
+						opacity: 1
+						+transition(all 0.2s)
+						+box-shadow(inset 0 0 1em rgba(255,255,255,0.4))
+
+					&:before
+						content: ""
+						display: inline-block
+						width: 0
+						height: 0
+						border-top: 4px solid transparent
+						border-bottom: 4px solid transparent
+						border-right: 3px solid $color-orange
+						position: absolute
+						left: 0
+						top: 50%
+						margin-top: -4px
+						opacity: 0
+						+transition(all 0.2s)
+
+				&:before
+					content: ""
+					display: block
+					position: absolute
+					left: 0
+					top: 0
+					right: 0
+					bottom: 0
+					z-index: -10
+					+transition(all 0.2s)
+					background: transparent
+
+				&:hover
+					color: lighten($color-orange, 10%)
+					text-decoration: none !important
+
+					.team
+						border-color: lighten(#c0c0c0, 22%)
+						+box-shadow(0 3px 9px rgba(0,0,0,0.3))
+
+				&.active
+					color: lighten($color-orange, 10%)
+
+					.team
+						border-color: lighten($color-orange, 5%)
+						+box-shadow(0 2px 16px rgba(0,0,0,0.5))
+
+						&:after
+							opacity: 0
+
+						&:before
+							opacity: 1
+							left: -5px
+
+					&:before
+						+background-image(linear-gradient(to right, rgba(0,0,0,0.2), transparent))
+
+				&:not([onclick*="selectTeam"])
+					&:hover
+						text-decoration: none !important
+
+				// "vs"
+				+ span[style*="width: 10%"]
+					background: rgba(0,0,0,0.1)
+					float: left !important
+					display: block
+					line-height: 54px
+					padding: 15px 0
+					width: 40px !important
+					margin: -10px 0 !important
+					color: darken($body-font-color, 5%)
+					cursor: default
+
+					+ a
+						margin: -10px -10px -10px 0
+
+						&.active
+							&:before
+								+background-image(linear-gradient(to left, rgba(0,0,0,0.2), transparent))
+
+							.team
+								&:before
+									right: -5px
+
+						.team
+							&:before
+								right: 0
+								left: auto
+								border-right: none
+								border-left: 3px solid $color-orange
+
+						+ .full
+							position: relative
+							padding-top: 8px
+							margin-top: 10px
+
+							&:before
+								content: ""
+								display: block
+								position: absolute
+								left: -10px
+								right: -10px
+								top: 0
+								height: 1px
+								background: rgba(255,255,255,0.06)
+
+							> .half
+								> div[style]
+									margin: 0 !important
+
+								&:last-child
+									text-align: right
+
+		#betpoll
+			position: relative
+			display: inline-block
+			width: 100%
+			top: 10px
+			margin-bottom: 15px
+			padding-top: 1px
+
+			&:after
+				content: ""
+				display: block
+				position: absolute
+				left: -10px
+				right: -10px
+				bottom: 0
+				height: 1px
+				background: rgba(255,255,255,0.06)
+
+			> .betpoll
+				line-height: 0
+				float: left
+				width: 100%
+
+				> .left
+					width: 55%
+					float: none
+					display: block
+					+pie-clearfix
+
+					.oitm
+						width: (100% / 4) !important
+
+						.name
+							left: 50% !important
+							margin-left: -112.5px !important
+
+					&:not(:empty)
+						margin: 10px auto
+
+					&:empty
+						display: block
+						padding: 0
+
+						&:before
+							content: none
+
+					&:before
+						content: ""
+						display: block
+						position: absolute
+						left: -10px
+						right: -10px
+						top: 0
+						height: 1px
+						background: rgba(255,255,255,0.06)
+
+		#placebut
+			float: none
+			position: relative
+			width: 150px !important
+			left: 50%
+			margin-left: -75px
+			text-transform: uppercase
+
+			&:hover
+				text-decoration: none
+
+			&[style*="display: none"]
+				display: inline-block !important
+				opacity: 0.3
+				cursor: wait
+
+			span.ld-btn-icon
+				display: none
+
+		.standard
+			> a
+				display: block
+				margin-top: 10px
+
+			img
+				display: block
+
+// Lounge's share icons
+.share-buttons
+	display: none
+
+// Twitch chat
+#chat_embed
+	margin-top: -4px
+
+// Disqus embed
+#disqus_thread
+	padding: 0 10px
+	color: white
+	position: relative
+	display: block
+	margin-top: 3.55em
+	+border-radius(2px)
+	+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+	+background-image(radial-gradient(lighten(#323232, 3%) 15%, lighten(#2d2d2d, 3%) 85%))
+
+	&:before
+		content: "Disqus"
+		position: absolute
+		top: -1.4em
+		left: 0
+
+// Last 30 bets
+#bets
+	margin: 0 !important
+	+pie-clearfix
+
+	.winsorloses
+		width: calc(50% - 5px)
+		margin-bottom: 10px
+
+		.betheader
+			text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+			position: relative
+			padding: 5px 4px 8px 4px
+			margin-bottom: 2px
+			line-height: 1em
+			max-width: 100%
+
+			&:after
+				content: ""
+				display: block
+				position: absolute
+				left: -2px
+				right: -2px
+				bottom: 0
+				background: rgba(255,255,255,0.06)
+				height: 1px
+
+			> span
+				color: $body-font-color !important
+				font-size: 1em !important
+
+				> b
+					white-space: nowrap
+					text-overflow: ellipsis
+					overflow: hidden
+					max-width: 74%
+					display: inline-block
+					float: left
+					margin-right: 0.3em
+
+		&:nth-child(even)
+			margin-left: 10px
+
+#disqus_thread, #last30bets
+	&[style*="display: inline-block"]
+		display: block !important
+
+	&[style*="display:none"],
+	&[style*="display: none"]
+		display: none !important
+
+// Inventory value stats
+.inventoryStatisticsBox
+	margin: 0 0 10px 0
+	width: 100%
+	padding: 0
+	color: $body-font-color
+	text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+	line-height: 36px
+	+border-radius(2px)
+	+background-image(radial-gradient(lighten(#323232, 3%) 15%, lighten(#2d2d2d, 3%) 85%))
+	+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+
+	#totalInvValue
+		text-align: center
+
+		> span
+			font-weight: bold
+			color: lighten($body-font-color, 15%)
+
+	#rarityValues
+		background: rgba(0,0,0,0.02)
+		border-top: 1px solid rgba(255,255,255,0.06)
+		border-bottom: 1px solid rgba(255,255,255,0.06)
+		margin: 0
+		width: 100%
+		+box-shadow(inset 0 0 5em rgba(0,0,0,0.08))
+		+pie-clearfix
+
+		.rarityContainer
+			float: left
+			width: 50%
+			padding: 2px 14px
+			border-right: 1px solid rgba(255,255,255,0.06)
+			border-top: 1px solid rgba(255,255,255,0.06)
+			+box-sizing(border-box)
+
+			&:nth-child(even)
+				border-right: none
+
+			&:first-child, &:nth-child(2)
+				border-top: none
+
+			span
+				font-weight: bold
+
+	#betSizeValues
+		font-size: 1em
+		text-align: center
+		margin: 0
+
+		> span
+			+ span
+				&:before
+					content: "/"
+					color: darken($body-font-color, 20%)
+					margin: 0 12px
+
+	#betSizeValues span,
+	#rarityValues div.rarityContainer div
+		padding: 0
+
+	// Rarity colors
+	.covert
+		color: $item-rarity-covert
+
+	.classified
+		color: $item-rarity-classified
+
+	.restricted
+		color: $item-rarity-restricted
+
+	.mil-spec
+		color: $item-rarity-milspec
+
+	.industrial
+		color: $item-rarity-industrial
+
+	.consumer
+		color: $item-rarity-consumer
+
+// LoungeDestroyer's "Add new group" feature
+.ld-add-item-group-wrapper
+	border-top: 1px solid rgba(255,255,255,0.08)
+	margin: 8px 0 5px 0
+	padding-top: 10px
+	+pie-clearfix
+
+	.selectbox
+		float: right
+		width: 270px
+
+// Donation to a stream
+#mainstream
+	> .tab
+		margin: 6px 0 10px 0
+		width: 100%
+		text-transform: uppercase
+
+// Bet queue
+#queue
+	background: none !important
+	+background-image(linear-gradient(to bottom, rgba(255,255,255,0.04), transparent), radial-gradient(lighten(#3a3a3a, 5%) 15%, lighten(#353535, 5%) 85%) !important)
+	+box-shadow(0 3px 7px rgba(0,0,0,0.18) !important)
+	+background-clip(padding-box)
+	+border-radius(2px !important)
+	padding: 8px 20px !important
+	text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+	color: white
+	width: 180px !important
+	text-align: center
+	z-index: 9999
+	right: 10px !important
+	bottom: 9px !important
+
+	.button
+		margin: 15px 0
+
+		&:before, &:after
+			content: ""
+			display: block
+			position: absolute
+			left: 0
+			right: 0
+			height: 1px
+			background: rgba(255,255,255,0.08)
+			top: 32px
+
+		&:after
+			top: 78px
+
+	.info
+		margin-bottom: 1px
+
+		.infobox
+			background: $color-orange
+			color: white
+			left: auto
+			right: -53px
+			+transform(none)
+
+	// Hiding and moving away an element, in which appears a notification sound (just in case, you know)
+	#soudbet
+		display: none
+		position: absolute
+		right: -999px
+		bottom: -999px
+		width: 1px
+		height: 1px

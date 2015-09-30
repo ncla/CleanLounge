@@ -1,0 +1,23 @@
+#modalPreview
+    display: none
+    position: fixed
+    z-index: 1000
+    margin: auto
+    height: 50%
+    width: 50%
+    bottom: 0
+    right: 0
+    left: 0
+    top: $header-height
+    padding: 10px
+    border: 2px solid lighten(#323232, 7%)
+    +border-radius(2px)
+    +background-image(radial-gradient(lighten(#323232, 1%) 15%, lighten(#2d2d2d, 1%) 85%))
+    +box-shadow(0 0 6em rgba(0,0,0,0.6), inset 0 10em 20em rgba(0,0,0,0.2))
+
+    img
+        position: absolute
+        max-height: 100%
+        left: 50%
+        top: 50%
+        +transform(translate(-50%, -50%))

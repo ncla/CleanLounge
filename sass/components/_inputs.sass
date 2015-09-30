@@ -1,0 +1,56 @@
+.selectbox, textarea.message, .destroyer.auto-info input
+    background: rgba(0,0,0,0.08)
+    padding: 5px 10px !important
+    border: 1px solid rgba(255,255,255,0.1)
+    text-shadow: 0 1px 0 rgba(0,0,0,0.1)
+    color: $body-font-color
+    vertical-align: middle
+    +border-radius(2px)
+    +box-sizing(border-box)
+    +transition(all 0.2s)
+
+    +placeholder
+        color: $body-font-color
+        +transition(all 0.2s)
+
+    &:hover
+        color: lighten($body-font-color, 5%)
+        background: rgba(0,0,0,0.12)
+        text-shadow: 0 1px 0 rgba(0,0,0,0.18)
+        border-color: rgba(255,255,255,0.12)
+        +box-shadow(inset 0 1px 3px rgba(0,0,0,0.08))
+
+        +placeholder
+            color: lighten($body-font-color, 5%)
+
+    &:focus
+        color: lighten($body-font-color, 10%)
+        background: rgba(0,0,0,0.14)
+        text-shadow: 0 1px 0 rgba(0,0,0,0.18)
+        border-color: rgba(255,255,255,0.13)
+        +box-shadow(inset 0 3px 8px rgba(0,0,0,0.13))
+
+        +placeholder
+            color: lighten($body-font-color, 10%)
+
+select
+    cursor: pointer
+    vertical-align: middle
+
+    &.selectbox
+        height: 30px
+        padding: 0 6px !important
+
+        option
+            background: #f0f0f0
+            color: #4a4a4a
+
+textarea
+    resize: none
+    vertical-align: middle
+
+    &.message
+        width: 100% !important
+        display: block
+        margin: 0 !important
+        height: 70px !important

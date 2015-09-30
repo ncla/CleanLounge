@@ -1,0 +1,325 @@
+// Items
+.oitm
+	display: inline-block
+	position: relative
+	width: (100% / 8)
+	max-width: 109px
+	min-width: 69px
+	padding: 2px
+	float: left
+	-webkit-user-select: none
+	cursor: pointer
+	+box-sizing(border-box)
+
+	&:hover
+		.item
+			background: $item-holder-hover-color
+			border-color: #5e5e5e
+			box-shadow: inset 0 0.8em 4em rgba(0,0,0,0.9)
+
+		.name, .itemoptions
+			visibility: visible
+			opacity: 1 !important
+			top: 100%
+
+	// Hide ".rarity" for non-items
+	&:not(.marketPriced)
+		.item
+			.rarity:not(.Covert):not(.Extraordinary):not(.Classified):not(.Restricted):not(.Mil-Spec):not(.Industrial):not(.Consumer):not(.Base)
+				&[style]
+					display: none
+
+	&.marketPriced .item, .item img[onerror*="gift"] +
+		.rarity:not(.Covert):not(.Extraordinary):not(.Classified):not(.Restricted):not(.Mil-Spec):not(.Industrial):not(.Consumer):not(.Base)
+			border-bottom-color: #bebebe
+
+	// Item holder
+	.item
+		position: relative
+		background: $item-holder-color
+		width: 100%
+		border: 1px solid #8b8d8f
+		+box-shadow(inset 0 0.8em 4em rgba(0,0,0,0.7))
+		+transition(all 0.15s)
+		+box-sizing(border-box)
+		+border-radius(2px)
+
+		&:active
+			background: $item-holder-pressed-color
+			border-color: darken(#5e5e5e, 6%)
+
+		&:after
+			padding-top: 75%
+			display: block
+			content: ""
+			+transition(all 0.15s)
+
+		// Item preview image
+		img
+			-webkit-user-drag: none
+			position: absolute
+			width: 94%
+			left: 50%
+			top: 50%
+			+transform(translate(-50%, -50%))
+			+transition(opacity 0.2s)
+
+			&[onerror*="gift"]
+				width: 100%
+				left: 0
+				+transform(translateY(-50%))
+
+			// Image URL fixes
+			// M4A4 | Griffin
+			&[src*="fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZYMUrsm1j-9xgEObwgfEh_nvjlWhNzZCveCDfIBj98xqodQ2CZknz52YOLkDzRyTQmWAPRhW-cz8g7lBxg"]
+				content: url("http://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhjxszFJTwW09uknYaNnvnLPr7Vn35cppcgi-3EoN-s2AOy-BJtNzjydY-TcFA9N13X_VS7wOfphJe4v8nJmiR9-n51W4Rymss/99fx66f")
+
+			// Five-SeveN | Monkey Business
+			&[src*="fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZYMUrsm1j-9xgEObwgfEh_nvjlWhNzZCveCDfIBj98xqodQ2CZknz59PfWwIzJxdwr9ArVhWvws8RvpHyI818ViWta49oQ"]
+				content: url("http://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposLOzLhRlxfbGTj5X09q_goWYkuHxPYTTl2VQ5sROh-zF_Jn4xlbkqURvZmiidYKRdAFoNVzR81bryLvmjZ7o6ZjAmyYw7CNw7SmLzRepwUYbn3RWfTI/99fx66f")
+
+			// AK-47 | Wasteland Rebel
+			&[src*="fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZYMUrsm1j-9xgEObwgfEh_nvjlWhNzZCveCDfIBj98xqodQ2CZknz56P7fiDzRyTRDQCKJLSPAF9QO4Xhg"]
+				content: url("http://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszcYzRA-cizq4GAw6DLP7LWnn9u5MRjjeyP89z2i1KxrhJkMm3wJtedcFVoZQ6C_Qe-xe_u1JG-uMmbm3ZgviUrtGGdwULRVQuqfg/99fx66f")
+
+		// StatTrak emblem
+		.clreff
+			display: none
+
+		// StatTrak
+		&.StatTrak
+			border-color: $item-stattrak-color
+
+			.rarity:after
+				content: ""
+				background: url(#{$image-stattrak}) no-repeat
+				background-size: 100%
+				display: inline-block
+				position: absolute
+				height: 22px
+				bottom: 16px
+				width: 22px
+				z-index: 10
+				left: 5px
+
+		// Knife
+		&.Star
+			border-color: $item-knife-color
+
+		// Souvenir
+		&.Souvenir
+			border-color: $item-souvenir-color
+
+		.rarity
+			border-bottom: 2px solid transparent
+			text-shadow: 0 1px 0 rgba(0,0,0,0.7) !important
+			position: absolute
+			text-align: center
+			line-height: 17px
+			font-size: 0.75em
+			color: white !important
+			bottom: -1px
+			right: -1px
+			left: -1px
+			display: block
+			background-color: transparent !important
+			+background-image(linear-gradient(to top, rgba(0,0,0,0.35), transparent) !important)
+			+border-radius(0 0 2px 2px)
+
+			&.Covert, &.Extraordinary
+				border-bottom-color: $item-rarity-covert
+
+			&.Classified
+				border-bottom-color: $item-rarity-classified
+
+			&.Restricted
+				border-bottom-color: $item-rarity-restricted
+
+			&.Mil-Spec
+				border-bottom-color: $item-rarity-milspec
+
+			&.Industrial
+				border-bottom-color: $item-rarity-industrial
+
+			&.Consumer, &.Base
+				border-bottom-color: $item-rarity-consumer
+
+		// Lounge prices
+		.value
+			text-shadow: 0 1px 0 rgba(0,0,0,0.7) !important
+			position: absolute
+			text-align: center
+			line-height: 17px
+			font-size: 0.75em
+			color: white
+			top: 0
+			right: 0
+			left: 0
+			z-index: 5
+			display: block
+			+background-image(linear-gradient(to bottom, rgba(0,0,0,0.15), transparent) !important)
+
+	// Item option tooltip on "Search" and "Add trade" pages
+	.itemoptions
+		position: absolute
+		top: 100%
+		display: block !important
+		opacity: 0 !important
+		visibility: hidden
+		text-transform: capitalize
+		color: lighten($body-font-color, 13%)
+		text-align: center
+		top: 93%
+		font-size: 12px
+		z-index: 1000
+		width: 140px
+		left: 50%
+		margin-left: -70px
+		padding-top: 2px
+		cursor: default
+		font-size: 12px
+		+box-shadow(0 4px 12px rgba(0,0,0,0.3))
+		+transition(all 0.1s)
+		+box-sizing(border-box)
+
+		&:before
+			content: ""
+			background: rgba(18,18,18,0.97)
+			position: absolute
+			display: block
+			z-index: -1
+			bottom: 0
+			right: 0
+			left: 0
+			top: 2px
+
+		> div
+			font-weight: bold
+			cursor: pointer
+			display: block
+			line-height: 30px
+			border-bottom: 1px solid rgba(255,255,255,0.1)
+			color: $color-orange
+			+transition(all 0.2s)
+
+			&:last-child
+				border-bottom: none
+
+			&:hover
+				background: rgba(255,255,255,0.04)
+				color: lighten($color-orange, 14%)
+
+			&:active
+				background: rgba(255,255,255,0.06)
+				color: lighten($color-orange, 16%)
+
+	// Tooltip
+	.name
+		color: lighten($body-font-color, 13%)
+		visibility: hidden
+		text-align: center
+		position: absolute
+		top: 93%
+		font-size: 12px
+		z-index: 1000
+		padding: 12px 10px 10px 10px
+		width: 225px
+		left: 50%
+		margin-left: -112.5px
+		opacity: 0
+		line-height: normal
+		cursor: default
+		+transition(all 0.1s)
+		+box-shadow(0 4px 12px rgba(0,0,0,0.3))
+		+box-sizing(border-box)
+
+		&:before
+			content: ""
+			background: rgba(18,18,18,0.97)
+			position: absolute
+			display: block
+			z-index: -1
+			bottom: 0
+			right: 0
+			left: 0
+			top: 2px
+
+		&:empty
+			display: none
+
+		b
+			text-overflow: ellipsis
+			display: inline-block
+			white-space: nowrap
+			overflow: hidden
+			max-width: 200px
+			color: white
+			margin: -2px 0
+
+		i
+			margin-top: 1px
+			font-size: 12px
+			display: block
+
+			&:after
+				background: rgba(255,255,255,0.1)
+				height: 1px
+				margin: 6px 0 -10px -10px
+				width: calc(100% + 20px)
+				display: block
+				content: ""
+
+		p
+			margin: 0
+
+			small[title]
+				display: inline-block
+				margin-left: 4px
+				position: relative
+
+			a
+				color: lighten($body-font-color, 6%)
+
+				&:hover
+					color: lighten($body-font-color, 14%)
+
+		a
+			font-weight: bold
+			cursor: pointer
+			color: $color-orange
+			+transition(all 0.2s)
+
+			&:hover
+				color: lighten($color-orange, 14%)
+				text-decoration: none
+
+		// "Show Steam market price" button
+		small
+			font-size: 1em
+			margin-top: -10px
+			display: block
+
+			+ br
+				display: none
+
+			a
+				color: lighten($body-font-color, 6%)
+
+				&:hover
+					color: lighten($body-font-color, 14%)
+
+		// Line after stickers
+		img
+			height: 35px
+			width: 35px
+
+			+ br + a:before
+				background: rgba(255,255,255,0.1)
+				height: 1px
+				margin: 4px -10px 7px -10px
+				width: calc(100% + 20px)
+				display: block
+				content: ""
+
+	+ .bpheader
+		margin-top: 10px

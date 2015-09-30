@@ -1,0 +1,25 @@
+.ld-trade-filters, .ld-match-filters
+	margin: 0 0 22px 0
+	padding: 10px 9px
+	position: relative
+	+border-radius(2px)
+	+box-sizing(border-box)
+	+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+	+background-image(radial-gradient(lighten(#323232, 3%) 15%, lighten(#2d2d2d, 3%) 85%))
+
+	.ld-trade-filters-buttons, .ld-match-filters-buttons
+		margin: -1px 0 0 0
+
+	&:before
+		margin: 3px 6px 0 0
+
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		bottom: -12px
+		left: 0
+		right: 0
+		height: 1px
+		background: rgba(255,255,255,0.08)
+		clear: none

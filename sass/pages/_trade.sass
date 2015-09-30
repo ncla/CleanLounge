@@ -1,0 +1,128 @@
+.box
+	&:first-child
+		&.notavailable
+			&:before
+				content: "This trade has been closed"
+				background: #d92626
+				display: block
+				padding: 6px 11px
+				text-align: center
+				margin-bottom: 11px
+				text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+				color: white
+				+border-radius(2px)
+				+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+
+.profilesmall
+	display: block
+	float: left
+
+	> img
+		float: left
+		width: 64px
+		height: 64px
+		display: block
+
+.profilesmallheader
+	float: left
+	margin: -1px 0 0 12px
+	line-height: 16px
+
+.box-shiny-alt
+	> .half
+		&[style="width: auto"]
+			width: 100% !important
+			float: none !important
+
+		&[style="width: auto; float: right"]
+			border-top: 1px solid rgba(255,255,255,0.08)
+			margin: 8px -10px 0 -10px
+			width: calc(100% + 20px) !important
+			float: none !important
+			text-align: center
+			padding-top: 10px
+
+			> .buttonright
+				float: none
+				margin-left: 0
+
+// Steam levels
+.slvl
+	color: #9b9b9b
+	border: 2px solid
+	display: inline-block
+	text-indent: 0.26em
+	text-align: center
+	width: 48px
+	height: 48px
+	white-space: nowrap
+	float: left
+	line-height: 48px
+	margin: 8px 12px 8px 0
+	font-size: 22px
+	+box-sizing(border-box)
+	+border-radius(50%)
+
+.sln
+	display: none
+
+.sl10
+	color: #c02942
+
+.sl20
+	color: #d95b43
+
+.sl30
+	color: #fecc23
+
+.sl40
+	color: #467a3c
+
+.sl50
+	color: #4e8ddb
+
+.sl60
+	color: #7652c9
+
+.sl70
+	color: #c252c9
+
+.sl80
+	color: #a94e72
+
+.sl90
+	color: #997c52
+
+.slh
+	color: #FFFFFF
+
+#offer
+	> textarea.message
+		margin-bottom: 3px !important
+
+		~ .button + .button
+			margin-left: -1px
+
+#messages
+	> div.message
+		width: 100%
+		display: table
+		margin: 0 0 11px 0
+		padding: 8.5px 12px
+		+box-sizing(border-box)
+		+pie-clearfix
+
+		> .msgleft, > .msgright
+			display: table-cell
+			vertical-align: middle
+			+pie-clearfix
+
+			&:empty
+				display: none
+
+		> .msgright
+			&:empty
+				+ .msgleft
+					hr
+						margin: 4px -12px !important
+						width: calc(100% + 24px) !important

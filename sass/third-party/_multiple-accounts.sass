@@ -1,0 +1,88 @@
+#switch_accounts_ui
+	padding: 0 !important
+	float: none !important
+	color: $body-font-color !important
+	z-index: 1000
+	min-width: 220px
+	-webkit-user-select: none
+	background: none !important
+	+background-image(radial-gradient(lighten(#323232, 1%) 15%, lighten(#2d2d2d, 1%) 85%) !important)
+	+box-shadow(0 3px 7px rgba(0,0,0,0.08) !important)
+	+border-radius(0 0 2px 2px !important)
+
+div.sa_account
+	border: none !important
+	height: auto
+	color: $body-font-color
+	margin: 0
+	padding: 0
+	background: transparent
+	+border-radius(0)
+	+box-shadow(none)
+	+pie-clearfix
+
+	&.logged, &.notactive, &.active
+		&:hover
+			+background-image(linear-gradient(to right, rgba(0,0,0,0.09), rgba(0,0,0,0.04)))
+
+			.sa_meta
+				padding-left: 14px
+
+		&:active
+			+background-image(linear-gradient(to right, rgba(0,0,0,0.15), rgba(0,0,0,0.07)))
+
+			.sa_meta
+				padding-left: 12px
+
+	&.logged
+		border: none !important
+		border-bottom: 1px solid rgba(255,255,255,0.04) !important
+		background: $color-orange
+		color: white
+		text-shadow: 0 1px 0 rgba(0,0,0,0.08)
+
+	&.notactive, &.active
+		border: none !important
+		border-bottom: 1px solid rgba(255,255,255,0.04) !important
+		background: rgba(0,0,0,0.02)
+		text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+		+background-clip(padding-box !important)
+
+	.sa_avatar
+		line-height: 0
+		width: 36px
+		height: 36px
+		overflow: hidden
+
+		img
+			width: 40px
+			height: 40px
+			margin: -2px 0 0 -2px
+
+	.sa_meta
+		float: left
+		margin: 0
+		padding: 8px 10px
+		line-height: 1em
+		+transition(padding 0.1s)
+
+		.sa_name
+			font-size: 1.25em
+			line-height: 1.25em
+			height: auto
+
+		.sa_steamid
+			display: none
+
+.sa_clear
+	line-height: 24px
+	padding: 0 8px
+	font-size: 0.9em
+	text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+
+	&:hover
+		color: lighten($body-font-color, 4%)
+		+background-image(linear-gradient(to bottom, rgba(0,0,0,0.09), rgba(0,0,0,0.04)))
+
+	&:active
+		+background-image(linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.07)))

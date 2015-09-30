@@ -1,0 +1,284 @@
+main
+	margin: ($content-gutter + $header-height) auto $content-gutter auto
+	padding: 0 $content-gutter
+	width: $content-width
+	+box-sizing(border-box)
+	+pie-clearfix
+
+// Hide "Trades" & "Bets" titles
+.title, #disqus_thread:before
+	font-family: "Roboto Condensed"
+	font-size: 2em
+	text-transform: uppercase
+	text-shadow: 0 1px 1px rgba(0,0,0,0.2)
+	margin-bottom: 10px
+	line-height: 1em
+	text-align: left !important
+	color: $body-font-color
+
+	&[style*="trades.png"],
+	&[style*="bets.png"]
+		display: none
+
+// Sections
+.box
+	padding-right: 10px
+	float: left
+	width: 50%
+	position: relative
+	+box-sizing(border-box)
+
+	+ .box
+		padding: 0 0 0 10px
+
+.standard
+	margin: 0 !important
+
+// Headers
+.tradeheader,
+.matchheader,
+.bpheader
+	text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+	line-height: 35px
+	min-height: 35px
+	padding: 0 12px
+	margin-bottom: 11px
+	display: inline-block
+	width: 100%
+	position: relative
+	color: $body-font-color
+	+border-radius(2px)
+	+box-sizing(border-box)
+	+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+	+background-image(radial-gradient(lighten(#323232, 3%) 15%, lighten(#2d2d2d, 3%) 85%))
+	+pie-clearfix
+
+	> div[style]
+		float: none !important
+		color: $body-font-color !important
+
+	hr
+		display: none
+
+.matchheader
+	line-height: normal
+	display: table
+	width: 100%
+
+.bpheader
+	text-transform: capitalize
+
+// Item containers
+.left, .right, .winsorloses
+	padding: 2px
+	float: left
+	width: 46%
+	display: inline-block
+	+border-radius(2px)
+	+box-sizing(border-box)
+	+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+	+background-image(radial-gradient(lighten(#323232, 3%) 15%, lighten(#2d2d2d, 3%) 85%))
+	+pie-clearfix
+
+.right
+	margin-left: 8%
+
+// Big containers
+.box-shiny-alt,
+.box-shiny,
+#satrade
+	width: 100% !important
+	padding: 10px !important
+	position: relative
+	margin: 0 0 11px 0 !important
+	text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+	+border-radius(2px)
+	+box-sizing(border-box)
+	+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+	+background-image(radial-gradient(lighten(#323232, 3%) 15%, lighten(#2d2d2d, 3%) 85%))
+	+pie-clearfix
+
+	.left, .right, .winsorloses
+		background: rgba(255,255,255,0.06)
+		width: 50%
+		+box-shadow(none)
+
+		&:empty
+			display: none
+
+	hr
+		width: calc(100% + 20px)
+		margin: 10px -10px
+
+		+ .full, + .half
+			margin-top: -4px
+
+// Tabs
+.tabholder,
+.tabselect,
+div[style*="border-radius: 5px"][style*="margin: 0 2%"]
+	width: 100% !important
+	display: table
+	margin: 0 0 10px 0 !important
+	height: 30px
+	text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+	-webkit-user-select: none
+	+border-radius(2px !important)
+	+box-sizing(border-box)
+	+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+	+background-image(radial-gradient(lighten(#323232, 3%) 15%, lighten(#2d2d2d, 3%) 85%))
+
+	a:hover
+		text-decoration: none
+
+	> .tab
+		display: table-cell
+		vertical-align: middle
+		text-align: center
+		cursor: pointer
+		width: 50%
+		height: 30px
+		position: relative
+		color: $body-font-color
+		+border-radius(0 !important)
+		border-right: 1px solid rgba(255,255,255,0.06)
+		+transition(all 0.13s)
+
+		&[style*="width: 33%"]
+			width: (100% / 3) !important
+
+		&:hover
+			background: rgba(0,0,0,0.05)
+			color: lighten($body-font-color, 8%)
+
+			> .subtabs
+				top: 100%
+				opacity: 1
+				visibility: visible
+
+		&:active
+			background: rgba(0,0,0,0.08)
+
+		&:last-child
+			border-right: none
+
+		> .subtabs
+			background: darken(#ccc, 55%)
+			left: 0
+			right: 0
+			top: 90%
+			position: absolute
+			opacity: 0
+			visibility: hidden
+			+transition(all 0.13s)
+			+box-shadow(0 3px 7px rgba(0,0,0,0.18))
+			+border-radius(0 0 2px 2px)
+
+			> .tab
+				line-height: 30px
+				display: block
+				border-top: 1px solid rgba(255,255,255,0.05)
+				+background-clip(content-box)
+				+transition(all 0.2s)
+
+				&:hover
+					background: rgba(255,255,255,0.03)
+
+				&:active
+					background: rgba(255,255,255,0.05)
+
+.tabselect
+	width: calc(100% + 1px) !important
+	z-index: 100
+	+transition(all 0.13s)
+
+	&:hover
+		+border-radius(2px 2px 0 0 !important)
+
+	> .tab
+		cursor: default
+		z-index: 5
+
+		.tab
+			cursor: pointer
+
+// "Grid"
+.full, .half
+	display: inline-block
+	width: 100%
+	+box-sizing(border-box)
+	+pie-clearfix
+
+	&:empty
+		display: none
+
+.half
+	width: 50%
+	float: left
+
+// Little "?" thingy
+.info
+	background: $color-orange
+	display: inline-block
+	height: 13px
+	width: 13px
+	color: black !important
+	font-weight: bold
+	text-shadow: 0 1px 0 rgba(0,0,0,0.12)
+	-webkit-user-select: none
+	cursor: help
+	font-size: 0.6em
+	line-height: 13px
+	text-align: center
+	position: relative
+	text-shadow: 0 1px 0 rgba(255,255,255,0.1)
+	top: -1px
+	+transition(all 0.3s)
+	+border-radius(50%)
+	+box-shadow(0 1px 1px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.1))
+
+	&:hover
+		background: lighten($color-orange, 4%)
+		text-decoration: none
+
+	&:active
+		background: lighten($color-orange, 10%)
+
+	// Tooltip
+	.infobox
+		position: absolute
+		display: inline-block
+		background: darken(#888, 22%)
+		padding: 5px 7px
+		color: lighten($body-font-color, 6%)
+		font-size: $body-font-size - 2px
+		font-weight: normal
+		line-height: 1.2em
+		left: 50%
+		top: 100%
+		white-space: nowrap
+		margin-top: -2px
+		opacity: 0
+		visibility: hidden
+		pointer-events: none
+		text-shadow: 0 1px 0 rgba(0,0,0,0.1)
+		+transform(translateX(-50%))
+		+box-shadow(0 2px 5px rgba(0,0,0,0.15))
+		+transition(all 0.1s)
+		+border-radius(2px)
+
+	&:hover
+		.infobox
+			visibility: visible
+			margin-top: 5px
+			opacity: 1
+
+// Loading image
+img
+	line-height: 0
+
+	&#loading
+		display: block
+		margin: 0 auto !important
+		+border-radius(2px)
+		+box-shadow(0 3px 9px rgba(0,0,0,0.2))

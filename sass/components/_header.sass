@@ -1,0 +1,162 @@
+header
+	-webkit-user-select: none
+	position: fixed
+	cursor: default
+	z-index: 5000
+	height: $header-height
+	width: calc(100% - #{$sidebar-toggle-width})
+	left: $sidebar-toggle-width
+	top: 0
+	+background-image(linear-gradient(to top, lighten(#2d2d2d, 3%), lighten(#323232, 3%)))
+	+box-sizing(border-box)
+
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		top: $header-height
+		left: -$sidebar-toggle-width
+		right: 0
+		height: 10px
+		z-index: -1
+		+background-image(linear-gradient(to bottom, rgba(0,0,0,0.12), transparent))
+		pointer-events: none
+
+	a
+		display: inline-block
+		+transition(all 0.2s)
+
+		&:hover
+			text-decoration: none
+
+	img
+		display: block
+		vertical-align: middle
+
+		&#logo
+			content: url(#{$image-logo})
+			width: 124px
+			height: 50px
+			margin: 13px 0
+
+		&[alt="Profile"],
+		&[alt="Sign in as..."]
+			content: url(#{$image-myprofile})
+
+		&[alt="My Trades"],
+		&[alt="Trades"]
+			content: url(#{$image-mytrades})
+
+		&[alt="My Offers"]
+			content: url(#{$image-myoffers})
+
+		&[alt="My Bets"],
+		&[alt="Bets"]
+			content: url(#{$image-mybets})
+
+		&[alt="Bookmarks"]
+			content: url(#{$image-bookmarks})
+
+		&[alt="Search"]
+			content: url(#{$image-search})
+
+		&[alt="Add Trade"]
+			content: url(#{$image-addtrade})
+
+	// Modifying logo anchor
+	> a:first-child
+		border-right: 1px solid #444
+		padding: 0 15px
+		height: $header-height
+		float: left
+
+		&:hover
+			background: rgba(0,0,0,0.09)
+
+		&:active
+			background: rgba(0,0,0,0.15)
+
+	// Modifying navigation
+	nav#menu
+		display: inline-block
+		float: left
+
+		img
+			margin: 0 auto 5px auto
+			height: 20px
+			width: 22px
+
+		a
+			border-right: 1px solid #444
+			text-transform: uppercase
+			padding: 19px 15px 0 15px
+			font-weight: 700
+			font-size: 12px
+			height: $header-height
+			float: left
+			+box-sizing(border-box)
+
+			&:hover
+				background: rgba(0,0,0,0.09)
+
+			&:active
+				background: rgba(0,0,0,0.15)
+
+		li
+			float: left
+			list-style: none
+
+	// Log in, Log out
+	#login, #logout
+		background: url(#{$image-logout}) center center no-repeat
+		width: 114px
+		height: $header-height
+		float: right
+		padding: 0 15px
+
+		&:hover
+			opacity: 0.85
+
+		&:active
+			opacity: 0.7
+
+		+ .ddbtn
+			display: none
+
+	#login
+		background-image: url(#{$image-login})
+
+	// Dropdowns
+	.ddbtn
+		float: right
+		line-height: 0
+		padding: 25px 6px
+		height: $header-height
+		z-index: 100
+		+box-sizing(border-box)
+
+		img
+			width: 32px
+			height: 22px
+
+		div
+			padding: 4px
+			+border-radius(2px)
+
+			&:hover
+				+background-image(radial-gradient(lighten(#323232, 18%) 15%, lighten(#2d2d2d, 18%) 85%))
+				+box-shadow(0 3px 7px rgba(0,0,0,0.18))
+
+				a[href]
+					display: block
+
+					&:hover
+						opacity: 1
+
+		a
+			+ a
+				margin-top: 4px
+
+			&[href]
+				display: none
+				opacity: 0.75

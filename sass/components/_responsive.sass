@@ -1,0 +1,264 @@
+@media screen and (min-width: 1200px) and (max-width: 1549px)
+	.left, .right
+		.oitm
+			width: (100% / 3) !important
+
+	.box
+		&:first-child
+			.left
+				.oitm
+					&:nth-child(1),
+					&:nth-child(4),
+					&:nth-child(7)
+						.name, .itemoptions
+							left: -2px !important
+							margin-left: 0 !important
+
+		&:nth-child(2)
+			.right
+				.oitm
+					&:nth-child(3),
+					&:nth-child(6)
+						.name
+							left: auto !important
+							right: 0 !important
+							margin: 0 -2px 0 0 !important
+
+	.winsorloses
+		.oitm
+			width: (100% / 4) !important
+
+	#backpack, #betreturns, #freeze, #itemlist
+		.bpheader
+			margin-bottom: 8px !important
+
+		.oitm
+			width: (100% / 7) !important
+
+	#backpack, #betreturns, #freeze
+		+pie-clearfix
+
+		.bpheader
+			~ .oitm:not([style*="display: none"])
+				&:nth-child(7n + 4)
+					.name
+						left: 0 !important
+						margin-left: 2px !important
+
+	.ld-item-group,
+		+pie-clearfix
+
+		.oitm
+			&:nth-child(7n + 1)
+				.name
+					left: 0 !important
+					margin-left: 2px !important
+
+	.ld-add-item-group-wrapper
+		width: 100%
+		display: inline-block
+
+		~ .oitm
+			.name
+				left: 50% !important
+				margin-left: -112.5px !important
+
+			&:nth-child(7n + 8)
+				.name
+					left: 0 !important
+					margin-left: 2px !important
+
+	#backpack
+		.oitm + .bpheader
+			+ .oitm:not([style*="display: none"])
+				.name
+					left: 0 !important
+					margin-left: 2px !important
+
+	#itemlist
+		.bpheader
+			~ .oitm:not([style*="display: none"])
+				&:nth-child(7n + 1)
+					.name
+						left: auto !important
+						right: 0 !important
+						margin: 0 2px 0 0 !important
+
+		.oitm + .bpheader
+			~ .oitm:not([style*="display: none"])
+				&:nth-child(7n)
+					.name
+						left: auto !important
+						right: 0 !important
+						margin: 0 2px 0 0 !important
+
+				&:nth-child(7n + 1)
+					.name
+						left: 50% !important
+						right: auto !important
+						margin: 0 0 0 -112.5px !important
+
+	// "Bet history" table
+	#ajaxCont
+		table
+			.oitm
+				width: (100% / 6) !important
+
+				&:nth-child(6n)
+					.name
+						left: auto !important
+						right: 0 !important
+						margin: 0 -2px 0 0 !important
+
+			tr:not([class])
+				td
+					&:nth-child(6)
+						width: 25%
+
+					&:nth-last-child(2)
+						width: 15%
+
+					&:last-child
+						display: none
+
+	// Pager
+	.simplePagerNav
+		li
+			width: (100% / 16)
+
+			&:nth-child(n + 17)
+				a
+					border-top: 1px solid lighten(#323232, 6%)
+
+			&:nth-child(16n + 1)
+				a
+					border-left: none !important
+
+@media screen and (min-width: 1550px)
+	.oitm
+		.item
+			+box-shadow(inset 0 1.2em 5.5em rgba(0,0,0,0.7))
+
+	.left, .right
+		.oitm
+			width: (100% / 4)
+
+	.box
+		&:first-child
+			.left
+				.oitm
+					&:nth-child(1),
+					&:nth-child(5)
+						.name, .itemoptions
+							left: -2px !important
+							margin-left: 0 !important
+
+		&:nth-child(2)
+			.right
+				.oitm
+					&:nth-child(3),
+					&:nth-child(6)
+						.name
+							left: auto !important
+							right: 0 !important
+							margin: 0 -2px 0 0 !important
+
+	.left
+		.oitm
+			&:nth-child(1),
+			&:nth-child(5)
+				.name
+					left: -2px
+					margin-left: 0
+
+	.winsorloses
+		.oitm
+			width: (100% / 4) !important
+
+	#backpack, #betreturns, #freeze, #itemlist
+		.bpheader
+			margin-bottom: 8px !important
+
+		.oitm
+			width: (100% / 9) !important
+
+	#backpack, #betreturns, #freeze
+		+pie-clearfix
+
+		.bpheader
+			~ .oitm
+				&:nth-child(9n + 4)
+					.name
+						left: 0 !important
+						margin-left: 2px !important
+
+	#itemlist
+		.bpheader
+			~ .oitm
+				&:nth-child(9n + 1)
+					.name
+						left: auto !important
+						right: 0 !important
+						margin: 0 2px 0 0 !important
+
+		.oitm + .bpheader
+			~ .oitm
+				&:nth-child(9n)
+					.name
+						left: auto !important
+						right: 0 !important
+						margin: 0 2px 0 0 !important
+
+				&:nth-child(9n + 1)
+					.name
+						left: 50% !important
+						right: auto !important
+						margin: 0 0 0 -112.5px !important
+
+	.ld-item-group,
+		+pie-clearfix
+
+		.oitm
+			&:nth-child(9n + 1)
+				.name
+					left: 0 !important
+					margin-left: 2px !important
+
+	.ld-add-item-group-wrapper
+		width: 100%
+		display: inline-block
+
+		~ .oitm
+			.name
+				left: 50% !important
+				margin-left: -112.5px !important
+
+			&:nth-child(9n + 8)
+				.name
+					left: 0 !important
+					margin-left: 2px !important
+
+	// "Bet history" table
+	#ajaxCont
+		table
+			.oitm
+				width: (100% / 8) !important
+
+				&:nth-child(8n)
+					.name
+						left: auto !important
+						right: 0 !important
+						margin: 0 -2px 0 0 !important
+
+	// Pager
+	.simplePagerNav
+		li
+			width: (100% / 20)
+
+			&:nth-child(n + 21)
+				a
+					border-top: 1px solid lighten(#323232, 6%)
+
+			&:nth-child(20n + 1)
+				a
+					border-left: none

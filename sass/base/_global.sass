@@ -1,0 +1,55 @@
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic&subset=latin,cyrillic")
+@import url("http://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic")
+
+html
+	min-height: 100%
+
+body
+	background: $body-bg-color url(#{$image-csbg}) top center no-repeat
+	font-size: $body-font-size
+	font-family: $body-font-family
+	color: $body-font-color
+	overflow-y: scroll
+	overflow-x: hidden
+	min-height: 100%
+	-webkit-font-feature-settings: "kern"
+	+box-sizing(border-box)
+	+pie-clearfix
+
+a
+	text-decoration: none
+	color: $color-orange
+
+	&:hover
+		text-decoration: underline
+
+h1, h2, h3, h4, h5, h6
+	margin: 0
+	padding: 0
+	display: inline-block
+
+*:focus
+	outline: none
+
+hr
+	border: none
+	border-top: 1px solid rgba(255,255,255,0.08)
+	margin: 10px 0
+	width: 100%
+
+// Hide "Trades" & "Bets" buttons above header
+#mt
+	display: none
+
+.ld-donations, .ld-guide, .ld-contact
+	main:before
+		content: "CleanLounge v2.0.0 is currently in it's alpha stage. Updates will arive soon.\A Feel free to report bugs @ reddit.com/r/loungedestroyer"
+		display: block
+		+background-image(radial-gradient(darken(#a92727, 8%) 15%, darken(#b72a2a, 8%) 85%))
+		color: #e7b7b7
+		padding: 8px 10px
+		border-radius: 2px
+		text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+		+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+		margin-bottom: 10px
+		white-space: pre

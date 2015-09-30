@@ -1,0 +1,142 @@
+// Trades
+#tradelist
+	img
+		&[src*="star.png"]
+			content: url(#{$image-addbookmark})
+			width: 10px
+			height: 9px
+
+		&[src*="remove.png"]
+			content: url(#{$image-removebookmark})
+			width: 10px
+			height: 10px
+
+	a[onclick*="addBookmark"]
+		margin: 0 -6px 0 -12px
+		display: inline-block
+		text-align: center
+		cursor: pointer
+		width: 34px
+
+	a[onclick*="removeBookmark"]
+		display: inline-block
+		text-align: center
+		width: 34px
+		margin: 0 8px 0 -12px
+		border-right: 1px solid rgba(255,255,255,0.08)
+		cursor: pointer
+		+transition(background 0.2s)
+
+		&:hover
+			background: rgba(0,0,0,0.06)
+
+		&:active
+			background: rgba(0,0,0,0.12)
+
+	a[onclick*="addBookmark"], a[onclick*="removeBookmark"]
+		float: left
+
+		&[style*="display: none"]
+			~ a
+				display: inline-block
+				margin-left: -3px
+
+	.tradeheader
+		> a
+			color: $body-font-color
+
+			&:hover
+				text-decoration: none
+
+			~ a
+				float: left
+				display: block
+				white-space: nowrap
+				max-width: calc(100% - 210px)
+				text-overflow: ellipsis
+				overflow: hidden
+				+transition(color 0.2s)
+
+				&:hover
+					color: lighten($body-font-color, 9%)
+
+					b
+						color: lighten($color-orange, 6%)
+
+			b
+				color: $color-orange
+				+transition(color 0.2s)
+
+		span[style*="float"]
+			position: absolute
+			padding-right: 3px
+			bottom: 0
+			right: 0
+			top: 0
+
+			.button, .buttonright
+				margin-left: 3px
+
+.tradecnt
+	background: url(#{$image-tradearrows}) center center no-repeat
+	+pie-clearfix
+
+.tradepoll
+	margin-bottom: 22px
+	+transition(opacity 0.2s)
+	+pie-clearfix
+
+	&:last-child
+		margin-bottom: 0
+
+	&:hover
+		.trade-description
+			opacity: 1 !important
+
+			> p
+				color: inherit !important
+
+	&.ld-filtered
+		.ld-steam-extra, .trade-description
+			background: radial-gradient(darken(#a92727, 8%) 15%, darken(#b72a2a, 8%) 85%)
+			color: #e7b7b7
+
+		.ld-steam-extra:after
+			+background-image(linear-gradient(to left, darken(#b72a2a, 8%), transparent))
+
+	&.unavailable
+		opacity: 0.7
+
+		&:hover
+			opacity: 1
+
+		.trade-description
+			opacity: 1 !important
+
+div.trade-description, div.message
+	+background-image(radial-gradient(lighten(#323232, 3%) 15%, lighten(#2d2d2d, 3%) 85%) !important)
+	opacity: 0.75 !important
+	border: none !important
+	float: none !important
+	margin: 11px 0 0 0 !important
+	+border-radius(2px !important)
+	+transition(all 0.2s)
+	+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+
+	> p, > p:hover
+		border: none !important
+		opacity: 1 !important
+		padding: 8.5px 12px !important
+		text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+		font-size: inherit
+		border-radius: 0
+		color: inherit !important
+		margin: 0
+		word-break: break-word
+
+	a
+		font-weight: bold
+
+div.message
+	margin-top: -11px !important
+	opacity: 1 !important

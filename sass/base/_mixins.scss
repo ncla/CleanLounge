@@ -1,0 +1,53 @@
+@mixin animation($string) {
+    -webkit-animation: #{$string};
+    -moz-animation: #{$string};
+    -ms-animation: #{$string};
+    -o-animation: #{$string};
+    animation: #{$string};
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes $animation-name {
+        @content;
+    }
+    @-moz-keyframes $animation-name {
+        @content;
+    }
+    @-ms-keyframes $animation-name {
+        @content;
+    }
+    @-o-keyframes $animation-name {
+        @content;
+    }
+    @keyframes $animation-name {
+        @content;
+    }
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin display($str) {
+    display: $str;
+    display: -moz-$str;
+    display: -webkit-$str;
+}
+
+@mixin align-items($str) {
+    -ms-flex-align: $str;
+    -webkit-align-items: $str;
+    -webkit-box-align: $str;
+    align-items: $str;
+}

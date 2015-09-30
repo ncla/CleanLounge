@@ -1,0 +1,18 @@
+div.ld-steam-extra-wrapper
+	float: none
+
+	> div.ld-steam-extra
+		+background-image(radial-gradient(lighten(#323232, 3%) 15%, lighten(#2d2d2d, 3%) 85%))
+		+border-radius(2px)
+		border: none
+		text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+		+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+
+		> div.ld-steam-info
+			border-right-color: rgba(255,255,255,0.08)
+
+		&:after
+			+background-image(linear-gradient(to left, lighten(#2d2d2d, 3%), transparent))
+
+	&.ld-slidedown
+		margin: 0 0 11px 0

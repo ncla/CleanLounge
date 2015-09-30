@@ -1,0 +1,165 @@
+.matchmain
+	margin-bottom: 22px
+
+	.whenm, .eventm
+		vertical-align: middle
+		display: table-cell
+		padding: 6px 0
+
+	.eventm
+		text-align: right
+		width: 35%
+
+	.whenm
+		width: 65%
+
+		span
+			&[style*="#72A326"],
+			&[style*="#D12121"]
+				font-weight: bold !important
+				line-height: 0.8em
+				text-transform: uppercase
+				position: relative
+				font-size: 0.8em
+
+			&[style*="#72A326"]
+				+background-image(linear-gradient(to top, rgba(103,216,37,0.55), rgba(103,216,37,0.7)))
+				padding: 3px 4px 4px 4px
+				cursor: default
+				display: inline-block
+				color: white !important
+				text-shadow: none !important
+				margin-left: 4px
+				top: -1px
+				text-shadow: 0 1px 0 rgba(0,0,0,0.08)
+				+box-shadow(0 1px 3px rgba(0,0,0,0.11))
+				+border-radius(2px)
+
+				+ [style*="#D12121"]
+					margin-left: -0.3em
+
+			&[style*="#D12121"]
+				color: lighten(#D12121, 5%) !important
+				text-shadow: 0 1px 0 rgba(0,0,0,0.12)
+
+	.match
+		background-position: right center
+		background-repeat: no-repeat
+		-webkit-user-select: none
+		background-color: #bbb
+		position: relative
+		overflow: hidden
+		height: 75px
+		+border-radius(2px)
+		+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+		+pie-clearfix
+
+		&.notavailable
+			opacity: 0.6
+
+		&:before
+			+background-image(linear-gradient(to right, #bbb, transparent))
+			position: absolute
+			display: block
+			right: 273px - 55px
+			width: 55px
+			bottom: 0
+			top: 0
+			z-index: 0
+			content: ""
+
+		.matchleft
+			position: relative
+			display: table
+			height: 100%
+			width: 100%
+
+			> a
+				vertical-align: middle
+				display: table-cell
+				padding-right: 27%
+				+pie-clearfix
+
+				&:before
+					+transition(all 0.15s)
+					position: absolute
+					display: block
+					z-index: 10
+					content: ""
+					bottom: 0
+					right: 0
+					left: 0
+					top: 0
+
+				&:hover
+					&:before
+						background: rgba(255,255,255,0.1)
+
+		.teamtext
+			background: rgba(187,187,187,0.95)
+			width: calc(100% - 60px)
+			text-align: center
+			padding: 8px 14px
+			height: 50px
+			float: left
+			line-height: 1.4em
+			+box-sizing(border-box)
+			+border-radius(2px)
+
+			b
+				color: #333333
+				font-size: 16px
+				display: block
+				white-space: nowrap
+
+				+ br
+					display: none
+
+			i
+				color: darken($body-font-color, 25%)
+				font-size: 14px
+				font-style: italic
+
+		[style*="text-align: right"]
+			.teamtext
+				float: right
+
+			img[src*="won.png"]
+				left: -13px !important
+				top: -9px !important
+
+		[style*="text-align: left"]
+			margin-left: 10%
+
+			.teamtext
+				border-left: 5px solid transparent
+				border-bottom-left-radius: 0
+				border-top-left-radius: 0
+				margin-left: -5px
+
+			img[src*="won.png"]
+				right: -13px !important
+				left: none !important
+				top: -9px !important
+
+		[style*="margin-top: 0.6em"]
+			margin: 0 !important
+			color: darken($body-font-color, 25%)
+			font-size: 14px
+			vertical-align: middle
+			line-height: 1em
+			display: inline-block
+			position: absolute
+			width: 7.5% !important
+			float: none !important
+			top: 50%
+			+transform(translateY(-50%))
+
+		.team
+			position: relative
+			height: 50px
+			width: 60px
+			+border-radius(2px)
+
+		img[src*="won.png"]
+			position: absolute !important
