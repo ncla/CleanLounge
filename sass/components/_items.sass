@@ -13,9 +13,10 @@
 
 	&:hover
 		.item
-			background: $item-holder-hover-color
 			border-color: #5e5e5e
-			box-shadow: inset 0 0.8em 4em rgba(0,0,0,0.9)
+
+			&:after
+				+opacity(0.7)
 
 		.name, .itemoptions
 			visibility: visible
@@ -36,23 +37,27 @@
 	// Item holder
 	.item
 		position: relative
-		background: $item-holder-color
+		+background-image(radial-gradient($item-holder-color 26%, darken($item-holder-color, 31%)))
 		width: 100%
 		border: 1px solid #8b8d8f
-		+box-shadow(inset 0 0.8em 4em rgba(0,0,0,0.7))
 		+transition(all 0.15s)
 		+box-sizing(border-box)
 		+border-radius(2px)
 
-		&:active
-			background: $item-holder-pressed-color
-			border-color: darken(#5e5e5e, 6%)
-
 		&:after
+			+background-image(radial-gradient($item-holder-pressed-color 26%, darken($item-holder-pressed-color, 24%)))
 			padding-top: 75%
 			display: block
 			content: ""
-			+transition(all 0.15s)
+			z-index: 0
+			+opacity(0)
+			+transition(opacity 0.15s)
+
+		&:active
+			border-color: darken(#5e5e5e, 6%)
+
+			&:after
+				+opacity(1)
 
 		// Item preview image
 		img
@@ -61,6 +66,7 @@
 			width: 94%
 			left: 50%
 			top: 50%
+			z-index: 1
 			+transform(translate(-50%, -50%))
 			+transition(opacity 0.2s)
 
@@ -84,23 +90,24 @@
 
 		// StatTrak emblem
 		.clreff
-			display: none
+			background-color: transparent !important
+			background-image: url(#{$image-stattrak})
+			background-repeat: no-repeat
+			background-size: 100%
+			display: inline-block
+			position: absolute
+			height: 22px
+			bottom: 16px
+			width: 22px
+			z-index: 10
+			left: 5px
+			text-indent: 999px
+			overflow: hidden
+			z-index: 2
 
 		// StatTrak
 		&.StatTrak
 			border-color: $item-stattrak-color
-
-			.rarity:after
-				content: ""
-				background: url(#{$image-stattrak}) no-repeat
-				background-size: 100%
-				display: inline-block
-				position: absolute
-				height: 22px
-				bottom: 16px
-				width: 22px
-				z-index: 10
-				left: 5px
 
 		// Knife
 		&.Star
@@ -123,6 +130,7 @@
 			left: -1px
 			display: block
 			background-color: transparent !important
+			z-index: 1
 			+background-image(linear-gradient(to top, rgba(0,0,0,0.35), transparent) !important)
 			+border-radius(0 0 2px 2px)
 
