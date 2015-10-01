@@ -1,5 +1,2 @@
-CleanLounge
+CleanLounge v2.0.0
 ===========
-
-To-Do:
-- Completely rewrite the theme, because LoungeDestroyer will disable Lounge's styling.
