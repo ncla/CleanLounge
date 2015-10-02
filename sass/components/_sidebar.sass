@@ -20,6 +20,7 @@
 		width: $sidebar-toggle-width
 		height: $header-height
 		cursor: pointer
+		z-index: 1000
 		border-right: 1px solid #444
 		+transition(all 0.35s)
 		+background-image(linear-gradient(to top, lighten(#2d2d2d, 3%), lighten(#323232, 3%)))
@@ -41,9 +42,11 @@
 			height: 15px
 			display: inline-block
 			position: absolute
-			left: 50%
-			top: 50%
-			+transform(translate(-50%, -50%))
+			bottom: 0
+			right: 0
+			left: 0
+			top: 0
+			margin: auto
 
 		&:hover
 			&:before

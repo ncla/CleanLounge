@@ -3,15 +3,15 @@
 		&.notavailable
 			&:before
 				content: "This trade has been closed"
-				background: #d92626
 				display: block
-				padding: 6px 11px
-				text-align: center
-				margin-bottom: 11px
+				+background-image(radial-gradient(darken(#a92727, 8%) 15%, darken(#b72a2a, 8%) 85%))
+				color: #e7b7b7
+				padding: 8px 10px
+				border-radius: 2px
 				text-shadow: 0 1px 0 rgba(0,0,0,0.16)
-				color: white
-				+border-radius(2px)
 				+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+				margin-bottom: 11px
+				text-align: center
 
 .profilesmall
 	display: block
@@ -44,7 +44,7 @@
 
 			> .buttonright
 				float: none
-				margin-left: 0
+				margin: 0
 
 // Steam levels
 .slvl
@@ -57,7 +57,7 @@
 	height: 48px
 	white-space: nowrap
 	float: left
-	line-height: 48px
+	line-height: 46px
 	margin: 8px 12px 8px 0
 	font-size: 22px
 	+box-sizing(border-box)

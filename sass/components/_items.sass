@@ -15,8 +15,12 @@
 		.item
 			border-color: #5e5e5e
 
-			&:after
+			&:before
 				+opacity(0.7)
+
+			&.notavailable
+				&:before
+					+opacity(0.4)
 
 		.name, .itemoptions
 			visibility: visible
@@ -44,39 +48,69 @@
 		+box-sizing(border-box)
 		+border-radius(2px)
 
-		&:after
+		&:before
+			content: ""
+			display: block
+			position: absolute
+			bottom: 0
+			right: 0
+			left: 0
+			top: 0
+			z-index: 0
 			+background-image(radial-gradient($item-holder-pressed-color 26%, darken($item-holder-pressed-color, 24%)))
+			+opacity(0)
+			+transition(opacity 0.15s)
+
+		&:after
 			padding-top: 75%
 			display: block
 			content: ""
-			z-index: 0
-			+opacity(0)
-			+transition(opacity 0.15s)
 
 		&:active
 			border-color: darken(#5e5e5e, 6%)
 
-			&:after
+			&:before
 				+opacity(1)
+
+		// Stiped background for unavailable items
+		// Was originally implemented by /u/YesBacon
+		// In his theme - "GlassLounge"
+
+		&.notavailable
+			+background-image(radial-gradient(transparent 10%, transparentize(darken($item-holder-pressed-color, 20%), 0.3)), repeating-linear-gradient(-45deg, darken($item-holder-color, 7%), darken($item-holder-color, 7%) 7px, $item-holder-color 7px, $item-holder-color 14px))
+
+			&:before
+				+background-image(radial-gradient(darken($item-holder-pressed-color, 13%) 26%, darken($item-holder-pressed-color, 40%)))
+
+			&:active
+				&:before
+					+opacity(0.6)
+
+		&.Warning
+			+background-image(radial-gradient(transparent 10%, transparentize(darken($item-holder-pressed-color, 20%), 0.3)), repeating-linear-gradient(-45deg, darken($item-holder-warning-color, 7%), darken($item-holder-warning-color, 7%) 7px, $item-holder-warning-color 7px, $item-holder-warning-color 14px))
+
+			&:before
+				+background-image(radial-gradient(transparentize(darken($item-holder-warning-color, 20%), 0.45) 26%, transparentize(darken($item-holder-warning-color, 60%), 0.35)))
 
 		// Item preview image
 		img
 			-webkit-user-drag: none
 			position: absolute
+			margin: auto
 			width: 94%
-			left: 50%
-			top: 50%
+			bottom: 0
+			right: 0
+			left: 0
+			top: 0
 			z-index: 1
-			+backface-visibility(hidden)
-			+transform(translate(-50%, -50%))
 			+transition(opacity 0.2s)
 
 			&[onerror*="gift"]
 				width: 100%
 				left: 0
-				+transform(translateY(-50%))
 
-			// Image URL fixes
+			// Changing images for broken skin preview images
+			//
 			// M4A4 | Griffin
 			&[src*="fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZYMUrsm1j-9xgEObwgfEh_nvjlWhNzZCveCDfIBj98xqodQ2CZknz52YOLkDzRyTQmWAPRhW-cz8g7lBxg"]
 				content: url("http://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhjxszFJTwW09uknYaNnvnLPr7Vn35cppcgi-3EoN-s2AOy-BJtNzjydY-TcFA9N13X_VS7wOfphJe4v8nJmiR9-n51W4Rymss/99fx66f")

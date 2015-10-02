@@ -1,3 +1,7 @@
+[class*="appID"]
+	header:before
+		content: none
+
 header
 	-webkit-user-select: none
 	position: fixed
@@ -9,6 +13,23 @@ header
 	top: 0
 	+background-image(linear-gradient(to top, lighten(#2d2d2d, 3%), lighten(#323232, 3%)))
 	+box-sizing(border-box)
+
+	// Making a clone of sidebar's toggle to
+	// Create an illusion of it always being there
+	&:before
+		content: ""
+		display: inline-block
+		position: fixed
+		left: 0
+		top: 0
+		width: $sidebar-toggle-width
+		height: $header-height
+		border-right: 1px solid #444
+		+box-sizing(border-box)
+		+background-image(url(#{$image-menutoggle}), linear-gradient(to top, lighten(#2d2d2d, 3%), lighten(#323232, 3%)))
+		background-repeat: no-repeat
+		background-position: calc(50% - 0.5px) center, left top
+		z-index: -1
 
 	&:after
 		content: ""

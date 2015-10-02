@@ -44,6 +44,31 @@
 		.right:empty:after
 			content: "Want"
 
+#backpack
+	a[style*="text-shadow: 1px 1px 0px #FF8A00;"]
+		text-shadow: none !important
+		cursor: pointer
+
+	.standard
+		text-align: center
+
+		+ .button
+			margin-top: 8px
+			width: 180px !important
+			position: relative
+			left: 50%
+			margin-left: -90px
+
+#LDloading
+	border: 3px solid rgba(255,255,255,0.08)
+	border-left-color: #ccc
+	width: 30px
+	height: 30px
+	animation: loading 0.45s linear infinite
+
+#LDerr
+	margin-bottom: 8px
+
 #rightlist
 	> .box-shiny
 		> .tab
