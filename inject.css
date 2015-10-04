@@ -944,7 +944,7 @@ iframe {
   display: none;
 }
 
-.ld-premium main:before, .ld-guide main:before, .ld-contact main:before {
+.ld-premium main:before, .ld-guide main:before, .ld-contact main:before, .appID570 main:before {
   content: "CleanLounge v2.0.0 alpha is currently not completely finished yet. Updates will arive soon.\A Feel free to report bugs @ reddit.com/r/loungedestroyer or github.com/farblood/cleanlounge";
   display: block;
   background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 85, color-stop(15%, #881f1f), color-stop(85%, #962222));
@@ -961,6 +961,10 @@ iframe {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
   margin-bottom: 11px;
   white-space: pre;
+}
+
+.appID570 main:before {
+  content: "CleanLounge v2.0.0 alpha doesn't support DOTA2Lounge yet.\A If you are an active DOTA2Lounge user, we'd recommend you to disable this theme until it has a full support of the site.";
 }
 
 [class*="appID"] header:before {
