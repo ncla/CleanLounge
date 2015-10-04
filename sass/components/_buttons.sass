@@ -21,12 +21,15 @@
         text-shadow: 0 1px 0 rgba(0,0,0,0.08)
         text-decoration: none
 
-    &:not([style*="display: none"]):active
+    &:not([style*="display: none"]):active, &.pressed, &.pressed:hover, &.pressed:active
         background: lighten($color-orange, 5%)
         border-color: lighten($color-orange, 5%)
         +box-shadow(0 3px 9px rgba(0,0,0,0.15))
 
-    &:not([style*="display: none"]):hover, &:not([style*="display: none"]):active
+    &.pressed
+        cursor: default
+
+    &:not([style*="display: none"]):hover, &:not([style*="display: none"]):active, &.pressed
         color: white
 
     + .button

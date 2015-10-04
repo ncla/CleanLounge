@@ -306,14 +306,48 @@
 		.standard
 			> a
 				display: block
-				margin-top: 10px
+				margin: 11px -11px 0 -10px
+				padding: 11px 10px 0 10px
+				width: calc(100% + 21px)
+				border-top: 1px solid rgba(255,255,255,0.08)
+				line-height: 0
+				+box-sizing(border-box)
+
+				&:hover
+					img
+						+opacity(0.85)
+
+				&:active
+					img
+						+opacity(0.7)
 
 			img
 				display: block
+				margin: auto
+				+transition(all 0.15s)
 
 // Lounge's share icons
 .share-buttons
-	display: none
+	display: table
+	margin: 11px -11px 0 -10px
+	border-top: 1px solid rgba(255,255,255,0.08)
+	padding: 11px 0 0 0
+	list-style: none
+	width: calc(100% + 21px)
+	line-height: 0
+
+	> li
+		display: table-cell
+		vertical-align: middle
+		text-align: center
+
+		> a
+			display: inline-block
+
+			> img
+				width: 32px
+				height: 32px
+				display: block
 
 // Twitch chat
 #chat_embed
@@ -480,10 +514,17 @@
 
 // Donation to a stream
 #mainstream
-	> .tab
-		margin: 6px 0 10px 0
-		width: 100%
+	.tab
+		margin: 2px 0 10px !important
+		width: 100% !important
+		display: block !important
 		text-transform: uppercase
+
+#stream
+	p[style="margin: 0.5em; float: left"]
+		margin: 0 0 11px 0 !important
+		float: none !important
+		text-align: center
 
 // Bet queue
 #queue
