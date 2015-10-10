@@ -22,6 +22,9 @@
 				&:before
 					+opacity(0.4)
 
+			&.Warning
+				border-color: darken($item-warning-border, 8%)
+
 		.name, .itemoptions
 			visibility: visible
 			opacity: 1 !important
@@ -44,6 +47,8 @@
 		+background-image(radial-gradient($item-holder-color 26%, darken($item-holder-color, 31%)))
 		width: 100%
 		border: 1px solid #8b8d8f
+		max-width: 99px
+		max-height: 66px
 		+transition(all 0.15s)
 		+box-sizing(border-box)
 		+border-radius(2px)
@@ -72,7 +77,7 @@
 			&:before
 				+opacity(1)
 
-		// Stiped background for unavailable items
+		// Striped background for unavailable items
 		// Was originally implemented by /u/YesBacon
 		// In his theme - "GlassLounge"
 
@@ -88,6 +93,7 @@
 
 		&.Warning
 			+background-image(radial-gradient(transparent 10%, transparentize(darken($item-holder-pressed-color, 20%), 0.3)), repeating-linear-gradient(-45deg, darken($item-holder-warning-color, 7%), darken($item-holder-warning-color, 7%) 7px, $item-holder-warning-color 7px, $item-holder-warning-color 14px))
+			border-color: $item-warning-border
 
 			&:before
 				+background-image(radial-gradient(transparentize(darken($item-holder-warning-color, 20%), 0.45) 26%, transparentize(darken($item-holder-warning-color, 60%), 0.35)))
@@ -446,7 +452,7 @@
 			width: calc(100% + 20px) !important
 			border-radius: 0
 			border: none
-			background: rgba(255,255,255,0.03)
+			background: rgba(255,255,255,0.04)
 			margin: 6px -10px 3px -10px !important
 			padding: 0 10px
 			height: 30px

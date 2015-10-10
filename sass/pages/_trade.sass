@@ -96,33 +96,204 @@
 .slh
 	color: #FFFFFF
 
+#messages
+	div.message
+		padding: 0
+		margin: 11px 0 !important
+		opacity: 1 !important
+		+pie-clearfix
+
+		&:first-child
+			margin-top: 0 !important
+
+		.msgleft
+			padding: 2px 10px 6px 10px
+
+		.msgright
+			padding: 10px
+			display: inline-block
+			width: 100%
+			border-bottom: 1px solid rgba(255,255,255,0.08)
+			+box-sizing(border-box)
+			+pie-clearfix
+
+			.oitm
+				width: (100% / 8)
+
+		.msgtxt
+			word-wrap: break-word
+			max-width: 100%
+			padding: 2px 1px
+
+			&:empty:after
+				content: "..."
+
+		hr
+			margin: 6px -10px 5px -10px !important
+			width: calc(100% + 20px) !important
+
+		+ #offer
+			border-top: 1px solid rgba(255,255,255,0.08)
+			padding-top: 11px
+
+		.opts
+			margin: 8px 0 5px 0
+
+			.button
+				background-position: 7px 5px
+				background-repeat: no-repeat
+				position: relative
+				padding-left: 28px !important
+
+				img
+					display: none
+
+				&:before
+					content: ""
+					display: inline-block
+					width: 15px
+					height: 13px
+					left: 7px
+					top: 5px
+					background-repeat: no-repeat
+					position: absolute
+					opacity: 0
+					+transition(opacity 0.15s)
+
+				&:hover:before
+					opacity: 1
+
+				&[onclick*="trashMsg"]
+					background-image: url(#{$image-trashcan1})
+
+					&:before
+						background-image: url(#{$image-trashcan2})
+
+					&:after
+						content: "Remove message"
+
+				&[onclick*="banUser"]
+					background-image: url(#{$image-blockuser1})
+					background-position: 8px 6px
+					padding-left: 25px !important
+
+					&:before
+						background-image: url(#{$image-blockuser2})
+						left: 8px
+						top: 6px
+
+					&:after
+						content: "Block user"
+
+				&[onclick*="replyTo"]
+					background-image: url(#{$image-reply1})
+					background-position: 9px 6px
+					padding-left: 22px !important
+
+					&:before
+						background-image: url(#{$image-reply2})
+						left: 9px
+						top: 6px
+
+					&:after
+						content: "Reply"
+
+		&.notavailable
+			+background-image(none !important)
+			background: rgba(255,255,255,0.02) !important
+			border: 2px solid rgba(255,255,255,0.08) !important
+
+			.opts
+				.button
+					&[onclick*="trashMsg"], &[onclick*="replyTo"]
+						display: none
+
 #offer
+	form.left
+		display: block !important
+		width: 100% !important
+		margin: 0 !important
+		padding: 0
+		+transition(margin 0.15s)
+
+		&:not([style*="display: none"])
+			margin: 0 0 3px !important
+
+		.oitm
+			width: calc(#{(100% / 8)} - 0.5px) !important
+			margin: 2px 0
+
+			&:nth-child(2)
+				margin-left: 2px
+
+	.buttonright
+		margin-right: 0
+
 	> textarea.message
 		margin-bottom: 3px !important
 
 		~ .button + .button
 			margin-left: -1px
 
-#messages
-	> div.message
-		width: 100%
-		display: table
-		margin: 0 0 11px 0
-		padding: 8.5px 12px
-		+box-sizing(border-box)
+	// Inventory
+	.srch
+		+background-image(none)
+		+box-shadow(none)
+		+border-radius(0)
+		padding: 10px 2px 0 2px
+		margin-bottom: 6px
 		+pie-clearfix
 
-		> .msgleft, > .msgright
-			display: table-cell
-			vertical-align: middle
-			+pie-clearfix
+		&:before
+			content: "Your inventory:"
+			float: left
+			display: inline-block
+			line-height: 30px
+			cursor: text
+			text-shadow: 0 1px 0 rgba(0,0,0,0.2)
 
-			&:empty
-				display: none
+		.selectbox
+			width: 270px
+			float: right
 
-		> .msgright
-			&:empty
-				+ .msgleft
-					hr
-						margin: 4px -12px !important
-						width: calc(100% + 24px) !important
+		.button
+			margin-top: 1px
+
+	#backpack
+		border-top: none
+		padding-top: 0
+
+	.standard
+		text-align: center
+
+		+ .button
+			margin-top: 8px
+			width: 180px !important
+			position: relative
+			left: 50%
+			margin-left: -90px
+
+	#recaptcha
+		margin-top: 11px
+
+		div[style="padding: 0.5em;background: #BBB;line-height: 1.5rem;margin: 0.5em;border: 1px solid #AAA;"]
+			display: block
+			background: none !important
+			+background-image(radial-gradient(darken(#a92727, 8%) 15%, darken(#b72a2a, 8%) 85%) !important)
+			color: #e7b7b7
+			padding: 8px 10px !important
+			border: none !important
+			+border-radius(2px)
+			text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+			+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+			margin: 0 0 11px 0 !important
+			line-height: inherit !important
+
+			a
+				text-shadow: none !important
+				font-weight: bold
+				cursor: pointer
+
+		.g-recaptcha
+			width: 50%
+			margin: auto

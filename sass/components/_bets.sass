@@ -67,7 +67,14 @@
 			bottom: 0
 			top: 0
 			z-index: 0
-			content: ""
+			content: none
+
+		> a[href*="predict"]
+			height: 100% !important
+			+transition(background 0.15s)
+
+			&:hover
+				background: rgba(255,255,255,0.1)
 
 		.matchleft
 			position: relative

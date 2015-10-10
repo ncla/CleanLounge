@@ -115,6 +115,7 @@ header
 			font-size: 12px
 			height: $header-height
 			float: left
+			position: relative
 			+box-sizing(border-box)
 
 			&:hover
@@ -126,6 +127,18 @@ header
 		li
 			float: left
 			list-style: none
+
+		.notification
+			+background-image(linear-gradient(to top, $color-orange, lighten($color-orange, 5%)))
+			position: absolute
+			right: 3px
+			top: 3px
+			display: inline-block
+			padding: 2px 5px
+			font-size: 9px
+			color: white
+			+border-radius(2px)
+			+box-shadow(0 1px 3px rgba(0,0,0,0.1))
 
 	// Log in, Log out
 	#login, #logout
