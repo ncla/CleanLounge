@@ -1,2 +1,2 @@
-CleanLounge v2.0.1 alpha
+CleanLounge v2.0.2 alpha
 ===========
