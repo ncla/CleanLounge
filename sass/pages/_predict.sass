@@ -1,0 +1,150 @@
+#pleft, #pright
+    background: black !important
+
+    &:before
+        content: ""
+        display: block
+        margin: -10px -10px 0 -10px
+        width: calc(100% + 20px)
+        height: $prediction-image-height
+        +border-radius(4px 4px 0 0)
+        background-repeat: no-repeat
+        background-position: center center
+        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.40, rgba(0,0,0,1)), color-stop(1.00, rgba(0,0,0,0)))
+
+#pleft
+    &:before
+        background-image: url(#{$prediction-image-left})
+
+    table
+        background: none !important
+        line-height: 1em !important
+        margin: 0 -10px
+        width: calc(100% + 20px) !important
+
+        tr
+            height: 34px
+            color: lighten($body-font-color, 5%) !important
+            margin-bottom: 1px
+            +background-clip(padding-box)
+            +transition(all 0.15s)
+
+            input
+                display: none
+
+            td, th
+                padding: 0 10px
+
+            .place
+                color: lighten($body-font-color, 5%) !important
+                text-shadow: none !important
+
+            &:last-child
+                border-bottom: 1px solid #121212
+
+            &:nth-child(n + 2)
+                cursor: pointer
+                border-top: 1px solid #121212
+
+                *
+                    cursor: pointer
+
+                td
+                    &:last-child
+                        opacity: 0.35 !important
+
+                &:hover
+                    color: lighten($body-font-color, 20%) !important
+                    background: rgba(255,255,255,0.04)
+
+                &.activeteam
+                    border-right: none !important
+                    text-shadow: none !important
+                    background: rgba(255,255,255,0.06)
+                    color: $prediction-color !important
+                    cursor: default
+
+                    td:last-child
+                        opacity: 1 !important
+
+    #ainfo
+        font-size: 1em !important
+        color: $prediction-color !important
+        margin-top: 4px
+
+        + .standard
+            border-top: 1px solid rgba(255,255,255,0.08)
+            margin: 8px -10px 0 -10px !important
+            padding-top: 10px
+
+    .ytoc
+        color: lighten($body-font-color, 5%) !important
+
+    .toc
+        text-shadow: none !important
+        color: $prediction-color !important
+        display: inline-block
+        font-size: 1.4rem !important
+
+    .betpoll
+        text-align: center
+
+        .left
+            float: none
+            width: 50% !important
+            margin: 0 !important
+
+            .oitm
+                width: (100% / 4) !important
+
+#pright
+    color: lighten($body-font-color, 5%) !important
+
+    &:before
+        background-image: url(#{$prediction-image-right})
+
+    > a
+        text-decoration: none !important
+        width: calc(100% + 20px) !important
+        margin: -$prediction-image-height -10px 0 -10px
+        height: $prediction-image-height !important
+        position: relative
+
+    h1
+        background: none !important
+        padding: 0 !important
+        color: $prediction-color !important
+
+    p
+        margin: 0 -10px -5px -10px !important
+        border-bottom: 1px solid rgba(255,255,255,0.08)
+        width: calc(100% + 20px)
+        padding: 0 10px 10px 10px
+        +box-sizing(border-box)
+
+        &:nth-last-child(2)
+            border-bottom: none
+            padding-bottom: 0
+            margin-bottom: 0 !important
+
+    > .full
+        > .full
+            border-bottom: 1px solid rgba(255,255,255,0.08)
+            padding: 0 10px 10px 10px
+            width: calc(100% + 20px)
+            margin: 0 -10px 10px -10px
+
+        + div[style*="background"]
+            float: none !important
+            width: calc(100% + 20px) !important
+            +border-radius(0 0 4px 4px !important)
+            background-color: none !important
+            background-position: center center !important
+            min-height: 0 !important
+            margin: 0 -10px -10px -10px
+            height: $prediction-image-height
+            -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.40, rgba(0,0,0,1)), color-stop(1.00, rgba(0,0,0,0)))
+
+            > a
+                height: 100% !important
+                width: 100%

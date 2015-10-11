@@ -29,7 +29,6 @@
 
 				// Format
 				&:nth-child(2)
-
 					&:not(:empty)
 						border-left: 1px solid rgba(255,255,255,0.06)
 						border-right: 1px solid rgba(255,255,255,0.06)
@@ -230,6 +229,19 @@
 								&:last-child
 									text-align: right
 
+				~ .full
+					.half
+						margin-top: 4px
+						line-height: 1.4em
+
+					+ .standard > a
+						width: calc(100% + 20px) !important
+
+					+ .standard > a, ~ .standard .share-buttons
+						border-top: 1px solid rgba(255,255,255,0.08)
+						padding-top: 11px
+						margin-top: 11px
+
 		#betpoll
 			position: relative
 			display: inline-block
@@ -303,7 +315,7 @@
 				cursor: wait
 
 			+ .standard
-				> a, .share-buttons
+				> a, .share-buttons, + .standard .share-buttons
 					border-top: 1px solid rgba(255,255,255,0.08)
 					padding-top: 11px
 					margin-top: 11px
@@ -514,6 +526,25 @@
 	.selectbox
 		float: right
 		width: 270px
+
+.ld-item-group-header
+	div[style*="float"]
+		float: left !important
+
+	.ld-item-group-delete
+		text-indent: -999px
+		cursor: pointer
+		width: 40px
+		height: 35px
+		margin-right: -12px
+		display: inline-block
+		+border-radius(0 2px 2px 0)
+		border-left: 1px solid rgba(255,255,255,0.08)
+		background: url(#{$image-removebookmark}) center center no-repeat
+		+transition(all 0.15s)
+
+		&:hover
+			background-color: rgba(0,0,0,0.1)
 
 // Donation to a stream
 #mainstream

@@ -128,7 +128,7 @@ div.trade-description, div.message
 	float: none !important
 	margin: 11px 0 0 0 !important
 	+border-radius(2px !important)
-	+transition(all 0.2s)
+	+transition(opacity 0.2s)
 	+box-shadow(0 2px 4px rgba(0,0,0,0.08))
 
 	> p, > p:hover
@@ -148,6 +148,17 @@ div.trade-description, div.message
 div.message
 	margin-top: -11px !important
 	opacity: 1 !important
+
+	#noteEdit
+		width: calc(100% - 1px)
+		padding: 7px 11px
+		min-height: 150px
+		border: 1px solid rgba(255,255,255,0.08)
+		resize: vertical
+		background: rgba(0,0,0,0.08)
+		text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+		+box-sizing(border-box)
+		+border-radius(2px)
 
 .ld-trades
 	.tradeheader

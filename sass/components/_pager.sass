@@ -12,14 +12,6 @@
 		border-top: 1px solid rgba(255,255,255,0.08)
 		margin-bottom: 11px
 
-	&:not(.full)
-		li
-			&:last-child
-				width: auto
-
-				a
-					padding: 0 13px
-
 	a:hover
 		text-decoration: none
 
@@ -57,3 +49,9 @@
 
 			+ li a
 				border-left-color: $color-orange
+
+.ld-main .simplePagerNav li:last-child
+	width: auto
+
+	a
+		padding: 0 13px

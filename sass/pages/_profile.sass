@@ -1,0 +1,97 @@
+//
+// TODO: Rewrite this whole thing, because it is old version's code
+//
+
+.ld-profile #profile .half:first-child
+    width: 59% !important
+
+.ld-profile #profile .box-shiny-alt > div[style]:not(.half)
+    margin: 9px 5px 0 0 !important
+
+    div[style="float: left;margin: 0 7px 0 0;"]
+        margin-top: -5px !important
+
+.ld-profile #profile .box-shiny-alt > div[style]:not(.half) div[style*="float: left"] > div:first-child
+    margin-top: 4px !important
+
+.ld-profile #profile .box-shiny-alt .half[style*="float:right"]
+    width: 110px !important
+    margin: 8px 0 0 10px !important
+
+.ld-profile #profile .box-shiny-alt .half[style*="float:right"] .button
+    display: block !important
+    clear: both !important
+    margin: 0 !important
+    width: 100% !important
+
+    -webkit-border-radius: 3px 3px 0 0 !important
+    -moz-border-radius: 3px 3px 0 0 !important
+    border-radius: 3px 3px 0 0 !important
+
+.ld-profile #profile .box-shiny-alt .half[style*="float:right"] .button + .button
+    border-top: transparent !important
+
+    -webkit-border-radius: 0 0 3px 3px !important
+    -moz-border-radius: 0 0 3px 3px !important
+    border-radius: 0 0 3px 3px !important
+
+.ld-profile #profile #reputation-minus,
+.ld-profile #profile #reputation-plus
+    height: auto !important
+    width: 400px !important
+    z-index: 1000 !important
+    border: 2px solid lighten(#323232, 7%)
+    +border-radius(2px !important)
+    +background-image(radial-gradient(lighten(#323232, 1%) 15%, lighten(#2d2d2d, 1%) 85%) !important)
+    +box-shadow(0 0 6em rgba(0,0,0,0.6), inset 0 10em 20em rgba(0,0,0,0.2) !important)
+
+    .full
+        margin: 0 0 20px 0 !important
+        border: none !important
+        padding: 0 !important
+        width: auto !important
+        display: block
+
+    .buttonright
+        margin-right: 0 !important
+
+    textarea.message
+        margin-top: 3px !important
+
+#reputation-vote
+    margin: 3px 0 0 5px !important
+
+    -webkit-border-radius: 5px !important
+    -moz-border-radius: 5px !important
+    border-radius: 5px !important
+
+    -webkit-box-shadow: none !important
+    box-shadow: none !important
+
+#reputation-vote a
+    text-shadow: none !important
+    padding: 0 !important
+    line-height: 22px !important
+    font-weight: bold !important
+    color: rgba(0,0,0,0.5) !important
+    cursor: pointer
+    text-decoration: none !important
+
+    -webkit-transition: all 0.1s !important
+    -o-transition: all 0.1s !important
+    transition: all 0.1s !important
+
+#reputation-vote a[onclick*="plus"]
+    background: $color-orange !important
+
+#reputation-vote a[onclick*="plus"]:hover
+    background: lighten($color-orange, 6%) !important
+
+#reputation-vote a[onclick*="minus"]
+    background: #696969 !important
+
+#reputation-vote a[onclick*="minus"]:hover
+    background: #777777 !important
+
+.ld-profile .tradeheader
+    text-indent: 0 !important
