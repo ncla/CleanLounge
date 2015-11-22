@@ -1,36 +1,37 @@
 .button, .buttonright, #mainstream > .tab
     display: inline-block !important
-    padding: 5px 10px
-    color: $color-orange
+    padding: 5px 10px !important
+    color: $color-orange !important
     line-height: 1em
-    border: 2px solid $color-orange
+    border: 2px solid $color-orange !important
     font-weight: bold
     cursor: pointer
     width: auto !important
     text-align: center
-    font-size: 1em !important
-    text-shadow: 0 1px 0 rgba(0,0,0,0.12)
+    text-shadow: 0 1px 0 rgba(0,0,0,0.12) !important
     -webkit-user-select: none
+    font-size: $body-font-size !important
+    font-family: $body-font-family
     +transition(all 0.13s)
     +box-sizing(border-box)
     +border-radius(2px)
-    +box-shadow(0 1px 3px rgba(0,0,0,0.1))
+    +box-shadow(0 1px 3px rgba(0,0,0,0.1) !important)
 
     &:not([style*="display: none"]):hover
-        background: $color-orange
-        text-shadow: 0 1px 0 rgba(0,0,0,0.08)
-        text-decoration: none
+        background: $color-orange !important
+        text-shadow: 0 1px 0 rgba(0,0,0,0.08) !important
+        text-decoration: none !important
 
     &:not([style*="display: none"]):active, &.pressed, &.pressed:hover, &.pressed:active
-        background: lighten($color-orange, 5%)
-        border-color: lighten($color-orange, 5%)
-        +box-shadow(0 3px 9px rgba(0,0,0,0.15))
+        background: lighten($color-orange, 5%) !important
+        border-color: lighten($color-orange, 5%) !important
+        +box-shadow(0 3px 9px rgba(0,0,0,0.15) !important)
 
     &.pressed
         cursor: default
 
     &:not([style*="display: none"]):hover, &:not([style*="display: none"]):active, &.pressed
-        color: white
+        color: white !important
 
     + .button
         margin-left: 0

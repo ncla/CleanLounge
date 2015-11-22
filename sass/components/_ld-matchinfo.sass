@@ -1,0 +1,172 @@
+.ld-match-info
+	display: inline-block
+	padding: 0 !important
+	margin-bottom: 11px !important
+
+	h2
+		padding: 0 3px 0 10px
+		font-weight: normal
+		font-size: 18px
+		line-height: 33px
+		text-transform: uppercase
+		font-family: "Roboto Condensed", sans-serif
+		color: $color-orange
+		background: none
+		border-top: 1px solid rgba(255,255,255,0.08)
+		border-bottom: 1px solid rgba(255,255,255,0.08)
+
+		&:first-of-type
+			border-top: none
+
+		.buttonright
+			color: $color-orange !important
+			margin: 3px 0 0 3px
+
+		span.ld-btn-icon
+			margin: 6px 6px 0 -2px
+
+	span.ld-btn-icon
+		background: url(#{$image-ld-logo-16x16-2}) no-repeat
+		height: 16px
+		width: 15px
+
+	.ld-match-info-label
+		font-size: 10px
+		line-height: normal
+		border: 1px solid $color-orange
+		color: $color-orange
+		padding: 0px 3px
+		top: -3px
+		+box-shadow(0 1px 2px rgba(0,0,0,0.1))
+
+	.ld-match-info-button-popup
+		position: relative
+
+		&:after
+			font-weight: normal
+			top: 100%
+			margin-top: 0
+			position: absolute
+			white-space: nowrap
+			display: inline-block
+			background: rgba(255,255,255,0.1)
+			padding: 4px 7px 6px
+			font-size: 0.85em
+			color: $body-font-color
+			line-height: 1em
+			text-transform: none
+			right: auto
+			left: 50%
+			+transform(translateX(-50%))
+			text-shadow: 0 1px 0 rgba(0,0,0,0.08)
+			+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+			+transition(all 0.1s)
+			+border-radius(2px)
+
+		&:hover:after
+			margin-top: 5px
+
+	p
+		margin: 0
+		padding: 0
+
+		+ p
+			margin-top: 2px !important
+
+	.full
+		&:nth-of-type(-n + 2)
+			padding: 8px 10px
+			margin: 0
+			width: 100%
+
+		&:nth-of-type(3)
+			margin-bottom: -4px
+
+		&:nth-of-type(4)
+			.ld-match-info-nomatches
+				margin: 10px 10px 14px 10px !important
+
+	.full, .ld-match-info-prediction, .ld-match-info-headtohead, .ld-match-info-pastmatches tr:nth-child(n + 2)
+		font-size: $body-font-size !important
+
+	td
+		padding: 0 0 0 10px !important
+
+	.ld-match-info-pastmatches
+		th
+			padding: 7px 10px
+			border-bottom-color: rgba(255,255,255,0.04)
+
+		td:last-child
+			padding-right: 10px !important
+			width: 15%
+
+		.ld-match-info-pastmatches-won
+			color: #5dca2d
+
+		.ld-match-info-pastmatches-lost
+			color: #ea3838
+
+		.ld-match-info-pastmatches-draw
+			color: #21a1e0
+
+		&:nth-of-type(2)
+			width: calc(50% + 1px)
+
+	.ld-match-info-headtohead-score
+		color: $color-orange
+
+	.ld-match-info-headtohead
+		td:nth-child(4) .buttonright
+			margin: 2px 3px 2px 0
+
+	hr
+		display: none
+
+	.ld-match-info-disclaimer
+		background: none
+		padding: 8px 11px
+		border-top: 1px solid rgba(255,255,255,0.08)
+		margin-top: -4px
+
+	.ld-match-info-error
+		background: none
+		border: none
+		margin: 0
+		+box-shadow(none)
+		+background-image(radial-gradient(darken(#a92727, 8%) 15%, darken(#b72a2a, 8%) 85%))
+		color: #e7b7b7
+		padding: 8px 10px
+		border-radius: 2px
+		font-size: $body-font-size
+		text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+
+		span.ld-btn-icon
+			background-image: url(#{$image-ld-logo-16x16-3})
+			margin: -4px 1px -1px 0
+
+		.button
+			margin: 3px 0 0 0
+			background: none
+			color: $color-orange !important
+			text-shadow: 0 1px 0 rgba(0,0,0,0.12) !important
+			+box-shadow(0 1px 3px rgba(0,0,0,0.1) !important)
+
+			&:hover, &:active
+				color: white !important
+
+	.ld-match-info-nomatches
+		background: none
+		border: none
+		margin: 10px 0 !important
+		+box-shadow(none)
+		+background-image(radial-gradient(lighten(#414141, 4%) 15%, lighten(#414141, 2%) 85%))
+		color: $body-font-color
+		padding: 8px 10px
+		border-radius: 2px
+		font-size: $body-font-size
+		+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+		text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+
+	.ld-loading-spinner
+		margin: 20px auto

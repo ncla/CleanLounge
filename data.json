@@ -1,15 +1,16 @@
 {
-	"icon"					: "http://api.ncla.me/themes/CleanLounge2/icon.png",
-	"bg"					: "http://api.ncla.me/themes/CleanLounge2/bg.png",
-	"css"					: "http://api.ncla.me/themes/CleanLounge2/inject.css",
+	"icon"					: "http://127.0.0.1/cleanlounge_old/icon.png",
+	"bg"					: "http://127.0.0.1/cleanlounge_old/bg.png",
+	"css"					: "http://127.0.0.1/cleanlounge_old/inject.css",
 
-	"name"					: "cleanlounge_night",
+	"name"					: "cleanlounge_night_old",
 	"author"				: "farblood",
-	"version"				: "2.0.2 alpha",
-	"title"					: "CleanLounge Night",
-	"description"			: "A clean, dark theme for CSGOLounge.com",
+	"version"				: "2.0.2.1 alpha",
+	"title"					: "CleanLounge Night (OLD)",
+	"description"			: "OLD",
 	"disableCss"			: true,
 	"collapsibleColumns"	: true,
+	"donationUrl"			: "https://steamcommunity.com/tradeoffer/new/?partner=159313440&token=jYe3YouE",
 
 	"options"		: {
 		"ld-background-image": {

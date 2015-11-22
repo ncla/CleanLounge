@@ -56,10 +56,15 @@ header
 		vertical-align: middle
 
 		&#logo
-			content: url(#{$image-logo})
 			width: 124px
 			height: 50px
 			margin: 13px 0
+
+			&[src*="csgolounge"]
+				content: url(#{$image-csgo-logo})
+
+			&[src*="dota2lounge"]
+				content: url(#{$image-dota2-logo})
 
 		&[alt="Profile"],
 		&[alt="Sign in as..."]
