@@ -1206,7 +1206,7 @@ div.ld-steam-extra-wrapper.ld-slidedown { margin: 0 0 11px 0; }
 /* line 110, sass/components/_ld-matchinfo.sass */
 .box .ld-match-info .ld-match-info-pastmatches .ld-match-info-pastmatches-draw { color: #21a1e0; }
 /* line 113, sass/components/_ld-matchinfo.sass */
-.box .ld-match-info .ld-match-info-pastmatches:nth-of-type(2) { width: calc(50% + 1px); }
+.box .ld-match-info .ld-match-info-pastmatches:nth-of-type(2) { width: 50%; }
 /* line 116, sass/components/_ld-matchinfo.sass */
 .box .ld-match-info .ld-match-info-headtohead-score { color: #e89300; }
 /* line 120, sass/components/_ld-matchinfo.sass */
