@@ -1992,24 +1992,26 @@ iframe[src*="statshelix"] { -webkit-border-radius: 2px !important; -moz-border-r
 #pleft .betpoll .left { float: none; width: 50% !important; margin: 0 !important; }
 /* line 97, sass/pages/_predict.sass */
 #pleft .betpoll .left .oitm { width: 25% !important; }
+/* line 101, sass/pages/_predict.sass */
+#pleft + div[style="float: left; width: 96%;margin: 0 2%;height: 26px;border-radius: 5px;position: relative;overflow: hidden;"] > .tab { width: 33.33333%; }
 
-/* line 100, sass/pages/_predict.sass */
+/* line 104, sass/pages/_predict.sass */
 #pright { color: #a0a0a0 !important; }
-/* line 103, sass/pages/_predict.sass */
+/* line 107, sass/pages/_predict.sass */
 #pright:before { background-image: url(http://csgolounge.com/res/predict/7010/P2.jpg); }
-/* line 106, sass/pages/_predict.sass */
+/* line 110, sass/pages/_predict.sass */
 #pright > a { text-decoration: none !important; width: calc(100% + 20px) !important; margin: -221px -10px 0 -10px; height: 221px !important; position: relative; }
-/* line 113, sass/pages/_predict.sass */
+/* line 117, sass/pages/_predict.sass */
 #pright h1 { background: none !important; padding: 0 !important; color: #e89300 !important; }
-/* line 118, sass/pages/_predict.sass */
+/* line 122, sass/pages/_predict.sass */
 #pright p { margin: 0 -10px -5px -10px !important; border-bottom: 1px solid rgba(255, 255, 255, 0.08); width: calc(100% + 20px); padding: 0 10px 10px 10px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-/* line 125, sass/pages/_predict.sass */
+/* line 129, sass/pages/_predict.sass */
 #pright p:nth-last-child(2) { border-bottom: none; padding-bottom: 0; margin-bottom: 0 !important; }
-/* line 131, sass/pages/_predict.sass */
+/* line 135, sass/pages/_predict.sass */
 #pright > .full > .full { border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding: 0 10px 10px 10px; width: calc(100% + 20px); margin: 0 -10px 10px -10px; }
-/* line 137, sass/pages/_predict.sass */
+/* line 141, sass/pages/_predict.sass */
 #pright > .full + div[style*="background"] { float: none !important; width: calc(100% + 20px) !important; -webkit-border-radius: 0 0 4px 4px !important; -moz-border-radius: 0 0 4px 4px !important; -ms-border-radius: 0 0 4px 4px !important; -o-border-radius: 0 0 4px 4px !important; border-radius: 0 0 4px 4px !important; background-color: none !important; background-position: center center !important; min-height: 0 !important; margin: 0 -10px -10px -10px; height: 221px; -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.4, black), color-stop(1, rgba(0, 0, 0, 0))); }
-/* line 148, sass/pages/_predict.sass */
+/* line 152, sass/pages/_predict.sass */
 #pright > .full + div[style*="background"] > a { height: 100% !important; width: 100%; }
 
 /* line 2, sass/pages/_my-trades.sass */
