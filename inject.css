@@ -338,10 +338,10 @@ iframe { border: none; }
 #mt, .mobon { display: none; }
 
 /* line 50, sass/base/_global.sass */
-.ld-premium main:before, .ld-guide main:before, .ld-contact main:before, .ld-missingitems main:before, .appID570 main:before { content: "CleanLounge v2.0.2.1 alpha is currently not completely finished yet. Updates will arive soon.\A Feel free to report bugs @ reddit.com/r/loungedestroyer or github.com/farblood/cleanlounge"; display: block; background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 85, color-stop(15%, #881f1f), color-stop(85%, #962222)); background-image: -webkit-radial-gradient(#881f1f 15%, #962222 85%); background-image: -moz-radial-gradient(#881f1f 15%, #962222 85%); background-image: -o-radial-gradient(#881f1f 15%, #962222 85%); background-image: radial-gradient(#881f1f 15%, #962222 85%); color: #e7b7b7; padding: 8px 10px; border-radius: 2px; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.16); -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); margin-bottom: 11px; white-space: pre; }
+.ld-premium main:before, .ld-guide main:before, .ld-contact main:before, .ld-missingitems main:before, .appID570 main:before { content: "CleanLounge v2.0.2.3 alpha is currently not completely finished yet. Updates will arive soon.\A Feel free to report bugs @ reddit.com/r/loungedestroyer or github.com/farblood/cleanlounge"; display: block; background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 85, color-stop(15%, #881f1f), color-stop(85%, #962222)); background-image: -webkit-radial-gradient(#881f1f 15%, #962222 85%); background-image: -moz-radial-gradient(#881f1f 15%, #962222 85%); background-image: -o-radial-gradient(#881f1f 15%, #962222 85%); background-image: radial-gradient(#881f1f 15%, #962222 85%); color: #e7b7b7; padding: 8px 10px; border-radius: 2px; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.16); -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); margin-bottom: 11px; white-space: pre; }
 
 /* line 63, sass/base/_global.sass */
-.appID570 main:before { content: "CleanLounge v2.0.2.1 alpha doesn't support DOTA2Lounge yet.\A If you are an active DOTA2Lounge user, we'd recommend you to disable this theme until it has a full support of the site."; }
+.appID570 main:before { content: "CleanLounge v2.0.2.3 alpha doesn't support DOTA2Lounge yet.\A If you are an active DOTA2Lounge user, we'd recommend you to disable this theme until it has a full support of the site."; }
 
 /* line 2, sass/components/_header.sass */
 [class*="appID"] header:before { content: none; }
@@ -1031,7 +1031,7 @@ div.message #noteEdit { width: calc(100% - 1px); padding: 7px 11px; min-height: 
 /* line 205, sass/components/_sidebar.sass */
 #submenu footer { text-shadow: 0 1px 0 rgba(0, 0, 0, 0.16); padding: 12px; position: absolute; bottom: 0; }
 /* line 211, sass/components/_sidebar.sass */
-#submenu footer:after { content: "CleanLounge Night v2.0.2.1 alpha\AMade by /u/farblood"; white-space: pre; cursor: text; margin-top: -10px; display: block; }
+#submenu footer:after { content: "CleanLounge Night v2.0.2.3 alpha\AMade by /u/farblood"; white-space: pre; cursor: text; margin-top: -10px; display: block; }
 /* line 218, sass/components/_sidebar.sass */
 #submenu footer br { display: none; }
 /* line 221, sass/components/_sidebar.sass */
