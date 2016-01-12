@@ -67,6 +67,9 @@
                     td:last-child
                         opacity: 1 !important
 
+            &:nth-child(even)
+                background: none
+
     #ainfo
         font-size: 1em !important
         color: $prediction-color !important
@@ -106,12 +109,14 @@
 
     &:before
         background-image: url(#{$prediction-image-right})
+        background-size: 100% auto
+        height: 145px
 
     > a
         text-decoration: none !important
         width: calc(100% + 20px) !important
-        margin: -$prediction-image-height -10px 0 -10px
-        height: $prediction-image-height !important
+        margin: -145px -10px 0 -10px
+        height: 145px !important
         position: relative
 
     h1
