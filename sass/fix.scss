@@ -1,0 +1,87 @@
+header * {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.btn {
+	margin: 1.5em 0.2em !important;
+}
+
+#status {
+	padding-right: 10px;
+}
+
+.tab {
+	cursor: pointer;
+	float: left;
+	width: 50%;
+	text-align: center;
+	background-color: #414141;
+	letter-spacing: 0.05em;
+	color: #CCC;
+	line-height: 1.7em;
+}
+
+.modal-content {
+	background-color: #D7D7D7;
+}
+
+.modal-content a {
+	color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content .btn {
+	color: #fff;
+}
+
+.modal-content .btn {
+	background-color: #ff8a00;
+	margin: 0 !important;
+}
+
+.tabs .tab a {
+	color: #e0e0e0;
+	text-decoration: none;
+}
+
+.tabs .tab a:hover {
+	color: #fff;
+}
+
+.input-field .btn, .input-field .btn-flat {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	font-size: 0.8em;
+	letter-spacing: 0;
+	padding: 0 0.5em;
+	height: 1.8em;
+	line-height: 1.8em;
+	text-transform: none;
+}
+
+.input-field .btn, .input-field .btn-flat {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	font-size: 0.8em;
+	letter-spacing: 0;
+	padding: 0 0.5em;
+	height: 1.8em;
+	line-height: 1.8em;
+	text-transform: none;
+}
+
+.input-field .btnbox .btn, .input-field .btnbox .btn-flat {
+	position: relative;
+	top: initial;
+	right: initial;
+}
+
+.input-field .btnbox {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}

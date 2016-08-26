@@ -1,10 +1,10 @@
 {
 	"icon"					: "http://api.ncla.me/themes/CleanLounge2/icon.png",
 	"bg"					: "http://api.ncla.me/themes/CleanLounge2/bg.png",
-	"css"					: "http://api.ncla.me/themes/CleanLounge2/inject.css",
+	"css"					: "http://192.168.1.13/inject.css",
 
-	"name"					: "cleanlounge_night",
-	"author"				: "farblood",
+	"name"					: "cleanlounge_night_fixed",
+	"author"				: "roguyt",
 	"version"				: "2.0.2.5 alpha",
 	"title"					: "CleanLounge Night",
 	"description"			: "A clean, dark theme for CSGOLounge.com",

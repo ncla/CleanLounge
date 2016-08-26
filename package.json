@@ -1,0 +1,25 @@
+{
+  "name": "cleanlounge",
+  "version": "1.0.0",
+  "description": "CleanLounge v2.0.2.3 alpha ===========",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roguyt/CleanLounge.git"
+  },
+  "author": "Roguyt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Roguyt/CleanLounge/issues"
+  },
+  "homepage": "https://github.com/Roguyt/CleanLounge#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify-css": "^1.2.4",
+  }
+}
