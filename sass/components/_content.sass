@@ -91,7 +91,8 @@ main
 .box-shiny-alt,
 .box-shiny,
 #satrade,
-#pleft, #pright
+#pleft, #pright,
+.ld-settings .box
 	width: 100% !important
 	padding: 10px !important
 	position: relative
@@ -117,6 +118,48 @@ main
 
 		+ .full, + .half
 			margin-top: -4px
+
+.ld-settings main
+	text-align: center
+	letter-spacing: -0.25em
+
+.ld-settings .box
+	display: inline-block
+	width: 45% !important
+	margin: 0 2.5% !important
+	text-align: left
+	letter-spacing: normal
+	.title
+		font-weight: normal
+		font-size: 18px
+		line-height: 33px
+		text-transform: uppercase
+		font-family: "Roboto Condensed", sans-serif
+		color: rgb(232, 147, 0)
+		padding: 0px 3px 0px 10px
+		background: none
+		border-top: 1px solid rgba(255, 255, 255, 0.0784314)
+		border-bottom: 1px solid rgba(255, 255, 255, 0.0784314)
+	article .row:nth-child(1) .s12
+		letter-spacing: -0.25em
+		.m6, .m8, .s12
+			display: inline-block
+			vertical-align: top
+			width: 47.5% !important
+			margin: 0 2.5% 0 0 !important
+			letter-spacing: normal
+
+.ld-settings .box
+	.s12
+		.m6:nth-child(2), .m6:nth-child(4)
+			margin: 0 0 0 2.5% !important
+		.m6:nth-child(4)
+			min-height: 55px
+
+.ld-settings .box:nth-child(1)
+	.s12:nth-child(2)
+		letter-spacing: normal !important
+		padding-left: 0 !important
 
 // Tabs
 .tabholder,

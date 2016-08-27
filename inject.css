@@ -3542,7 +3542,8 @@ main:after {
 .box-shiny-alt,
 .box-shiny,
 #satrade,
-#pleft, #pright {
+#pleft, #pright,
+.ld-settings .box {
   width: 100% !important;
   padding: 10px !important;
   position: relative;
@@ -3567,7 +3568,8 @@ main:after {
 .box-shiny-alt:after,
 .box-shiny:after,
 #satrade:after,
-#pleft:after, #pright:after {
+#pleft:after, #pright:after,
+.ld-settings .box:after {
   content: "";
   display: table;
   clear: both;
@@ -3581,7 +3583,10 @@ main:after {
 #satrade .winsorloses,
 #pleft .left,
 #pleft .right,
-#pleft .winsorloses, #pright .left, #pright .right, #pright .winsorloses {
+#pleft .winsorloses, #pright .left, #pright .right, #pright .winsorloses,
+.ld-settings .box .left,
+.ld-settings .box .right,
+.ld-settings .box .winsorloses {
   background: rgba(255, 255, 255, 0.06);
   width: 50%;
   -moz-box-shadow: none;
@@ -3597,13 +3602,17 @@ main:after {
 #satrade .winsorloses:empty,
 #pleft .left:empty,
 #pleft .right:empty,
-#pleft .winsorloses:empty, #pright .left:empty, #pright .right:empty, #pright .winsorloses:empty {
+#pleft .winsorloses:empty, #pright .left:empty, #pright .right:empty, #pright .winsorloses:empty,
+.ld-settings .box .left:empty,
+.ld-settings .box .right:empty,
+.ld-settings .box .winsorloses:empty {
   display: none;
 }
 .box-shiny-alt hr,
 .box-shiny hr,
 #satrade hr,
-#pleft hr, #pright hr {
+#pleft hr, #pright hr,
+.ld-settings .box hr {
   width: calc(100% + 20px);
   margin: 10px -10px;
 }
@@ -3613,8 +3622,57 @@ main:after {
 #satrade hr + .full,
 #satrade hr + .half,
 #pleft hr + .full,
-#pleft hr + .half, #pright hr + .full, #pright hr + .half {
+#pleft hr + .half, #pright hr + .full, #pright hr + .half,
+.ld-settings .box hr + .full,
+.ld-settings .box hr + .half {
   margin-top: -4px;
+}
+
+.ld-settings main {
+  text-align: center;
+  letter-spacing: -0.25em;
+}
+
+.ld-settings .box {
+  display: inline-block;
+  width: 45% !important;
+  margin: 0 2.5% !important;
+  text-align: left;
+  letter-spacing: normal;
+}
+.ld-settings .box .title {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 33px;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #e89300;
+  padding: 0px 3px 0px 10px;
+  background: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.07843);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07843);
+}
+.ld-settings .box article .row:nth-child(1) .s12 {
+  letter-spacing: -0.25em;
+}
+.ld-settings .box article .row:nth-child(1) .s12 .m6, .ld-settings .box article .row:nth-child(1) .s12 .m8, .ld-settings .box article .row:nth-child(1) .s12 .s12 {
+  display: inline-block;
+  vertical-align: top;
+  width: 47.5% !important;
+  margin: 0 2.5% 0 0 !important;
+  letter-spacing: normal;
+}
+
+.ld-settings .box .s12 .m6:nth-child(2), .ld-settings .box .s12 .m6:nth-child(4) {
+  margin: 0 0 0 2.5% !important;
+}
+.ld-settings .box .s12 .m6:nth-child(4) {
+  min-height: 55px;
+}
+
+.ld-settings .box:nth-child(1) .s12:nth-child(2) {
+  letter-spacing: normal !important;
+  padding-left: 0 !important;
 }
 
 .tabholder,
@@ -3870,7 +3928,7 @@ img#loading {
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
 }
 
-.selectbox, textarea.message, .destroyer.auto-info input, .modal input {
+.selectbox, textarea.message, .destroyer.auto-info input, .modal input, .ld-settings input {
   background: rgba(0, 0, 0, 0.08);
   padding: 5px 10px !important;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -3888,35 +3946,35 @@ img#loading {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-.selectbox::-webkit-input-placeholder, textarea.message::-webkit-input-placeholder, .destroyer.auto-info input::-webkit-input-placeholder, .modal input::-webkit-input-placeholder {
+.selectbox::-webkit-input-placeholder, textarea.message::-webkit-input-placeholder, .destroyer.auto-info input::-webkit-input-placeholder, .modal input::-webkit-input-placeholder, .ld-settings input::-webkit-input-placeholder {
   color: #939393;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-.selectbox:-moz-placeholder, textarea.message:-moz-placeholder, .destroyer.auto-info input:-moz-placeholder, .modal input:-moz-placeholder {
+.selectbox:-moz-placeholder, textarea.message:-moz-placeholder, .destroyer.auto-info input:-moz-placeholder, .modal input:-moz-placeholder, .ld-settings input:-moz-placeholder {
   color: #939393;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-.selectbox::-moz-placeholder, textarea.message::-moz-placeholder, .destroyer.auto-info input::-moz-placeholder, .modal input::-moz-placeholder {
+.selectbox::-moz-placeholder, textarea.message::-moz-placeholder, .destroyer.auto-info input::-moz-placeholder, .modal input::-moz-placeholder, .ld-settings input::-moz-placeholder {
   color: #939393;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-.selectbox:-ms-input-placeholder, textarea.message:-ms-input-placeholder, .destroyer.auto-info input:-ms-input-placeholder, .modal input:-ms-input-placeholder {
+.selectbox:-ms-input-placeholder, textarea.message:-ms-input-placeholder, .destroyer.auto-info input:-ms-input-placeholder, .modal input:-ms-input-placeholder, .ld-settings input:-ms-input-placeholder {
   color: #939393;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-.selectbox:hover, textarea.message:hover, .destroyer.auto-info input:hover, .modal input:hover {
+.selectbox:hover, textarea.message:hover, .destroyer.auto-info input:hover, .modal input:hover, .ld-settings input:hover {
   color: #a0a0a0;
   background: rgba(0, 0, 0, 0.12);
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.18);
@@ -3925,19 +3983,19 @@ img#loading {
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
 }
-.selectbox:hover::-webkit-input-placeholder, textarea.message:hover::-webkit-input-placeholder, .destroyer.auto-info input:hover::-webkit-input-placeholder, .modal input:hover::-webkit-input-placeholder {
+.selectbox:hover::-webkit-input-placeholder, textarea.message:hover::-webkit-input-placeholder, .destroyer.auto-info input:hover::-webkit-input-placeholder, .modal input:hover::-webkit-input-placeholder, .ld-settings input:hover::-webkit-input-placeholder {
   color: #a0a0a0;
 }
-.selectbox:hover:-moz-placeholder, textarea.message:hover:-moz-placeholder, .destroyer.auto-info input:hover:-moz-placeholder, .modal input:hover:-moz-placeholder {
+.selectbox:hover:-moz-placeholder, textarea.message:hover:-moz-placeholder, .destroyer.auto-info input:hover:-moz-placeholder, .modal input:hover:-moz-placeholder, .ld-settings input:hover:-moz-placeholder {
   color: #a0a0a0;
 }
-.selectbox:hover::-moz-placeholder, textarea.message:hover::-moz-placeholder, .destroyer.auto-info input:hover::-moz-placeholder, .modal input:hover::-moz-placeholder {
+.selectbox:hover::-moz-placeholder, textarea.message:hover::-moz-placeholder, .destroyer.auto-info input:hover::-moz-placeholder, .modal input:hover::-moz-placeholder, .ld-settings input:hover::-moz-placeholder {
   color: #a0a0a0;
 }
-.selectbox:hover:-ms-input-placeholder, textarea.message:hover:-ms-input-placeholder, .destroyer.auto-info input:hover:-ms-input-placeholder, .modal input:hover:-ms-input-placeholder {
+.selectbox:hover:-ms-input-placeholder, textarea.message:hover:-ms-input-placeholder, .destroyer.auto-info input:hover:-ms-input-placeholder, .modal input:hover:-ms-input-placeholder, .ld-settings input:hover:-ms-input-placeholder {
   color: #a0a0a0;
 }
-.selectbox:focus, textarea.message:focus, .destroyer.auto-info input:focus, .modal input:focus {
+.selectbox:focus, textarea.message:focus, .destroyer.auto-info input:focus, .modal input:focus, .ld-settings input:focus {
   color: #adadad;
   background: rgba(0, 0, 0, 0.14);
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.18);
@@ -3946,16 +4004,16 @@ img#loading {
   -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.13);
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.13);
 }
-.selectbox:focus::-webkit-input-placeholder, textarea.message:focus::-webkit-input-placeholder, .destroyer.auto-info input:focus::-webkit-input-placeholder, .modal input:focus::-webkit-input-placeholder {
+.selectbox:focus::-webkit-input-placeholder, textarea.message:focus::-webkit-input-placeholder, .destroyer.auto-info input:focus::-webkit-input-placeholder, .modal input:focus::-webkit-input-placeholder, .ld-settings input:focus::-webkit-input-placeholder {
   color: #adadad;
 }
-.selectbox:focus:-moz-placeholder, textarea.message:focus:-moz-placeholder, .destroyer.auto-info input:focus:-moz-placeholder, .modal input:focus:-moz-placeholder {
+.selectbox:focus:-moz-placeholder, textarea.message:focus:-moz-placeholder, .destroyer.auto-info input:focus:-moz-placeholder, .modal input:focus:-moz-placeholder, .ld-settings input:focus:-moz-placeholder {
   color: #adadad;
 }
-.selectbox:focus::-moz-placeholder, textarea.message:focus::-moz-placeholder, .destroyer.auto-info input:focus::-moz-placeholder, .modal input:focus::-moz-placeholder {
+.selectbox:focus::-moz-placeholder, textarea.message:focus::-moz-placeholder, .destroyer.auto-info input:focus::-moz-placeholder, .modal input:focus::-moz-placeholder, .ld-settings input:focus::-moz-placeholder {
   color: #adadad;
 }
-.selectbox:focus:-ms-input-placeholder, textarea.message:focus:-ms-input-placeholder, .destroyer.auto-info input:focus:-ms-input-placeholder, .modal input:focus:-ms-input-placeholder {
+.selectbox:focus:-ms-input-placeholder, textarea.message:focus:-ms-input-placeholder, .destroyer.auto-info input:focus:-ms-input-placeholder, .modal input:focus:-ms-input-placeholder, .ld-settings input:focus:-ms-input-placeholder {
   color: #adadad;
 }
 
@@ -3981,6 +4039,41 @@ textarea.message {
   display: block;
   margin: 0 !important;
   height: 70px !important;
+}
+
+.ld-settings .m8 .input-field a {
+  right: 0;
+}
+.ld-settings .m8 .input-field a:nth-child(2) {
+  right: 50px;
+}
+.ld-settings .input-field {
+  height: 55px;
+  position: relative;
+}
+.ld-settings input, .ld-settings label, .ld-settings .input-field a, .ld-settings .input-field p, .ld-settings .input-field select {
+  position: absolute;
+}
+.ld-settings input, .ld-settings .input-field p, .ld-settings .input-field select {
+  top: 18px;
+  width: 100%;
+}
+.ld-settings label {
+  top: 0;
+}
+.ld-settings p {
+  margin: 3px 0 0 0;
+}
+.ld-settings p input, .ld-settings p label {
+  display: inline-block;
+  width: auto;
+  vertical-align: top;
+  position: static;
+  line-height: 30px;
+}
+.ld-settings p input {
+  margin-right: 5px;
+  height: 30px;
 }
 
 .button, .buttonright, #mainstream > .tab, .btn {

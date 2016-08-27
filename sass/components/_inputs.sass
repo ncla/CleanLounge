@@ -1,4 +1,4 @@
-.selectbox, textarea.message, .destroyer.auto-info input, .modal input
+.selectbox, textarea.message, .destroyer.auto-info input, .modal input, .ld-settings input
     background: rgba(0,0,0,0.08)
     padding: 5px 10px !important
     border: 1px solid rgba(255,255,255,0.1)
@@ -54,3 +54,30 @@ textarea
         display: block
         margin: 0 !important
         height: 70px !important
+
+.ld-settings
+    .m8 .input-field a
+        right: 0
+    .m8 .input-field a:nth-child(2)
+        right: 50px
+    .input-field
+        height: 55px
+        position: relative
+    input, label, .input-field a, .input-field p, .input-field select
+        position: absolute
+    input, .input-field p, .input-field select
+        top: 18px
+        width: 100%
+    label
+        top: 0
+    p
+        margin: 3px 0 0 0
+    p input, p label
+        display: inline-block
+        width: auto
+        vertical-align: top
+        position: static
+        line-height: 30px
+    p input
+        margin-right: 5px
+        height: 30px
