@@ -3662,6 +3662,10 @@ main:after {
   margin: 0 2.5% 0 0 !important;
   letter-spacing: normal;
 }
+.ld-settings .box #steamcon {
+  color: #FFF !important;
+  border: 0 !important;
+}
 
 .ld-settings .box .s12 .m6:nth-child(2), .ld-settings .box .s12 .m6:nth-child(4) {
   margin: 0 0 0 2.5% !important;
