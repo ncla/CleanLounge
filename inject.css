@@ -3665,6 +3665,7 @@ main:after {
 .ld-settings .box #steamcon {
   color: #FFF !important;
   border: 0 !important;
+  line-height: 30px;
 }
 
 .ld-settings .box .s12 .m6:nth-child(2), .ld-settings .box .s12 .m6:nth-child(4) {
