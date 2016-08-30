@@ -1,0 +1,41 @@
+.modal
+	+background-image(radial-gradient(lighten(#323232, 3%) 15%, lighten(#2d2d2d, 3%) 85%) !important)
+	.input-field
+		height: 55px
+		position: relative
+	input, label, .input-field a
+		position: absolute
+	input
+		top: 18px
+		width: 100%
+	label
+		top: 0
+	.input-field a
+		top: 18px
+		right: 0
+		z-index: 100
+
+.tabs
+	margin: 0
+	padding: 0
+	text-align: center
+	li
+		display: inline-block
+		vertical-align: top
+		width: 49%
+	a
+		margin: 0.75em 0.2em
+
+#logIn
+	div:nth-child(3)
+		margin: 0 0 15px 0 !important
+	.col.s12:nth-child(4), .col.s12:nth-child(5), .col.s12:nth-child(6)
+		display: inline-block
+		vertical-align: top
+		width: 32%
+		text-align: center
+	.col:nth-child(5)
+		.col.s5
+			display: none
+	img
+		height: 14px !important

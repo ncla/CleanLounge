@@ -1,0 +1,83 @@
+// Code from materializecss
+// Required because CSGOLounge devs  ¯\_(ツ)_/¯
+
+$primary-color: color("materialize-red", "lighten-2") !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+
+$secondary-color: color("teal", "lighten-1") !default;
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+$link-color: color("light-blue", "darken-1") !default;
+
+$tabs-underline-color: #ff8a00 !default;
+$tabs-text-color: #CCC !default;
+$tabs-bg-color: #fff !default;
+
+.tabs {
+  display: flex;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 48px;
+  background-color: #414141;
+  margin: 0 auto;
+  width: 100%;
+  white-space: nowrap;
+
+  .tab {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    display: block;
+    float: left;
+    text-align: center;
+    line-height: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    letter-spacing: .8px;
+    width: 15%;
+    min-width: 80px;
+
+    background-color: #414141;
+    color: #CCC;
+
+    a {
+	  color: #e0e0e0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      transition: color .28s ease;
+
+	  margin: 0;
+	  padding: 0;
+	  font-size: 100%;
+	  font: inherit;
+	  vertical-align: baseline;
+	  border: 0;
+
+      &:hover {
+        color: lighten($tabs-text-color, 20%);
+      }
+    }
+
+    &.disabled a {
+      color: lighten($tabs-text-color, 20%);
+      cursor: default;
+    }
+  }
+  .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: $tabs-underline-color;
+    will-change: left, right;
+  }
+}
