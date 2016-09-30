@@ -17,8 +17,7 @@ $tabs-bg-color: #fff !default;
 .tabs {
   display: flex;
   position: relative;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: hidden;
   height: 48px;
   background-color: #414141;
   margin: 0 auto;
