@@ -1,5 +1,270 @@
 // Match's header
 .box:first-child
+	.match-box
+		> .row[style*="font-size: 0.8em;margin: 1em 0"]
+			display: table !important
+			width: 100%
+			height: 32px
+			margin: -10px 0 10px 0
+			position: relative
+			text-align: left
+
+			.s4
+				display: table-cell
+				font-size: 1em !important
+				padding-bottom: 1px
+				float: none
+				vertical-align: middle
+				width: (100% / 3) !important
+
+				&:nth-child(2)
+					&:not(:empty)
+						border-left: 1px solid rgba(255,255,255,0.06)
+						border-right: 1px solid rgba(255,255,255,0.06)
+
+	.match-team-wrapper
+		height: 120px
+		padding: 0 !important
+		overflow: hidden
+
+		*
+			box-sizing: border-box
+
+		.match-trapezoid
+			position: relative
+			height: 0
+			z-index: 0
+
+			.match-trapezoid-wrapper
+				background-color: #333
+				width: 100%
+				text-align: center
+
+				.match-trapezoid-vs
+					width: 50px
+					line-height: 50px
+					font-size: 24px
+					border-radius: 25px
+					background: #ff8a00
+					color: #fff
+					display: inline-block
+					z-index: 2
+					position: relative
+
+				.match-trapezoid-left, .match-trapezoid-right
+					width: 80%
+					display: inline-block
+					position: absolute
+					top: 0
+					cursor: pointer
+					-webkit-transform: skew(-30deg)
+					-moz-transform: skew(-30deg)
+					-o-transform: skew(-30deg)
+
+				.match-trapezoid-left
+					left: 0
+					margin-left: -30%
+
+				.match-trapezoid-right
+					right: 0
+					margin-right: -30%
+
+				.match-trapezoid-winner-left, .match-trapezoid-winner-right, .match-trapezoid-winner-left-chosen, .match-trapezoid-winner-right-chosen
+					z-index: 4
+					width: 90px
+					display: inline-block
+					position: absolute
+					height: 28px
+					top: 8px
+					padding: 8px
+					letter-spacing: 0.04em
+					font-size: 12px
+					font-weight: bold
+					color: #fff
+					background-color: #ff8a00
+
+				.match-trapezoid-winner-left, .match-trapezoid-winner-left-chosen
+					left: 0
+					top: 8px
+				.match-trapezoid-winner-right, .match-trapezoid-winner-right-chosen
+					right: 0
+				.match-trapezoid-winner-left-chosen, .match-trapezoid-winner-right-chosen
+					background-color: #333
+					color: #ff8a00
+				.match-trapezoid-winner-left:after, .match-trapezoid-winner-right:after, .match-trapezoid-winner-left:before, .match-trapezoid-winner-right:before,	.match-trapezoid-winner-left-chosen:after, .match-trapezoid-winner-right-chosen:after, .match-trapezoid-winner-left-chosen:before, .match-trapezoid-winner-right-chosen:before
+					z-index: 3
+					position: absolute
+					display: block
+					background-color: #ff8a00
+					width: 28px
+					height: 28px
+					top: 0
+					content: ""
+					-webkit-transform: skew(-30deg)
+					-moz-transform: skew(-30deg)
+					-o-transform: skew(-30deg)
+
+				.match-trapezoid-winner-left:before, .match-trapezoid-winner-right:before
+					left: -14px
+				.match-trapezoid-winner-left:after, .match-trapezoid-winner-right:after
+					right: -14px
+				.match-trapezoid-winner-left-chosen:before, .match-trapezoid-winner-right-chosen:before
+					left: -14px
+					background-color: #333
+				.match-trapezoid-winner-left-chosen:after, .match-trapezoid-winner-right-chosen:after
+					right: -14px
+					background-color: #333
+				.match-trapezoid-left
+					left: 0
+					margin-left: -30%
+				.match-trapezoid-right
+					right: 0
+					margin-right: -30%
+
+				.chosen
+					background-color: #ff8a00
+
+		.match-trapezoid-wrapper, .match-trapezoid-left, .match-trapezoid-right
+			height: 120px
+		.match-trapezoid-vs
+			margin: 35px auto
+		.match-trapezoid-winner-left, .match-trapezoid-winner-left-chosen
+			top: 8px
+
+		.col
+			float: left
+			padding: 0 0.75rem
+
+			&.m6
+				width: 50%
+				margin-left: auto
+				left: auto
+				right: auto
+
+				#team-a, #team-b
+					cursor: pointer
+					background: none
+					position: relative
+					padding: 0
+					margin: 23px 0
+
+					&.chosen
+						.match-team, .match-team .match-team-name, .match-team, .match-team .match-team-name
+							color: #252525
+
+					> div
+						vertical-align: middle
+						display: inline-block
+						line-height: 1.3em
+
+					.match-team
+						font-weight: bold
+
+						.match-team-name
+							color: #f4511e
+							letter-spacing: 0.4px
+							font-size: 1.4em
+
+					.match-team-percent
+						color: #fff
+						display: inline-block
+						position: inherit
+						bottom: initial
+						top: initial
+						right: initial
+
+					.team
+						width: 60px
+						height: 50px
+						-webkit-border-radius: 5px
+						border-radius: 5px
+
+				#team-a
+					text-align: left
+
+					padding: 0.75em 0.75em 0.75em 0
+					margin: 23px 23px 23px 0
+					text-align: right
+
+				#team-b
+					text-align: right
+
+					padding: 0.75em 0 0.75em 0.75em
+					margin: 23px 0 23px 23px
+					text-align: left
+
+	#match-coins-details
+		margin-bottom: 0 !important
+
+		input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
+			-webkit-appearance: none
+			margin: 0
+
+		#match-coins-place
+			.input-field
+				position: relative
+				margin-top: 1rem
+
+				input
+					box-shadow: none
+					box-shadow: 0 1px 0 0 #ff9800
+					background-color: transparent
+					border: none
+					border-bottom: 1px solid #ff9800
+					border-radius: 0
+					outline: none
+					height: 3rem
+					width: 100%
+					margin: 0 0 15px 0
+					padding: 0
+					transition: all 0.3s
+
+					line-height: normal
+
+					color: inherit
+					font: inherit
+
+				label
+					width: 100%
+					pointer-events: none
+
+					font-size: 0.8rem
+					transform: translateY(-140%)
+
+					color: #9e9e9e
+					position: absolute
+					top: 0.8rem
+					cursor: text
+					transition: .2s ease-out
+
+					&:after
+						content: attr(data-success)
+						color: #ff9800
+						opacity: 1
+
+						display: block
+						content: ""
+						position: absolute
+						top: 65px
+						opacity: 0
+						transition: .2s opacity ease-out, .2s color ease-out
+
+	div[style*="text-align: center;padding: 1em;background-color: #333;"]
+		#place-coins-msg
+			margin: 0
+
+			.bet-lost
+				color: #ff0000
+			.bet-won
+				color: #569c00
+			.bet-cancel
+				color: #666
+
+		#place-coins
+			&.deep-orange.darken-1
+				background-color: transparent !important
+
+
 	> .box-shiny-alt
 		> div[style*="display: flex"]
 			display: table !important
@@ -616,3 +881,16 @@ iframe
 		+border-radius(2px !important)
 		+box-shadow(0 2px 4px rgba(0,0,0,0.08) !important)
 		+background-image(radial-gradient(lighten(#323232, 3%) 15%, lighten(#2d2d2d, 3%) 85%))
+
+.video-container
+	position: relative
+	padding-bottom: 56.25%
+	height: 0
+	overflow: hidden
+
+	iframe, object, embed
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%

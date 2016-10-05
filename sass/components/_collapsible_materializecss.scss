@@ -27,7 +27,7 @@ $element-bottom-margin: ($gutter-width*2)/3 !default;
   min-height: $collapsible-height;
   line-height: $collapsible-height;
   padding: 0 1rem;
-  background-color: $collapsible-header-color;
+  //background-color: $collapsible-header-color;
   border-bottom: 1px solid $collapsible-border-color;
 
   i {
