@@ -146,6 +146,26 @@ header
 			+border-radius(2px)
 			+box-shadow(0 1px 3px rgba(0,0,0,0.1))
 
+	div#status
+		.dd-coins::after
+			content: ""
+			width: 0
+			height: 0
+			border-left: 7px solid transparent
+			border-right: 7px solid transparent
+			border-top: 6px solid #ff8a00
+			margin: 2px 0 2px 4px
+			display: inline-block
+
+		#dropdown-coins
+			width: 132px !important
+
+		#notifications
+			display: none
+
+		ul
+			padding: 0
+
 	// Fix new div with onclick to signup
 	*
 		display: inline-block
