@@ -78,7 +78,28 @@
 			display: none
 
 	// Right side
+	+ #myprofile-right
+		padding: 0 !important
+
+		#tradelist
+			padding: 0 10px
+			.tradepoll
+				+border-radius(2px)
+				+box-sizing(border-box)
+				+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+				+background-image(radial-gradient(lighten(#323232, 3%) 15%, lighten(#2d2d2d, 3%) 85%))
+				+pie-clearfix
+
 	+ .box
+		position: relative
+		margin: 0 0 11px 0 !important
+		text-shadow: 0 1px 0 rgba(0,0,0,0.16) !important
+		+border-radius(2px !important)
+		+box-sizing(border-box)
+		+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+		+background-image(radial-gradient(lighten(#323232, 3%) 15%, lighten(#2d2d2d, 3%) 85%) !important)
+		+pie-clearfix
+
 		> .box-shiny
 			> .button
 				&:first-child
@@ -87,6 +108,36 @@
 		// Removing unnecessary space in trade's header
 		.tradeheader
 			text-indent: -0.5em
+
+		// Notifications
+		#page-notifications
+			list-style: none 
+			padding: 0
+		#page-notifications li .collapsible-header
+			+background-image(radial-gradient(#3a3a3a 15%, #353535 85%))
+			border: none
+		#page-notifications > li:nth-child(odd) .collapsible-header
+			+background-image(linear-gradient(to top, rgba(0,0,0,0.1), rgba(0,0,0,0.08)))
+		#page-notifications
+			border: none
+		#page-notifications li.active .collapsible-header, #page-notifications li.notification-new .collapsible-header
+			border-bottom: 2px solid rgb(232, 147, 0)
+			color: #eee
+		#page-notifications .collapsible-body
+			background-color: #333
+			color: #bbb
+			border: none
+			text-align: justify
+		#page-notifications svg
+			width: 18px
+			height: 18px
+			vertical-align: sub
+
+		#page-notifications a
+			&:hover
+				text-decoration: none
+		.active .collapsible-body p a
+			color: #ff8a00
 
 		#ajaxCont
 			position: relative

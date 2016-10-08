@@ -17,8 +17,7 @@ $tabs-bg-color: #fff !default;
 .tabs {
   display: flex;
   position: relative;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: hidden;
   height: 48px;
   background-color: #414141;
   margin: 0 auto;
@@ -48,13 +47,17 @@ $tabs-bg-color: #fff !default;
     color: #CCC;
 
     a {
-	  color: #e0e0e0;
+	    color: #e0e0e0;
       display: block;
       width: 100%;
       height: 100%;
       text-overflow: ellipsis;
       overflow: hidden;
       transition: color .28s ease;
+
+      &:hover {
+        text-decoration: none;
+      }
 
 	  margin: 0;
 	  padding: 0;
