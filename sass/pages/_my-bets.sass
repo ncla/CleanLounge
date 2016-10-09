@@ -136,6 +136,142 @@
 				&:last-child
 					padding: 4px 10px 6px 10px
 
+#mybets
+	table
+		width: 100%
+		display: table
+
+		border-collapse: collapse
+		+background-image(radial-gradient(#3a3a3a 15%, #353535 85%))
+		+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+		+border-radius(2px)
+
+		a:hover
+			text-decoration: none
+
+		> tbody, thead
+			// Styling rows
+			> tr
+				border-top: 1px solid darken(#444, 1%)
+
+				&:nth-child(odd)
+					background: none
+
+				&.grey
+					background-color: transparent !important
+
+				height: 34px
+
+				// Row recolorings
+				&:nth-child(even)
+					+background-image(linear-gradient(to top, rgba(0,0,0,0.1), rgba(0,0,0,0.08)))
+
+					> td
+						border-right-color: darken(#444, 2%)
+
+						&:first-child
+							> a
+								&:hover
+									background: rgba(0,0,0,0.08)
+
+								&:active
+									background: rgba(0,0,0,0.12)
+
+					+ [class],
+					+ [class] + [class]
+						background: rgba(0,0,0,0.1)
+
+						> td
+							border-color: darken(#444, 2%)
+
+				// Styling cells
+				> td
+					vertical-align: middle
+					float: none !important
+					padding: 0 6px
+					text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+					text-align: center
+
+					a
+						color: $body-font-color
+
+					&.bet-won, .bet-won
+						color: #569c00
+					&.bet-lost, .bet-lost
+						color: #ff0000
+					&.bet-cancel, .bet-cancel
+						color: #666
+
+					// Adding borders
+					&:nth-child(1),
+					&:nth-child(2),
+					&:nth-child(3),
+					&:nth-child(4),
+					&:nth-child(5),
+					&:nth-child(6)
+						border-right: 1px solid darken(#444, 1%)
+
+					&:last-child
+						border-left: 1px solid darken(#444, 1%)
+
+					// Styling "expand" toggle
+					&:first-child
+						padding: 0
+						//width: 5.5%
+						text-align: center
+						-webkit-user-select: none
+
+						> a
+							cursor: pointer
+							display: block
+							line-height: 34px
+							+transition(all 0.2s)
+
+							&:hover
+								background: rgba(255,255,255,0.03)
+
+							&:active
+								background: rgba(255,255,255,0.04)
+
+					// Correcting date's alignment
+					&[style*="float"]
+						width: 19%
+
+					// Changing color of won team
+					&[style*="font-weight"]
+						a
+							color: lighten($body-font-color, 5%)
+
+					// Resizing the clickable area in 3 cells
+					&:nth-child(3),
+					&:nth-child(4),
+					&:nth-child(5)
+						padding: 0
+
+						a
+							display: block
+							line-height: 34px
+
+					// Left team
+					&:nth-child(3)
+						text-align: center
+
+						a
+							padding: 0 0 0 6px
+							text-align: right
+
+					// "vs"
+					&:nth-child(4)
+
+						a
+							padding: 0 12px
+
+					// Right team
+					&:nth-child(5)
+						a
+							text-align: left
+							padding: 0 6px 0 0
+
 // Value
 .potwin, #teamA, #teamB, .yourVal, .tradeheader span.notification
 	background: $color-orange
@@ -155,6 +291,188 @@
 #betreturns
 	.full
 		margin-bottom: 6px
+
+#mystats
+	@import "../components/_grid_materializecss"
+
+	div[style*="margin: 1em 0;"]
+		font-weight: normal
+		font-size: 18px
+		line-height: 33px
+		text-transform: uppercase
+		font-family: "Roboto Condensed", sans-serif
+		color: rgb(232, 147, 0)
+		padding: 0px 3px 0px 10px
+
+	.col:nth-child(1)
+		padding-left: 0
+	.col:nth-child(2)
+		padding-right: 0
+
+	table
+		border-collapse: collapse
+		+background-image(radial-gradient(#3a3a3a 15%, #353535 85%))
+		+box-shadow(0 2px 4px rgba(0,0,0,0.08))
+		+border-radius(2px)
+
+		a:hover
+			text-decoration: none
+
+		> tbody, thead
+			// Styling rows
+			> tr
+				border-top: 1px solid darken(#444, 1%)
+
+				&:nth-child(odd)
+					background: none
+
+				&.grey
+					background-color: transparent !important
+
+				height: 34px
+
+				// Row recolorings
+				&:nth-child(even)
+					+background-image(linear-gradient(to top, rgba(0,0,0,0.1), rgba(0,0,0,0.08)))
+
+					> td
+						border-right-color: darken(#444, 2%)
+
+						&:first-child
+							> a
+								&:hover
+									background: rgba(0,0,0,0.08)
+
+								&:active
+									background: rgba(0,0,0,0.12)
+
+					+ [class],
+					+ [class] + [class]
+						background: rgba(0,0,0,0.1)
+
+						> td
+							border-color: darken(#444, 2%)
+
+				// Styling cells
+				> td
+					vertical-align: middle
+					float: none !important
+					padding: 0 6px
+					text-shadow: 0 1px 0 rgba(0,0,0,0.16)
+
+					a
+						color: $body-font-color
+
+					// Adding borders
+					&:nth-child(1),
+					&:nth-child(2),
+					&:nth-child(5),
+					&:nth-child(6)
+						border-right: 1px solid darken(#444, 1%)
+
+					&:last-child
+						border-left: 1px solid darken(#444, 1%)
+
+					// Styling "expand" toggle
+					&:first-child
+						padding: 0
+						width: 5.5%
+						text-align: center
+						-webkit-user-select: none
+
+						> a
+							cursor: pointer
+							display: block
+							line-height: 34px
+							+transition(all 0.2s)
+
+							&:hover
+								background: rgba(255,255,255,0.03)
+
+							&:active
+								background: rgba(255,255,255,0.04)
+
+					// Styling "status" cell
+					&:nth-child(2)
+						width: 12%
+						-webkit-user-select: none
+
+						span
+							color: white
+							font-weight: bold
+							font-size: 0.846em
+							display: inline-block
+							text-transform: uppercase
+							text-shadow: 0 1px 0 rgba(0,0,0,0.1)
+							line-height: 21px
+							padding: 1px 6px 0 6px
+							width: 100%
+							cursor: default
+							+border-radius(2px)
+							+box-sizing(border-box)
+							+background-image(linear-gradient(to top, $color-gray, lighten($color-gray, 2%)))
+							+box-shadow(inset 0 1px 0 lighten($color-gray, 8%), 0 1px 3px rgba(0,0,0,0.1))
+
+							&.lost
+								+background-image(linear-gradient(to top, $color-red, lighten($color-red, 2%)))
+								+box-shadow(inset 0 1px 0 saturate(lighten($color-red, 10%), 15%), 0 1px 3px rgba(0,0,0,0.1))
+
+							&.won
+								+background-image(linear-gradient(to top, $color-green, lighten($color-green, 2%)))
+								+box-shadow(inset 0 1px 0 saturate(lighten($color-green, 8%), 15%), 0 1px 3px rgba(0,0,0,0.1))
+
+					// Correcting date's alignment
+					&[style*="float"]
+						width: 19%
+
+					// Changing color of won team
+					&[style*="font-weight"]
+						a
+							color: lighten($body-font-color, 5%)
+
+					// Resizing the clickable area in 3 cells
+					&:nth-child(3),
+					&:nth-child(4),
+					&:nth-child(5)
+						padding: 0
+
+						a
+							display: block
+							line-height: 34px
+
+					// Left team
+					&:nth-child(3)
+						text-align: center
+
+						a
+							padding: 0 0 0 6px
+							text-align: right
+
+					// "vs"
+					&:nth-child(4)
+						width: 2%
+
+						a
+							padding: 0 12px
+
+					// Right team
+					&:nth-child(5)
+						a
+							text-align: left
+							padding: 0 6px 0 0
+
+					// Teams
+					&:nth-child(3),
+					&:nth-child(5)
+						width: 13%
+
+					// Tournament
+					&:nth-child(6)
+						width: 20%
+
+					// Bet value
+					&:nth-last-child(2)
+						width: 11%
 
 #freeze
 	margin-bottom: 6px
