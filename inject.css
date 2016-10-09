@@ -7223,12 +7223,1120 @@ div.ld-steam-extra-wrapper.ld-slidedown {
   padding-top: 37px;
 }
 #rightlist > .box-shiny > .srch {
+  /* Text Inputs + Textarea
+     ========================================================================== */
+  /* Style Placeholders */
+  /* Text inputs */
+  /* Search Field */
+  /* Textarea */
+  /* Autocomplete */
+  /* Select Field
+     ========================================================================== */
   position: relative;
   display: inline-block;
   padding-top: 10px;
   width: 100%;
   margin: 0 0 -3px 0;
   *zoom: 1;
+}
+#rightlist > .box-shiny > .srch ::-webkit-input-placeholder {
+  color: #d1d1d1;
+}
+#rightlist > .box-shiny > .srch :-moz-placeholder {
+  /* Firefox 18- */
+  color: #d1d1d1;
+}
+#rightlist > .box-shiny > .srch ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #d1d1d1;
+}
+#rightlist > .box-shiny > .srch :-ms-input-placeholder {
+  color: #d1d1d1;
+}
+#rightlist > .box-shiny > .srch input:not([type]),
+#rightlist > .box-shiny > .srch input[type=text],
+#rightlist > .box-shiny > .srch input[type=password],
+#rightlist > .box-shiny > .srch input[type=email],
+#rightlist > .box-shiny > .srch input[type=url],
+#rightlist > .box-shiny > .srch input[type=time],
+#rightlist > .box-shiny > .srch input[type=date],
+#rightlist > .box-shiny > .srch input[type=datetime],
+#rightlist > .box-shiny > .srch input[type=datetime-local],
+#rightlist > .box-shiny > .srch input[type=tel],
+#rightlist > .box-shiny > .srch input[type=number],
+#rightlist > .box-shiny > .srch input[type=search],
+#rightlist > .box-shiny > .srch textarea.materialize-textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #9e9e9e;
+  border-radius: 0;
+  outline: none;
+  height: 3rem;
+  width: 100%;
+  font-size: 1rem;
+  margin: 0 0 20px 0;
+  padding: 0;
+  box-shadow: none;
+  box-sizing: content-box;
+  transition: all 0.3s;
+}
+#rightlist > .box-shiny > .srch input:not([type]):disabled, #rightlist > .box-shiny > .srch input:not([type])[readonly="readonly"],
+#rightlist > .box-shiny > .srch input[type=text]:disabled,
+#rightlist > .box-shiny > .srch input[type=text][readonly="readonly"],
+#rightlist > .box-shiny > .srch input[type=password]:disabled,
+#rightlist > .box-shiny > .srch input[type=password][readonly="readonly"],
+#rightlist > .box-shiny > .srch input[type=email]:disabled,
+#rightlist > .box-shiny > .srch input[type=email][readonly="readonly"],
+#rightlist > .box-shiny > .srch input[type=url]:disabled,
+#rightlist > .box-shiny > .srch input[type=url][readonly="readonly"],
+#rightlist > .box-shiny > .srch input[type=time]:disabled,
+#rightlist > .box-shiny > .srch input[type=time][readonly="readonly"],
+#rightlist > .box-shiny > .srch input[type=date]:disabled,
+#rightlist > .box-shiny > .srch input[type=date][readonly="readonly"],
+#rightlist > .box-shiny > .srch input[type=datetime]:disabled,
+#rightlist > .box-shiny > .srch input[type=datetime][readonly="readonly"],
+#rightlist > .box-shiny > .srch input[type=datetime-local]:disabled,
+#rightlist > .box-shiny > .srch input[type=datetime-local][readonly="readonly"],
+#rightlist > .box-shiny > .srch input[type=tel]:disabled,
+#rightlist > .box-shiny > .srch input[type=tel][readonly="readonly"],
+#rightlist > .box-shiny > .srch input[type=number]:disabled,
+#rightlist > .box-shiny > .srch input[type=number][readonly="readonly"],
+#rightlist > .box-shiny > .srch input[type=search]:disabled,
+#rightlist > .box-shiny > .srch input[type=search][readonly="readonly"],
+#rightlist > .box-shiny > .srch textarea.materialize-textarea:disabled,
+#rightlist > .box-shiny > .srch textarea.materialize-textarea[readonly="readonly"] {
+  color: rgba(0, 0, 0, 0.26);
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.26);
+}
+#rightlist > .box-shiny > .srch input:not([type]):disabled + label, #rightlist > .box-shiny > .srch input:not([type])[readonly="readonly"] + label,
+#rightlist > .box-shiny > .srch input[type=text]:disabled + label,
+#rightlist > .box-shiny > .srch input[type=text][readonly="readonly"] + label,
+#rightlist > .box-shiny > .srch input[type=password]:disabled + label,
+#rightlist > .box-shiny > .srch input[type=password][readonly="readonly"] + label,
+#rightlist > .box-shiny > .srch input[type=email]:disabled + label,
+#rightlist > .box-shiny > .srch input[type=email][readonly="readonly"] + label,
+#rightlist > .box-shiny > .srch input[type=url]:disabled + label,
+#rightlist > .box-shiny > .srch input[type=url][readonly="readonly"] + label,
+#rightlist > .box-shiny > .srch input[type=time]:disabled + label,
+#rightlist > .box-shiny > .srch input[type=time][readonly="readonly"] + label,
+#rightlist > .box-shiny > .srch input[type=date]:disabled + label,
+#rightlist > .box-shiny > .srch input[type=date][readonly="readonly"] + label,
+#rightlist > .box-shiny > .srch input[type=datetime]:disabled + label,
+#rightlist > .box-shiny > .srch input[type=datetime][readonly="readonly"] + label,
+#rightlist > .box-shiny > .srch input[type=datetime-local]:disabled + label,
+#rightlist > .box-shiny > .srch input[type=datetime-local][readonly="readonly"] + label,
+#rightlist > .box-shiny > .srch input[type=tel]:disabled + label,
+#rightlist > .box-shiny > .srch input[type=tel][readonly="readonly"] + label,
+#rightlist > .box-shiny > .srch input[type=number]:disabled + label,
+#rightlist > .box-shiny > .srch input[type=number][readonly="readonly"] + label,
+#rightlist > .box-shiny > .srch input[type=search]:disabled + label,
+#rightlist > .box-shiny > .srch input[type=search][readonly="readonly"] + label,
+#rightlist > .box-shiny > .srch textarea.materialize-textarea:disabled + label,
+#rightlist > .box-shiny > .srch textarea.materialize-textarea[readonly="readonly"] + label {
+  color: rgba(0, 0, 0, 0.26);
+}
+#rightlist > .box-shiny > .srch input:not([type]):focus:not([readonly]),
+#rightlist > .box-shiny > .srch input[type=text]:focus:not([readonly]),
+#rightlist > .box-shiny > .srch input[type=password]:focus:not([readonly]),
+#rightlist > .box-shiny > .srch input[type=email]:focus:not([readonly]),
+#rightlist > .box-shiny > .srch input[type=url]:focus:not([readonly]),
+#rightlist > .box-shiny > .srch input[type=time]:focus:not([readonly]),
+#rightlist > .box-shiny > .srch input[type=date]:focus:not([readonly]),
+#rightlist > .box-shiny > .srch input[type=datetime]:focus:not([readonly]),
+#rightlist > .box-shiny > .srch input[type=datetime-local]:focus:not([readonly]),
+#rightlist > .box-shiny > .srch input[type=tel]:focus:not([readonly]),
+#rightlist > .box-shiny > .srch input[type=number]:focus:not([readonly]),
+#rightlist > .box-shiny > .srch input[type=search]:focus:not([readonly]),
+#rightlist > .box-shiny > .srch textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #ff8a00;
+  box-shadow: 0 1px 0 0 #ff8a00;
+}
+#rightlist > .box-shiny > .srch input:not([type]):focus:not([readonly]) + label,
+#rightlist > .box-shiny > .srch input[type=text]:focus:not([readonly]) + label,
+#rightlist > .box-shiny > .srch input[type=password]:focus:not([readonly]) + label,
+#rightlist > .box-shiny > .srch input[type=email]:focus:not([readonly]) + label,
+#rightlist > .box-shiny > .srch input[type=url]:focus:not([readonly]) + label,
+#rightlist > .box-shiny > .srch input[type=time]:focus:not([readonly]) + label,
+#rightlist > .box-shiny > .srch input[type=date]:focus:not([readonly]) + label,
+#rightlist > .box-shiny > .srch input[type=datetime]:focus:not([readonly]) + label,
+#rightlist > .box-shiny > .srch input[type=datetime-local]:focus:not([readonly]) + label,
+#rightlist > .box-shiny > .srch input[type=tel]:focus:not([readonly]) + label,
+#rightlist > .box-shiny > .srch input[type=number]:focus:not([readonly]) + label,
+#rightlist > .box-shiny > .srch input[type=search]:focus:not([readonly]) + label,
+#rightlist > .box-shiny > .srch textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #ff8a00;
+}
+#rightlist > .box-shiny > .srch input:not([type]).valid, #rightlist > .box-shiny > .srch input:not([type]):focus.valid,
+#rightlist > .box-shiny > .srch input[type=text].valid,
+#rightlist > .box-shiny > .srch input[type=text]:focus.valid,
+#rightlist > .box-shiny > .srch input[type=password].valid,
+#rightlist > .box-shiny > .srch input[type=password]:focus.valid,
+#rightlist > .box-shiny > .srch input[type=email].valid,
+#rightlist > .box-shiny > .srch input[type=email]:focus.valid,
+#rightlist > .box-shiny > .srch input[type=url].valid,
+#rightlist > .box-shiny > .srch input[type=url]:focus.valid,
+#rightlist > .box-shiny > .srch input[type=time].valid,
+#rightlist > .box-shiny > .srch input[type=time]:focus.valid,
+#rightlist > .box-shiny > .srch input[type=date].valid,
+#rightlist > .box-shiny > .srch input[type=date]:focus.valid,
+#rightlist > .box-shiny > .srch input[type=datetime].valid,
+#rightlist > .box-shiny > .srch input[type=datetime]:focus.valid,
+#rightlist > .box-shiny > .srch input[type=datetime-local].valid,
+#rightlist > .box-shiny > .srch input[type=datetime-local]:focus.valid,
+#rightlist > .box-shiny > .srch input[type=tel].valid,
+#rightlist > .box-shiny > .srch input[type=tel]:focus.valid,
+#rightlist > .box-shiny > .srch input[type=number].valid,
+#rightlist > .box-shiny > .srch input[type=number]:focus.valid,
+#rightlist > .box-shiny > .srch input[type=search].valid,
+#rightlist > .box-shiny > .srch input[type=search]:focus.valid,
+#rightlist > .box-shiny > .srch textarea.materialize-textarea.valid,
+#rightlist > .box-shiny > .srch textarea.materialize-textarea:focus.valid {
+  border-bottom: 1px solid #4CAF50;
+  box-shadow: 0 1px 0 0 #4CAF50;
+}
+#rightlist > .box-shiny > .srch input:not([type]).valid + label:after, #rightlist > .box-shiny > .srch input:not([type]):focus.valid + label:after,
+#rightlist > .box-shiny > .srch input[type=text].valid + label:after,
+#rightlist > .box-shiny > .srch input[type=text]:focus.valid + label:after,
+#rightlist > .box-shiny > .srch input[type=password].valid + label:after,
+#rightlist > .box-shiny > .srch input[type=password]:focus.valid + label:after,
+#rightlist > .box-shiny > .srch input[type=email].valid + label:after,
+#rightlist > .box-shiny > .srch input[type=email]:focus.valid + label:after,
+#rightlist > .box-shiny > .srch input[type=url].valid + label:after,
+#rightlist > .box-shiny > .srch input[type=url]:focus.valid + label:after,
+#rightlist > .box-shiny > .srch input[type=time].valid + label:after,
+#rightlist > .box-shiny > .srch input[type=time]:focus.valid + label:after,
+#rightlist > .box-shiny > .srch input[type=date].valid + label:after,
+#rightlist > .box-shiny > .srch input[type=date]:focus.valid + label:after,
+#rightlist > .box-shiny > .srch input[type=datetime].valid + label:after,
+#rightlist > .box-shiny > .srch input[type=datetime]:focus.valid + label:after,
+#rightlist > .box-shiny > .srch input[type=datetime-local].valid + label:after,
+#rightlist > .box-shiny > .srch input[type=datetime-local]:focus.valid + label:after,
+#rightlist > .box-shiny > .srch input[type=tel].valid + label:after,
+#rightlist > .box-shiny > .srch input[type=tel]:focus.valid + label:after,
+#rightlist > .box-shiny > .srch input[type=number].valid + label:after,
+#rightlist > .box-shiny > .srch input[type=number]:focus.valid + label:after,
+#rightlist > .box-shiny > .srch input[type=search].valid + label:after,
+#rightlist > .box-shiny > .srch input[type=search]:focus.valid + label:after,
+#rightlist > .box-shiny > .srch textarea.materialize-textarea.valid + label:after,
+#rightlist > .box-shiny > .srch textarea.materialize-textarea:focus.valid + label:after {
+  content: attr(data-success);
+  color: #4CAF50;
+  opacity: 1;
+}
+#rightlist > .box-shiny > .srch input:not([type]).invalid, #rightlist > .box-shiny > .srch input:not([type]):focus.invalid,
+#rightlist > .box-shiny > .srch input[type=text].invalid,
+#rightlist > .box-shiny > .srch input[type=text]:focus.invalid,
+#rightlist > .box-shiny > .srch input[type=password].invalid,
+#rightlist > .box-shiny > .srch input[type=password]:focus.invalid,
+#rightlist > .box-shiny > .srch input[type=email].invalid,
+#rightlist > .box-shiny > .srch input[type=email]:focus.invalid,
+#rightlist > .box-shiny > .srch input[type=url].invalid,
+#rightlist > .box-shiny > .srch input[type=url]:focus.invalid,
+#rightlist > .box-shiny > .srch input[type=time].invalid,
+#rightlist > .box-shiny > .srch input[type=time]:focus.invalid,
+#rightlist > .box-shiny > .srch input[type=date].invalid,
+#rightlist > .box-shiny > .srch input[type=date]:focus.invalid,
+#rightlist > .box-shiny > .srch input[type=datetime].invalid,
+#rightlist > .box-shiny > .srch input[type=datetime]:focus.invalid,
+#rightlist > .box-shiny > .srch input[type=datetime-local].invalid,
+#rightlist > .box-shiny > .srch input[type=datetime-local]:focus.invalid,
+#rightlist > .box-shiny > .srch input[type=tel].invalid,
+#rightlist > .box-shiny > .srch input[type=tel]:focus.invalid,
+#rightlist > .box-shiny > .srch input[type=number].invalid,
+#rightlist > .box-shiny > .srch input[type=number]:focus.invalid,
+#rightlist > .box-shiny > .srch input[type=search].invalid,
+#rightlist > .box-shiny > .srch input[type=search]:focus.invalid,
+#rightlist > .box-shiny > .srch textarea.materialize-textarea.invalid,
+#rightlist > .box-shiny > .srch textarea.materialize-textarea:focus.invalid {
+  border-bottom: 1px solid #F44336;
+  box-shadow: 0 1px 0 0 #F44336;
+}
+#rightlist > .box-shiny > .srch input:not([type]).invalid + label:after, #rightlist > .box-shiny > .srch input:not([type]):focus.invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=text].invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=text]:focus.invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=password].invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=password]:focus.invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=email].invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=email]:focus.invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=url].invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=url]:focus.invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=time].invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=time]:focus.invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=date].invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=date]:focus.invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=datetime].invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=datetime]:focus.invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=datetime-local].invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=datetime-local]:focus.invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=tel].invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=tel]:focus.invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=number].invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=number]:focus.invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=search].invalid + label:after,
+#rightlist > .box-shiny > .srch input[type=search]:focus.invalid + label:after,
+#rightlist > .box-shiny > .srch textarea.materialize-textarea.invalid + label:after,
+#rightlist > .box-shiny > .srch textarea.materialize-textarea:focus.invalid + label:after {
+  content: attr(data-error);
+  color: #F44336;
+  opacity: 1;
+}
+#rightlist > .box-shiny > .srch input:not([type]).validate + label,
+#rightlist > .box-shiny > .srch input[type=text].validate + label,
+#rightlist > .box-shiny > .srch input[type=password].validate + label,
+#rightlist > .box-shiny > .srch input[type=email].validate + label,
+#rightlist > .box-shiny > .srch input[type=url].validate + label,
+#rightlist > .box-shiny > .srch input[type=time].validate + label,
+#rightlist > .box-shiny > .srch input[type=date].validate + label,
+#rightlist > .box-shiny > .srch input[type=datetime].validate + label,
+#rightlist > .box-shiny > .srch input[type=datetime-local].validate + label,
+#rightlist > .box-shiny > .srch input[type=tel].validate + label,
+#rightlist > .box-shiny > .srch input[type=number].validate + label,
+#rightlist > .box-shiny > .srch input[type=search].validate + label,
+#rightlist > .box-shiny > .srch textarea.materialize-textarea.validate + label {
+  width: 100%;
+  pointer-events: none;
+}
+#rightlist > .box-shiny > .srch input:not([type]) + label:after,
+#rightlist > .box-shiny > .srch input[type=text] + label:after,
+#rightlist > .box-shiny > .srch input[type=password] + label:after,
+#rightlist > .box-shiny > .srch input[type=email] + label:after,
+#rightlist > .box-shiny > .srch input[type=url] + label:after,
+#rightlist > .box-shiny > .srch input[type=time] + label:after,
+#rightlist > .box-shiny > .srch input[type=date] + label:after,
+#rightlist > .box-shiny > .srch input[type=datetime] + label:after,
+#rightlist > .box-shiny > .srch input[type=datetime-local] + label:after,
+#rightlist > .box-shiny > .srch input[type=tel] + label:after,
+#rightlist > .box-shiny > .srch input[type=number] + label:after,
+#rightlist > .box-shiny > .srch input[type=search] + label:after,
+#rightlist > .box-shiny > .srch textarea.materialize-textarea + label:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 60px;
+  opacity: 0;
+  transition: .2s opacity ease-out, .2s color ease-out;
+}
+#rightlist > .box-shiny > .srch .input-field {
+  position: relative;
+  margin-top: 1rem;
+}
+#rightlist > .box-shiny > .srch .input-field.col label {
+  left: 0.75rem;
+}
+#rightlist > .box-shiny > .srch .input-field.col .prefix ~ label,
+#rightlist > .box-shiny > .srch .input-field.col .prefix ~ .validate ~ label {
+  width: calc(100% - 3rem - 1.5rem);
+}
+#rightlist > .box-shiny > .srch .input-field label {
+  color: #9e9e9e;
+  position: absolute;
+  top: 0.8rem;
+  font-size: 1rem;
+  cursor: text;
+  transition: .2s ease-out;
+}
+#rightlist > .box-shiny > .srch .input-field label.active {
+  font-size: 0.8rem;
+  transform: translateY(-140%);
+}
+#rightlist > .box-shiny > .srch .input-field .prefix {
+  position: absolute;
+  width: 3rem;
+  font-size: 2rem;
+  transition: color .2s;
+}
+#rightlist > .box-shiny > .srch .input-field .prefix.active {
+  color: #ff8a00;
+}
+#rightlist > .box-shiny > .srch .input-field .prefix ~ input,
+#rightlist > .box-shiny > .srch .input-field .prefix ~ textarea,
+#rightlist > .box-shiny > .srch .input-field .prefix ~ label,
+#rightlist > .box-shiny > .srch .input-field .prefix ~ .validate ~ label,
+#rightlist > .box-shiny > .srch .input-field .prefix ~ .autocomplete-content {
+  margin-left: 3rem;
+  width: 92%;
+  width: calc(100% - 3rem);
+}
+#rightlist > .box-shiny > .srch .input-field .prefix ~ label {
+  margin-left: 3rem;
+}
+@media only screen and (max-width: 992px) {
+  #rightlist > .box-shiny > .srch .input-field .prefix ~ input {
+    width: 86%;
+    width: calc(100% - 3rem);
+  }
+}
+@media only screen and (max-width: 600px) {
+  #rightlist > .box-shiny > .srch .input-field .prefix ~ input {
+    width: 80%;
+    width: calc(100% - 3rem);
+  }
+}
+#rightlist > .box-shiny > .srch .input-field input[type=search] {
+  display: block;
+  line-height: inherit;
+  padding-left: 4rem;
+  width: calc(100% - 4rem);
+}
+#rightlist > .box-shiny > .srch .input-field input[type=search]:focus {
+  background-color: #fff;
+  border: 0;
+  box-shadow: none;
+  color: #444;
+}
+#rightlist > .box-shiny > .srch .input-field input[type=search]:focus + label i, #rightlist > .box-shiny > .srch .input-field input[type=search]:focus ~ .mdi-navigation-close, #rightlist > .box-shiny > .srch .input-field input[type=search]:focus ~ .material-icons {
+  color: #444;
+}
+#rightlist > .box-shiny > .srch .input-field input[type=search] + label {
+  left: 1rem;
+}
+#rightlist > .box-shiny > .srch .input-field input[type=search] ~ .mdi-navigation-close, #rightlist > .box-shiny > .srch .input-field input[type=search] ~ .material-icons {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  color: transparent;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: .3s color;
+}
+#rightlist > .box-shiny > .srch textarea {
+  width: 100%;
+  height: 3rem;
+  background-color: transparent;
+}
+#rightlist > .box-shiny > .srch textarea.materialize-textarea {
+  overflow-y: hidden;
+  /* prevents scroll bar flash */
+  padding: .8rem 0 1.6rem 0;
+  /* prevents text jump on Enter keypress */
+  resize: none;
+  min-height: 3rem;
+}
+#rightlist > .box-shiny > .srch .hiddendiv {
+  display: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  /* future version of deprecated 'word-wrap' */
+  padding-top: 1.2rem;
+  /* prevents text jump on Enter keypress */
+}
+#rightlist > .box-shiny > .srch .autocomplete-content {
+  margin-top: -15px;
+  display: block;
+  opacity: 1;
+  position: static;
+}
+#rightlist > .box-shiny > .srch .autocomplete-content li .highlight {
+  color: #444;
+}
+#rightlist > .box-shiny > .srch .autocomplete-content li img {
+  height: 40px;
+  width: 40px;
+  margin: 5px 15px;
+}
+#rightlist > .box-shiny > .srch select {
+  display: none;
+}
+#rightlist > .box-shiny > .srch select.browser-default {
+  display: block;
+}
+#rightlist > .box-shiny > .srch select {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #f2f2f2;
+  border-radius: 2px;
+  height: 3rem;
+}
+#rightlist > .box-shiny > .srch .select-label {
+  position: absolute;
+}
+#rightlist > .box-shiny > .srch .select-wrapper {
+  position: relative;
+}
+#rightlist > .box-shiny > .srch .select-wrapper input.select-dropdown {
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #9e9e9e;
+  outline: none;
+  height: 3rem;
+  line-height: 3rem;
+  width: 100%;
+  font-size: 1rem;
+  margin: 0 0 20px 0;
+  padding: 0;
+  display: block;
+}
+#rightlist > .box-shiny > .srch .select-wrapper span.caret {
+  color: initial;
+  position: absolute;
+  right: 0;
+  top: 16px;
+  font-size: 10px;
+}
+#rightlist > .box-shiny > .srch .select-wrapper span.caret.disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+#rightlist > .box-shiny > .srch .select-wrapper + label {
+  position: absolute;
+  top: -14px;
+  font-size: 0.8rem;
+}
+#rightlist > .box-shiny > .srch select:disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+#rightlist > .box-shiny > .srch .select-wrapper input.select-dropdown:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  cursor: default;
+  -webkit-user-select: none;
+  /* webkit (safari, chrome) browsers */
+  -moz-user-select: none;
+  /* mozilla browsers */
+  -ms-user-select: none;
+  /* IE10+ */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+#rightlist > .box-shiny > .srch .select-wrapper i {
+  color: rgba(0, 0, 0, 0.3);
+}
+#rightlist > .box-shiny > .srch .select-dropdown li.disabled,
+#rightlist > .box-shiny > .srch .select-dropdown li.disabled > span,
+#rightlist > .box-shiny > .srch .select-dropdown li.optgroup {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+}
+#rightlist > .box-shiny > .srch .prefix ~ .select-wrapper {
+  margin-left: 3rem;
+  width: 92%;
+  width: calc(100% - 3rem);
+}
+#rightlist > .box-shiny > .srch .prefix ~ label {
+  margin-left: 3rem;
+}
+#rightlist > .box-shiny > .srch .select-dropdown li img {
+  height: 40px;
+  width: 40px;
+  margin: 5px 15px;
+  float: right;
+}
+#rightlist > .box-shiny > .srch .select-dropdown li.optgroup {
+  border-top: 1px solid #444;
+}
+#rightlist > .box-shiny > .srch .select-dropdown li.optgroup.selected > span {
+  color: rgba(0, 0, 0, 0.7);
+}
+#rightlist > .box-shiny > .srch .select-dropdown li.optgroup > span {
+  color: rgba(0, 0, 0, 0.4);
+}
+#rightlist > .box-shiny > .srch .select-dropdown li.optgroup ~ li.optgroup-option {
+  padding-left: 1rem;
+}
+#rightlist > .box-shiny > .srch .container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
+@media only screen and (min-width: 601px) {
+  #rightlist > .box-shiny > .srch .container {
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  #rightlist > .box-shiny > .srch .container {
+    width: 70%;
+  }
+}
+#rightlist > .box-shiny > .srch .container .row {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+#rightlist > .box-shiny > .srch .section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+#rightlist > .box-shiny > .srch .section.no-pad {
+  padding: 0;
+}
+#rightlist > .box-shiny > .srch .section.no-pad-bot {
+  padding-bottom: 0;
+}
+#rightlist > .box-shiny > .srch .section.no-pad-top {
+  padding-top: 0;
+}
+#rightlist > .box-shiny > .srch .row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+#rightlist > .box-shiny > .srch .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#rightlist > .box-shiny > .srch .row .col {
+  float: left;
+  box-sizing: border-box;
+  padding: 0 0.75rem;
+  min-height: 1px;
+}
+#rightlist > .box-shiny > .srch .row .col[class*="push-"], #rightlist > .box-shiny > .srch .row .col[class*="pull-"] {
+  position: relative;
+}
+#rightlist > .box-shiny > .srch .row .col.s1 {
+  width: 8.33333%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+#rightlist > .box-shiny > .srch .row .col.s2 {
+  width: 16.66667%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+#rightlist > .box-shiny > .srch .row .col.s3 {
+  width: 25%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+#rightlist > .box-shiny > .srch .row .col.s4 {
+  width: 33.33333%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+#rightlist > .box-shiny > .srch .row .col.s5 {
+  width: 41.66667%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+#rightlist > .box-shiny > .srch .row .col.s6 {
+  width: 50%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+#rightlist > .box-shiny > .srch .row .col.s7 {
+  width: 58.33333%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+#rightlist > .box-shiny > .srch .row .col.s8 {
+  width: 66.66667%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+#rightlist > .box-shiny > .srch .row .col.s9 {
+  width: 75%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+#rightlist > .box-shiny > .srch .row .col.s10 {
+  width: 83.33333%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+#rightlist > .box-shiny > .srch .row .col.s11 {
+  width: 91.66667%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+#rightlist > .box-shiny > .srch .row .col.s12 {
+  width: 100%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+#rightlist > .box-shiny > .srch .row .col.offset-s1 {
+  margin-left: 8.33333%;
+}
+#rightlist > .box-shiny > .srch .row .col.pull-s1 {
+  right: 8.33333%;
+}
+#rightlist > .box-shiny > .srch .row .col.push-s1 {
+  left: 8.33333%;
+}
+#rightlist > .box-shiny > .srch .row .col.offset-s2 {
+  margin-left: 16.66667%;
+}
+#rightlist > .box-shiny > .srch .row .col.pull-s2 {
+  right: 16.66667%;
+}
+#rightlist > .box-shiny > .srch .row .col.push-s2 {
+  left: 16.66667%;
+}
+#rightlist > .box-shiny > .srch .row .col.offset-s3 {
+  margin-left: 25%;
+}
+#rightlist > .box-shiny > .srch .row .col.pull-s3 {
+  right: 25%;
+}
+#rightlist > .box-shiny > .srch .row .col.push-s3 {
+  left: 25%;
+}
+#rightlist > .box-shiny > .srch .row .col.offset-s4 {
+  margin-left: 33.33333%;
+}
+#rightlist > .box-shiny > .srch .row .col.pull-s4 {
+  right: 33.33333%;
+}
+#rightlist > .box-shiny > .srch .row .col.push-s4 {
+  left: 33.33333%;
+}
+#rightlist > .box-shiny > .srch .row .col.offset-s5 {
+  margin-left: 41.66667%;
+}
+#rightlist > .box-shiny > .srch .row .col.pull-s5 {
+  right: 41.66667%;
+}
+#rightlist > .box-shiny > .srch .row .col.push-s5 {
+  left: 41.66667%;
+}
+#rightlist > .box-shiny > .srch .row .col.offset-s6 {
+  margin-left: 50%;
+}
+#rightlist > .box-shiny > .srch .row .col.pull-s6 {
+  right: 50%;
+}
+#rightlist > .box-shiny > .srch .row .col.push-s6 {
+  left: 50%;
+}
+#rightlist > .box-shiny > .srch .row .col.offset-s7 {
+  margin-left: 58.33333%;
+}
+#rightlist > .box-shiny > .srch .row .col.pull-s7 {
+  right: 58.33333%;
+}
+#rightlist > .box-shiny > .srch .row .col.push-s7 {
+  left: 58.33333%;
+}
+#rightlist > .box-shiny > .srch .row .col.offset-s8 {
+  margin-left: 66.66667%;
+}
+#rightlist > .box-shiny > .srch .row .col.pull-s8 {
+  right: 66.66667%;
+}
+#rightlist > .box-shiny > .srch .row .col.push-s8 {
+  left: 66.66667%;
+}
+#rightlist > .box-shiny > .srch .row .col.offset-s9 {
+  margin-left: 75%;
+}
+#rightlist > .box-shiny > .srch .row .col.pull-s9 {
+  right: 75%;
+}
+#rightlist > .box-shiny > .srch .row .col.push-s9 {
+  left: 75%;
+}
+#rightlist > .box-shiny > .srch .row .col.offset-s10 {
+  margin-left: 83.33333%;
+}
+#rightlist > .box-shiny > .srch .row .col.pull-s10 {
+  right: 83.33333%;
+}
+#rightlist > .box-shiny > .srch .row .col.push-s10 {
+  left: 83.33333%;
+}
+#rightlist > .box-shiny > .srch .row .col.offset-s11 {
+  margin-left: 91.66667%;
+}
+#rightlist > .box-shiny > .srch .row .col.pull-s11 {
+  right: 91.66667%;
+}
+#rightlist > .box-shiny > .srch .row .col.push-s11 {
+  left: 91.66667%;
+}
+#rightlist > .box-shiny > .srch .row .col.offset-s12 {
+  margin-left: 100%;
+}
+#rightlist > .box-shiny > .srch .row .col.pull-s12 {
+  right: 100%;
+}
+#rightlist > .box-shiny > .srch .row .col.push-s12 {
+  left: 100%;
+}
+@media only screen and (min-width: 601px) {
+  #rightlist > .box-shiny > .srch .row .col.m1 {
+    width: 8.33333%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.m2 {
+    width: 16.66667%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.m3 {
+    width: 25%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.m4 {
+    width: 33.33333%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.m5 {
+    width: 41.66667%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.m6 {
+    width: 50%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.m7 {
+    width: 58.33333%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.m8 {
+    width: 66.66667%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.m9 {
+    width: 75%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.m10 {
+    width: 83.33333%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.m11 {
+    width: 91.66667%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.m12 {
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-m1 {
+    margin-left: 8.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-m1 {
+    right: 8.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-m1 {
+    left: 8.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-m2 {
+    margin-left: 16.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-m2 {
+    right: 16.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-m2 {
+    left: 16.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-m3 {
+    margin-left: 25%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-m3 {
+    right: 25%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-m3 {
+    left: 25%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-m4 {
+    margin-left: 33.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-m4 {
+    right: 33.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-m4 {
+    left: 33.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-m5 {
+    margin-left: 41.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-m5 {
+    right: 41.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-m5 {
+    left: 41.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-m6 {
+    margin-left: 50%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-m6 {
+    right: 50%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-m6 {
+    left: 50%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-m7 {
+    margin-left: 58.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-m7 {
+    right: 58.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-m7 {
+    left: 58.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-m8 {
+    margin-left: 66.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-m8 {
+    right: 66.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-m8 {
+    left: 66.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-m9 {
+    margin-left: 75%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-m9 {
+    right: 75%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-m9 {
+    left: 75%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-m10 {
+    margin-left: 83.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-m10 {
+    right: 83.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-m10 {
+    left: 83.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-m11 {
+    margin-left: 91.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-m11 {
+    right: 91.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-m11 {
+    left: 91.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-m12 {
+    margin-left: 100%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-m12 {
+    right: 100%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-m12 {
+    left: 100%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  #rightlist > .box-shiny > .srch .row .col.l1 {
+    width: 8.33333%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.l2 {
+    width: 16.66667%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.l3 {
+    width: 25%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.l4 {
+    width: 33.33333%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.l5 {
+    width: 41.66667%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.l6 {
+    width: 50%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.l7 {
+    width: 58.33333%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.l8 {
+    width: 66.66667%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.l9 {
+    width: 75%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.l10 {
+    width: 83.33333%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.l11 {
+    width: 91.66667%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.l12 {
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-l1 {
+    margin-left: 8.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-l1 {
+    right: 8.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-l1 {
+    left: 8.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-l2 {
+    margin-left: 16.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-l2 {
+    right: 16.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-l2 {
+    left: 16.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-l3 {
+    margin-left: 25%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-l3 {
+    right: 25%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-l3 {
+    left: 25%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-l4 {
+    margin-left: 33.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-l4 {
+    right: 33.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-l4 {
+    left: 33.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-l5 {
+    margin-left: 41.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-l5 {
+    right: 41.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-l5 {
+    left: 41.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-l6 {
+    margin-left: 50%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-l6 {
+    right: 50%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-l6 {
+    left: 50%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-l7 {
+    margin-left: 58.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-l7 {
+    right: 58.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-l7 {
+    left: 58.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-l8 {
+    margin-left: 66.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-l8 {
+    right: 66.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-l8 {
+    left: 66.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-l9 {
+    margin-left: 75%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-l9 {
+    right: 75%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-l9 {
+    left: 75%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-l10 {
+    margin-left: 83.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-l10 {
+    right: 83.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-l10 {
+    left: 83.33333%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-l11 {
+    margin-left: 91.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-l11 {
+    right: 91.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-l11 {
+    left: 91.66667%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.offset-l12 {
+    margin-left: 100%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.pull-l12 {
+    right: 100%;
+  }
+  #rightlist > .box-shiny > .srch .row .col.push-l12 {
+    left: 100%;
+  }
+}
+#rightlist > .box-shiny > .srch #itemfilter {
+  width: 100%;
+}
+#rightlist > .box-shiny > .srch ul {
+  padding: 0;
+}
+#rightlist > .box-shiny > .srch ul li {
+  list-style-type: none;
 }
 #rightlist > .box-shiny > .srch:after {
   content: "";
