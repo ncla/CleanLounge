@@ -18,6 +18,6 @@
   "homepage": "https://github.com/Roguyt/CleanLounge#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-compass": "^2.1.0",
+    "gulp-compass": "^2.1.0"
   }
 }
