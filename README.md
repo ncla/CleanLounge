@@ -1,2 +1,2 @@
-CleanLounge v2.1 Alpha
+CleanLounge v2.2 Alpha
 ===========
