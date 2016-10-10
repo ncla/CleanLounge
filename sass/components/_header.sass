@@ -161,7 +161,19 @@ header
 			width: 132px !important
 
 		#notifications
-			display: none
+			#notifications-count
+				position: absolute
+				margin: -30px 0 0 22px
+				display: block
+				width: 16px
+				line-height: 16px
+				background-color: #f4511e
+				border-radius: 10px
+				font-size: 10px
+				font-weight: bold
+				text-align: center
+				color: #fff
+				box-shadow: 1px 2px 5px #111
 
 		ul
 			padding: 0
@@ -225,3 +237,60 @@ header
 			&[href]
 				display: none
 				opacity: 0.75
+
+#dropdown-notifications
+	position: absolute
+	z-index: 9999
+	top: 67px
+	right: 0
+	width: 250px
+	background-color: #373737
+	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+	list-style: none
+	padding: 0
+	margin: 0
+
+	li
+		color: #888
+		padding: 1em
+		border-bottom: 1px solid #252525
+		display: block
+
+		a
+			color: #ff8a00
+
+		.notification-markasread
+			position: absolute
+			width: 8px
+			height: 8px
+			margin: 2px
+			background-color: #ff8a00
+			border-radius: 6px
+			box-sizing: initial
+			right: 6px
+
+		&:first-child ::before
+			z-index: 99999
+			width: 0
+			height: 0
+			border-left: 8px solid transparent
+			border-right: 8px solid transparent
+			border-bottom: 8px solid #373737
+			position: absolute
+			top: -8px
+			left: 52px
+			content: ""
+
+		&:hover
+			background-color: #ff8a00
+
+			a
+				color: #fff !important
+
+			.notification-markasread
+				background-color: #fff
+
+				&:hover
+					margin: 0
+					background-color: #ff8a00
+					border: 2px solid #fff

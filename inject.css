@@ -3590,8 +3590,19 @@ header div#status .dd-coins::after {
 header div#status #dropdown-coins {
   width: 132px !important;
 }
-header div#status #notifications {
-  display: none;
+header div#status #notifications #notifications-count {
+  position: absolute;
+  margin: -30px 0 0 22px;
+  display: block;
+  width: 16px;
+  line-height: 16px;
+  background-color: #f4511e;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  box-shadow: 1px 2px 5px #111;
 }
 header div#status ul {
   padding: 0;
@@ -3661,6 +3672,64 @@ header .ddbtn a + a {
 header .ddbtn a[href] {
   display: none;
   opacity: 0.75;
+}
+
+#dropdown-notifications {
+  position: absolute;
+  z-index: 9999;
+  top: 67px;
+  right: 0;
+  width: 250px;
+  background-color: #373737;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#dropdown-notifications li {
+  color: #888;
+  padding: 1em;
+  border-bottom: 1px solid #252525;
+  display: block;
+}
+#dropdown-notifications li a {
+  color: #ff8a00;
+}
+#dropdown-notifications li .notification-markasread {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  margin: 2px;
+  background-color: #ff8a00;
+  border-radius: 6px;
+  box-sizing: initial;
+  right: 6px;
+}
+#dropdown-notifications li:first-child ::before {
+  z-index: 99999;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #373737;
+  position: absolute;
+  top: -8px;
+  left: 52px;
+  content: "";
+}
+#dropdown-notifications li:hover {
+  background-color: #ff8a00;
+}
+#dropdown-notifications li:hover a {
+  color: #fff !important;
+}
+#dropdown-notifications li:hover .notification-markasread {
+  background-color: #fff;
+}
+#dropdown-notifications li:hover .notification-markasread:hover {
+  margin: 0;
+  background-color: #ff8a00;
+  border: 2px solid #fff;
 }
 
 main {
@@ -6092,6 +6161,10 @@ div.ld-steam-extra-wrapper > div.ld-steam-extra {
 }
 div.ld-steam-extra-wrapper > div.ld-steam-extra > div.ld-steam-info {
   border-right-color: rgba(255, 255, 255, 0.08);
+}
+div.ld-steam-extra-wrapper > div.ld-steam-extra > div.ld-steam-info a.ld-steam-img img {
+  width: 40px;
+  height: 40px;
 }
 div.ld-steam-extra-wrapper > div.ld-steam-extra:after {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM1MzUzNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
