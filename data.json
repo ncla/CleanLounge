@@ -5,7 +5,7 @@
 
 	"name"					: "cleanlounge_night",
 	"author"				: "farblood",
-	"version"				: "2.2 Alpha",
+	"version"				: "2.2.1 Alpha",
 	"title"					: "CleanLounge Night",
 	"description"			: "A clean, dark theme for CSGOLounge.com",
 	"disableCss"			: true,
