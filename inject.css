@@ -3674,7 +3674,7 @@ header .ddbtn a[href] {
   opacity: 0.75;
 }
 
-#dropdown-notifications {
+body.ld-ver-0\.9\.5 #dropdown-notifications {
   position: absolute;
   z-index: 9999;
   top: 67px;
@@ -3686,16 +3686,16 @@ header .ddbtn a[href] {
   padding: 0;
   margin: 0;
 }
-#dropdown-notifications li {
+body.ld-ver-0\.9\.5 #dropdown-notifications li {
   color: #888;
   padding: 1em;
   border-bottom: 1px solid #252525;
   display: block;
 }
-#dropdown-notifications li a {
+body.ld-ver-0\.9\.5 #dropdown-notifications li a {
   color: #ff8a00;
 }
-#dropdown-notifications li .notification-markasread {
+body.ld-ver-0\.9\.5 #dropdown-notifications li .notification-markasread {
   position: absolute;
   width: 8px;
   height: 8px;
@@ -3705,7 +3705,7 @@ header .ddbtn a[href] {
   box-sizing: initial;
   right: 6px;
 }
-#dropdown-notifications li:first-child ::before {
+body.ld-ver-0\.9\.5 #dropdown-notifications li:first-child ::before {
   z-index: 99999;
   width: 0;
   height: 0;
@@ -3717,16 +3717,16 @@ header .ddbtn a[href] {
   left: 52px;
   content: "";
 }
-#dropdown-notifications li:hover {
+body.ld-ver-0\.9\.5 #dropdown-notifications li:hover {
   background-color: #ff8a00;
 }
-#dropdown-notifications li:hover a {
+body.ld-ver-0\.9\.5 #dropdown-notifications li:hover a {
   color: #fff !important;
 }
-#dropdown-notifications li:hover .notification-markasread {
+body.ld-ver-0\.9\.5 #dropdown-notifications li:hover .notification-markasread {
   background-color: #fff;
 }
-#dropdown-notifications li:hover .notification-markasread:hover {
+body.ld-ver-0\.9\.5 #dropdown-notifications li:hover .notification-markasread:hover {
   margin: 0;
   background-color: #ff8a00;
   border: 2px solid #fff;
